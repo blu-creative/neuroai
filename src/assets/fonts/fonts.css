@@ -138,14 +138,14 @@ CerebriSansPro font face
 
 @font-face {
   font-family: "CerebriSansPro";
-  src: url("./CerebriSansPro/CerebriSansPro-Black.ttf") format("truetype");
+  src: url("./CerebriSansPro/CerebriSansPro-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CerebriSansPro";
-  src: url("./CerebriSansPro/CerebriSansPro-BlackItalic.ttf") format("truetype");
+  src: url("./CerebriSansPro/CerebriSansPro-HeavyItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
