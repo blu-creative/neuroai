@@ -13,20 +13,24 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        white: "#FFFFFFF",
         neutral: {
-          25: "#F4F4F4",
+          25: "#F9F9F9",
           50: "#F7F7F7",
-          500: "#676666",
-          800: "#222222",
+          500: "#858585",
+          800: "#383838",
         },
         primary: {
-          500: "#A11D21",
-          700: "#610A0A",
-          800: "#450B0B",
+          500: "#3366FF",
+          700: "#001957",
+          800: "#1F4693",
+          900: "#001957",
         },
       },
       fontFamily: {
         Roboto: ["Roboto-Flex"],
+        Exo: ["Exo"],
+        CerebriSansPro: ["CerebriSansPro"],
       },
     },
     container: {

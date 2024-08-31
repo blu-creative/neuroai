@@ -1,0 +1,267 @@
+/* 
+====================================================
+Exo font face
+====================================================
+*/
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("./exo/Exo-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* 
+====================================================
+CerebriSansPro font face
+====================================================
+*/
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-ExtraBoldItalic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-ExtraLightItalic.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CerebriSansPro";
+  src: url("./CerebriSansPro/CerebriSansPro-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}

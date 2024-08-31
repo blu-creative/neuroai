@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vxhv1h');
-  src:  url('fonts/icomoon.eot?vxhv1h#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vxhv1h') format('truetype'),
-    url('fonts/icomoon.woff?vxhv1h') format('woff'),
-    url('fonts/icomoon.svg?vxhv1h#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4vxf2b');
+  src:  url('fonts/icomoon.eot?4vxf2b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4vxf2b') format('truetype'),
+    url('fonts/icomoon.woff?4vxf2b') format('woff'),
+    url('fonts/icomoon.svg?4vxf2b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,15 +25,54 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mim-arrow:before {
-  content: "\e903";
-}
-.icon-mim-clock:before {
-  content: "\e901";
-}
-.icon-mim-map-marker:before {
+.icon-mim-close:before {
   content: "\e900";
 }
-.icon-mim-phone:before {
+.icon-mim-check:before {
+  content: "\e901";
+}
+.icon-mim-love-screen:before {
   content: "\e902";
+}
+.icon-mim-search:before {
+  content: "\e903";
+}
+.icon-mim-search-page:before {
+  content: "\e904";
+}
+.icon-mim-like:before {
+  content: "\e905";
+}
+.icon-mim-document:before {
+  content: "\e906";
+}
+.icon-mim-chat:before {
+  content: "\e907";
+}
+.icon-mim-click:before {
+  content: "\e908";
+}
+.icon-mim-scales:before {
+  content: "\e909";
+}
+.icon-mim-neurodivergence:before {
+  content: "\e90a";
+}
+.icon-mim-chevron:before {
+  content: "\e90b";
+}
+.icon-mim-full-screen:before {
+  content: "\e90c";
+}
+.icon-mim-mag:before {
+  content: "\e90d";
+}
+.icon-mim-shield:before {
+  content: "\e90e";
+}
+.icon-mim-hand:before {
+  content: "\e90f";
+}
+.icon-mim-world:before {
+  content: "\e910";
 }

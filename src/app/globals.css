@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import url("../assets/icomoon-v1.0/style.css");
-@import url("../assets/roboto/style.css");
+@import url("../assets/fonts/fonts.css");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Roboto;
+  font-family: Exo;
 }
 
 .list-box {

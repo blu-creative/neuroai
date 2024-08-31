@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vxhv1h');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vxhv1h#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vxhv1h') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vxhv1h') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vxhv1h##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4vxf2b');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4vxf2b#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4vxf2b') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4vxf2b') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4vxf2b##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,24 +27,89 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mim-arrow {
+.icon-mim-close {
   &:before {
-    content: $icon-mim-arrow; 
+    content: $icon-mim-close; 
   }
 }
-.icon-mim-clock {
+.icon-mim-check {
   &:before {
-    content: $icon-mim-clock; 
+    content: $icon-mim-check; 
   }
 }
-.icon-mim-map-marker {
+.icon-mim-love-screen {
   &:before {
-    content: $icon-mim-map-marker; 
+    content: $icon-mim-love-screen; 
   }
 }
-.icon-mim-phone {
+.icon-mim-search {
   &:before {
-    content: $icon-mim-phone; 
+    content: $icon-mim-search; 
+  }
+}
+.icon-mim-search-page {
+  &:before {
+    content: $icon-mim-search-page; 
+  }
+}
+.icon-mim-like {
+  &:before {
+    content: $icon-mim-like; 
+  }
+}
+.icon-mim-document {
+  &:before {
+    content: $icon-mim-document; 
+  }
+}
+.icon-mim-chat {
+  &:before {
+    content: $icon-mim-chat; 
+  }
+}
+.icon-mim-click {
+  &:before {
+    content: $icon-mim-click; 
+  }
+}
+.icon-mim-scales {
+  &:before {
+    content: $icon-mim-scales; 
+  }
+}
+.icon-mim-neurodivergence {
+  &:before {
+    content: $icon-mim-neurodivergence; 
+  }
+}
+.icon-mim-chevron {
+  &:before {
+    content: $icon-mim-chevron; 
+  }
+}
+.icon-mim-full-screen {
+  &:before {
+    content: $icon-mim-full-screen; 
+  }
+}
+.icon-mim-mag {
+  &:before {
+    content: $icon-mim-mag; 
+  }
+}
+.icon-mim-shield {
+  &:before {
+    content: $icon-mim-shield; 
+  }
+}
+.icon-mim-hand {
+  &:before {
+    content: $icon-mim-hand; 
+  }
+}
+.icon-mim-world {
+  &:before {
+    content: $icon-mim-world; 
   }
 }
 
