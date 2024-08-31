@@ -50,10 +50,9 @@ const MobileMenu = ({ locale = "en" }) => {
 
   return (
     <nav className="h-[140px] flex px-14 items-center justify-between">
-      {console.log("locale", locale)}
       <Link
         href={`/${locale === "en" ? "" : "?locale=fr"}`}
-        className="relative md:w-[186px] md:h-[78px] w-[95px] h-[39px]"
+        className="relative md:w-[42px] md:h-[42px] w-[42px] h-[42px]"
       >
         <Image
           src="/images/Logo.png"

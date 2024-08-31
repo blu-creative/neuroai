@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="w-full md:w-[344px] text-center md:text-left">
           <Link
             href={`/${lang === "fr" ? "?locale=fr" : ""}`}
-            className="relative m-auto md:m-0 md:w-[186px] md:h-[78px] w-[108px] h-[45px] block"
+            className="relative m-auto md:m-0 md:w-[42px] md:h-[42px] w-[42px] h-[42px] block"
           >
             <Image
               src="/images/Logo.png"
