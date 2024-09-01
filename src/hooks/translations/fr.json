@@ -34,7 +34,7 @@
   "containers_bins_hoppers": "Conteneurs, bacs à déchets et trémies auto-basculantes",
   "purchase_scrap": "Achat de ferraille et de métaux",
   "see_what_we_buy": "Voir ce que nous achetons",
-  "we_purchase_various_scrap": "Nous achetons divers types de ferraille…",
+  "customize-your-journey": "Nous achetons divers types de ferraille…",
   "from_general_public": "Du grand public, des entrepreneurs privés, des restaurants, des hôtels, des hôpitaux et du secteur manufacturier.",
   "services_what_we_buy": "Services – Ce que nous achetons",
   "non_ferrous_materials": "Matériaux non ferreux",
@@ -83,5 +83,11 @@
   "PC_Boards": "Cartes de circuits imprimés",
   "Power_Supplies": "Alimentations électriques",
   "Servers": "Serveurs",
-  "Hubs_and_Switches": "Concentrateurs et commutateurs"
+  "Hubs_and_Switches": "Concentrateurs et commutateurs",
+  "Benefits": "Avantages",
+  "Features": "Caractéristiques",
+  "Accessibility": "Accessibilité",
+  "Litigation-Support": "Soutien en matière de litiges",
+  "Neuro-vs-Competition": "Neuro vs la concurrence",
+  "FAQ": "FAQ"
 }
