@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <div className="bg-[url('/images/header/Background.png')] text-neutral-25 bg-cover">
       <Links locale={locale} />
-      <section className="flex flex-col items-center gap-12 pt-16 md:pb-24 pb-12 px-12">
+      <section className="flex flex-col items-center gap-12 md:pt-16 pt-0 md:pb-24 pb-12 px-12">
         <h1
           className="md:text-6xl text-3xl max-w-2xl font-extrabold text-center"
           data-aos="fade-up"

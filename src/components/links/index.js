@@ -196,6 +196,7 @@ const MobileMenu = ({ locale = "en" }) => {
         </li> */}
       </ul>
       <Link
+        className="hidden md:flex"
         data-aos="fade-up"
         href={`/get-an-estimate${locale === "fr" ? "?locale=fr" : ""}`}
       >
