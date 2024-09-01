@@ -61,7 +61,7 @@
   "rebar_steel": "Acier d'armature",
   "demolition_scrap": "Ferraille de démolition",
   "pc_boards": "#3 Cartes de circuits imprimés",
-  "family_business": "Nous sommes une entreprise familiale spécialisée dans le recyclage de ferraille. L'entreprise a été fondée par Mitchell Goldberg en 1955 et, grâce à ses valeurs fondamentales d'honnêteté et d'intégrité, il a rapidement gagné le respect des clients et des fournisseurs.",
+  "integrating ": "Nous sommes une entreprise familiale spécialisée dans le recyclage de ferraille. L'entreprise a été fondée par Mitchell Goldberg en 1955 et, grâce à ses valeurs fondamentales d'honnêteté et d'intégrité, il a rapidement gagné le respect des clients et des fournisseurs.",
   "about_us_mission": "À propos de nous - Mission",
   "about_us_history": "À propos de nous - Histoire",
   "our_objective": "Notre objectif chez Mitch’s Iron & Metal",
@@ -89,5 +89,6 @@
   "Accessibility": "Accessibilité",
   "Litigation-Support": "Soutien en matière de litiges",
   "Neuro-vs-Competition": "Neuro vs la concurrence",
-  "FAQ": "FAQ"
+  "FAQ": "FAQ",
+  "book_a_demo": "Réserver une démo"
 }

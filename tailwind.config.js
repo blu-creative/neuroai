@@ -26,6 +26,12 @@ module.exports = {
           800: "#1F4693",
           900: "#001957",
         },
+        secondary: {
+          500: "#383838",
+          700: "#FF3366",
+          800: "#FF3366",
+          900: "#FF3366",
+        },
       },
       fontFamily: {
         Roboto: ["Roboto-Flex"],
