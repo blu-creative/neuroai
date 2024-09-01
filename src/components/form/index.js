@@ -4,16 +4,24 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { useSearchParams } from "next/navigation";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Form() {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
   const [status, setStatus] = useState("");
   const searchParams = useSearchParams();
   const { t } = useTranslation(searchParams.get("locale"));
+
+  const list = [
+    "industry-1",
+    "industry-2",
+    "industry-3",
+    "industry-4",
+    "industry-5",
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,13 +47,14 @@ export default function Form() {
   };
 
   return (
-    <section className="md:my-16 my-12 relative" data-aos="fade-up" id="form">
-      <div className="absolute z-1 h-5/6 w-2/3 bottom-0">
-        <Image src="/images/Pattern.png" fill quality={100} alt="pattern" />
-      </div>
+    <section
+      className="md:my-16 my-12 font-CerebriSansPro flex"
+      data-aos="fade-up"
+      id="form"
+    >
       <form
         onSubmit={handleSubmit}
-        className="bg-primary-700 p-6 md:p-12 rounded-lg w-11/12 md:w-7/12 flex flex-col gap-6 items-center relative z-2 left-1/2 transform -translate-x-1/2"
+        className="bg-primary-500 p-6 md:p-12 rounded-lg w-10/12 md:w-10/12 flex flex-col gap-6 items-center max-w-2xl font-bold"
       >
         <div className="flex flex-col md:flex-row items-center gap-6 w-full">
           <input
@@ -56,7 +65,7 @@ export default function Form() {
             required
           />
           <input
-            placeholder={t("Last_Name")}
+            placeholder={t("Company")}
             className="outline-none p-4 grow w-full"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
@@ -69,18 +78,39 @@ export default function Form() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          type="email"
         />
-        <textarea
-          placeholder={t("Message")}
+        <input
+          placeholder={t("Phone_Number")}
           className="outline-none p-4 w-full"
-          rows={6}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          type="tel"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           required
         />
+        <div className="w-full relative">
+          <i className="icon-mim-chevron absolute text-primary-500 right-4 top-5" />
+          <select
+            className={`outline-none p-4 w-full appearance-none ${
+              message ? "" : "text-neutral-400"
+            }`}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+            value={message}
+          >
+            <option value="" disabled selected hidden>
+              Industry
+            </option>
+            {list.map((x) => (
+              <option className="text-neutral-900" key={x} value={x}>
+                {x}
+              </option>
+            ))}
+          </select>
+        </div>
         <button
           type="submit"
-          className="bg-neutral-800 text-neutral-25 md:rounded-md md:px-8 md:py-4 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg"
+          className="bg-primary-900 text-neutral-25 md:rounded-md md:px-8 md:py-4 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg"
         >
           {t("get_a_quote")}
         </button>
