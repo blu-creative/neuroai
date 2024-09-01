@@ -88,29 +88,56 @@ const MobileMenu = ({ locale = "en" }) => {
         <ul className="flex flex-col items-center gap-6 mt-20">
           <li>
             <Link
-              href={`/what-we-buy${locale === "en" ? "" : "?locale=fr"}`}
+              href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}
               onClick={toggleMenu}
             >
-              {t("what_we_buy")}
+              {t("Benefits")}
             </Link>
           </li>
           <li>
             <Link
-              href={`/about-us${locale === "en" ? "" : "?locale=fr"}`}
+              href={`/features${locale === "en" ? "" : "?locale=fr"}`}
               onClick={toggleMenu}
             >
-              {t("about_us")}
+              {t("Features")}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href={`/accessibility${locale === "en" ? "" : "?locale=fr"}`}
+              onClick={toggleMenu}
+            >
+              {t("Accessibility")}
             </Link>
           </li>
           <li>
             <Link
-              href={`/get-an-estimate${locale === "en" ? "" : "?locale=fr"}`}
+              href={`/litigation-Support${locale === "en" ? "" : "?locale=fr"}`}
               onClick={toggleMenu}
             >
-              {t("get_an_estimate")}
+              {t("Litigation-Support")}
             </Link>
           </li>
           <li>
+            <Link
+              href={`/Neuro-vs-Competition${
+                locale === "en" ? "" : "?locale=fr"
+              }`}
+              onClick={toggleMenu}
+            >
+              {t("Neuro-vs-Competition")}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={`/fAQ${locale === "en" ? "" : "?locale=fr"}`}
+              onClick={toggleMenu}
+            >
+              {t("FAQ")}
+            </Link>
+          </li>
+          {/* <li>
             <div
               onClick={selectLanguage}
               className="text-3xl font-extrabold cursor-pointer"
@@ -118,27 +145,47 @@ const MobileMenu = ({ locale = "en" }) => {
             >
               {lang}
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 text-xl items-center">
         <li>
-          <Link href={`/what-we-buy${locale === "en" ? "" : "?locale=fr"}`}>
-            {t("what_we_buy")}
+          <Link href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}>
+            {t("Benefits")}
           </Link>
         </li>
         <li>
-          <Link href={`/about-us${locale === "en" ? "" : "?locale=fr"}`}>
-            {t("about_us")}
+          <Link href={`/features${locale === "en" ? "" : "?locale=fr"}`}>
+            {t("Features")}
+          </Link>
+        </li>
+
+        <li>
+          <Link href={`/accessibility${locale === "en" ? "" : "?locale=fr"}`}>
+            {t("Accessibility")}
           </Link>
         </li>
         <li>
-          <Link href={`/get-an-estimate${locale === "en" ? "" : "?locale=fr"}`}>
-            {t("get_an_estimate")}
+          <Link
+            href={`/litigation-Support${locale === "en" ? "" : "?locale=fr"}`}
+          >
+            {t("Litigation-Support")}
           </Link>
         </li>
         <li>
+          <Link
+            href={`/Neuro-vs-Competition${locale === "en" ? "" : "?locale=fr"}`}
+          >
+            {t("Neuro-vs-Competition")}
+          </Link>
+        </li>
+        <li>
+          <Link href={`/fAQ${locale === "en" ? "" : "?locale=fr"}`}>
+            {t("FAQ")}
+          </Link>
+        </li>
+        {/* <li>
           <div
             onClick={selectLanguage}
             className="text-3xl font-extrabold cursor-pointer"
@@ -146,8 +193,17 @@ const MobileMenu = ({ locale = "en" }) => {
           >
             {lang}
           </div>
-        </li>
+        </li> */}
       </ul>
+      <Link
+        className="hidden md:flex"
+        data-aos="fade-up"
+        href={`/get-an-estimate${locale === "fr" ? "?locale=fr" : ""}`}
+      >
+        <button className="bg-primary-500 md:rounded-lg md:px- md:py-2 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg">
+          {t("contact_us")}
+        </button>
+      </Link>
     </nav>
   );
 };

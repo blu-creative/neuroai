@@ -36,7 +36,7 @@
   "containers_bins_hoppers": "Containers, Tote Bins, and Self Dumping Hoppers",
   "purchase_scrap": "Purchase of Iron and Metal Scrap",
   "see_what_we_buy": "See What We Buy",
-  "we_purchase_various_scrap": "We purchase various types of scrap metal…",
+  "customize-your-journey": "Customize your journey",
   "from_general_public": "From the general public, private contractors, restaurants, hotels, hospitals, and from the manufacturing sector.",
   "services_what_we_buy": "Services – What We Buy",
   "non_ferrous_materials": "Non Ferrous Materials",
@@ -85,5 +85,12 @@
   "PC_Boards": "PC Boards",
   "Power_Supplies": "Power Supplies",
   "Servers": "Servers",
-  "Hubs_and_Switches": "Hubs and Switches"
+  "Hubs_and_Switches": "Hubs and Switches",
+
+  "Benefits": "Benefits",
+  "Features": "Features",
+  "Accessibility": "Accessibility",
+  "Litigation-Support": "Litigation Support",
+  "Neuro-vs-Competition": "Neuro vs Competition",
+  "FAQ": "FAQ"
 }
