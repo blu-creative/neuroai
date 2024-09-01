@@ -48,10 +48,19 @@ export default function Form() {
 
   return (
     <section
-      className="md:my-16 my-12 font-CerebriSansPro flex"
+      className="md:my-16 my-12 font-CerebriSansPro flex mx-6 flex-col md:flex-row justify-center gap-6"
       data-aos="fade-up"
       id="form"
     >
+      <div className="font-bold max-w-[472px] w-[472px]">
+        <h1 className="text-primary-900 text-6xl w-fit whitespace-nowrap">
+          Request a Demo
+        </h1>
+        <p className="text-neutral-700 text-justify text-xl">
+          For more information or to schedule a consultation, fill this form or
+          contact us at your convenience.
+        </p>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="bg-primary-500 p-6 md:p-12 rounded-lg w-10/12 md:w-10/12 flex flex-col gap-6 items-center max-w-2xl font-bold"
@@ -89,7 +98,7 @@ export default function Form() {
           required
         />
         <div className="w-full relative">
-          <i className="icon-mim-chevron absolute text-primary-500 right-4 top-5" />
+          <i className="icon-mim-chevron absolute text-primary-500 right-4 top-5 pointer-events-none" />
           <select
             className={`outline-none p-4 w-full appearance-none ${
               message ? "" : "text-neutral-400"
