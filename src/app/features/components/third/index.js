@@ -19,23 +19,32 @@ export default function Third() {
         <span className="text-primary-500">Features</span>
       </h1>
       <Accordion text="Content">
-        <ul>
+        <ul className="font-CerebriSansPro font-medium text-xl">
           {list.map((text) => (
-            <li key={text}>{text}</li>
+            <li className="flex items-center gap-4 mb-2" key={text}>
+              <div className="h-4 bg-primary-500 w-4 rounded-full" />
+              <p>{text}</p>
+            </li>
           ))}
         </ul>
       </Accordion>
-      <Accordion text="Content">
-        <ul>
+      <Accordion text="Display">
+        <ul className="list-disc list-inside marker:text-primary-500 font-CerebriSansPro font-medium text-xl">
           {list.map((text) => (
-            <li key={text}>{text}</li>
+            <li className="flex items-center gap-4 mb-2" key={text}>
+              <div className="h-4 bg-primary-500 w-4 rounded-full" />
+              <p>{text}</p>
+            </li>
           ))}
         </ul>
       </Accordion>
-      <Accordion text="Content">
-        <ul>
+      <Accordion text="Orientation">
+        <ul className="list-disc list-inside marker:text-primary-500 marker:text-2xl font-CerebriSansPro font-medium text-xl">
           {list.map((text) => (
-            <li key={text}>{text}</li>
+            <li className="flex items-center gap-4 mb-2" key={text}>
+              <div className="h-4 bg-primary-500 w-4 rounded-full" />
+              <p>{text}</p>
+            </li>
           ))}
         </ul>
       </Accordion>
