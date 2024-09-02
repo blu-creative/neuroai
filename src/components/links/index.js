@@ -121,7 +121,7 @@ const MobileMenu = ({ locale = "en" }) => {
           </li>
           <li>
             <Link
-              href={`/Neuro-vs-Competition${
+              href={`/neuro-vs-competition${
                 locale === "en" ? "" : "?locale=fr"
               }`}
               onClick={toggleMenu}
@@ -175,7 +175,7 @@ const MobileMenu = ({ locale = "en" }) => {
         </li>
         <li>
           <Link
-            href={`/Neuro-vs-Competition${locale === "en" ? "" : "?locale=fr"}`}
+            href={`/neuro-vs-competition${locale === "en" ? "" : "?locale=fr"}`}
           >
             {t("Neuro-vs-Competition")}
           </Link>
