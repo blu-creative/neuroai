@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useRef, useState } from "react";
 
-export default function Accordion({ text, children }) {
+export default function Accordion({ text, children, simple }) {
   const [height, setHeight] = useState(0);
   const pp = useRef();
 
@@ -13,15 +13,23 @@ export default function Accordion({ text, children }) {
     <div className="mb-4">
       <div
         onClick={toggleListVisibility}
-        className="text-primary-800 flex items-center gap-1 justify-between cursor-pointer w-full bg-neutral-50 px-6 py-4 rounded-lg"
+        className={`flex items-center gap-1 cursor-pointer w-full px-6 py-4 ${
+          simple
+            ? "text-primary-500 justify-center"
+            : "rounded-lg bg-neutral-50 justify-between text-primary-800"
+        }`}
       >
         <p className="font-extrabold md:text-2xl text-base">{text}</p>
         <div
-          className={`text-xl transform transition-all duration-500 ease-in-out rounded-full bg-primary-700 w-9 h-9 flex items-center justify-center ${
-            height ? "rotate-180" : ""
-          }`}
+          className={`text-xl transform transition-all duration-500 ease-in-out
+            ${
+              simple
+                ? ""
+                : "rounded-full bg-primary-700 w-9 h-9 flex items-center justify-center text-neutral-50"
+            }
+             ${height ? "rotate-180" : ""}`}
         >
-          <i className="icon-mim-chevron block text-neutral-50" />
+          <i className="icon-mim-chevron block " />
         </div>
       </div>
       <div

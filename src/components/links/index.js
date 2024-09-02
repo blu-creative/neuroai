@@ -111,14 +111,14 @@ const MobileMenu = ({ locale = "en" }) => {
               {t("Accessibility")}
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href={`/litigation-Support${locale === "en" ? "" : "?locale=fr"}`}
               onClick={toggleMenu}
             >
               {t("Litigation-Support")}
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               href={`/neuro-vs-competition${
@@ -166,13 +166,13 @@ const MobileMenu = ({ locale = "en" }) => {
             {t("Accessibility")}
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href={`/litigation-Support${locale === "en" ? "" : "?locale=fr"}`}
           >
             {t("Litigation-Support")}
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href={`/neuro-vs-competition${locale === "en" ? "" : "?locale=fr"}`}

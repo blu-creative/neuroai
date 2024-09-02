@@ -33,7 +33,7 @@ const list = [
 export default function Second() {
   return (
     <section className="m-8 flex flex-col items-center gap-8">
-      <Accordion text="See Comparison Charts">
+      <Accordion text="See Comparison Charts" simple>
         {list.map((sec) => (
           <div key={sec.title}>
             <p
