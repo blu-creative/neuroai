@@ -25,6 +25,20 @@ export default function Third() {
           ))}
         </ul>
       </Accordion>
+      <Accordion text="Content">
+        <ul>
+          {list.map((text) => (
+            <li key={text}>{text}</li>
+          ))}
+        </ul>
+      </Accordion>
+      <Accordion text="Content">
+        <ul>
+          {list.map((text) => (
+            <li key={text}>{text}</li>
+          ))}
+        </ul>
+      </Accordion>
     </section>
   );
 }

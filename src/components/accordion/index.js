@@ -10,7 +10,7 @@ export default function Accordion({ text, children }) {
   }, []);
 
   return (
-    <>
+    <div className="mb-4">
       <div
         onClick={toggleListVisibility}
         className="text-primary-700 flex items-center gap-1 justify-between cursor-pointer w-full bg-neutral-50 px-6 py-4 rounded-lg"
@@ -34,6 +34,6 @@ export default function Accordion({ text, children }) {
           <div className="px-12 py-6">{children}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
