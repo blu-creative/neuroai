@@ -10,8 +10,11 @@ const list = [
 
 export default function Third() {
   return (
-    <section className="flex justify-center gap-10 flex-col items-center text-center">
-      <h1 className="text-6xl font-bold font-Exo" data-aos="fade-up">
+    <section className="m-20">
+      <h1
+        className="text-6xl font-bold font-Exo text-center mb-10"
+        data-aos="fade-up"
+      >
         <span className="text-primary-900">See all of our </span>
         <span className="text-primary-500">Features</span>
       </h1>
