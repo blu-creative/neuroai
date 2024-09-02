@@ -93,7 +93,7 @@ export default function Form() {
           required
           value={message}
         >
-          <option value="" disabled selected hidden>
+          <option value="" disabled defaultValue hidden>
             Industry
           </option>
           {list.map((x) => (

@@ -11,8 +11,8 @@ export default function GAE({ searchParams }) {
   const { t } = useTranslation(lang);
   return (
     <main>
-      <First translate={t} locale={lang} />
-      <Second />
+      {/* <First translate={t} locale={lang} /> */}
+      {/* <Second /> */}
     </main>
   );
 }
