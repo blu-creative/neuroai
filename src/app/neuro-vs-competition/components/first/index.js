@@ -25,7 +25,10 @@ const NeuroAI = [
 export default function First() {
   return (
     <section className="flex font-CerebriSansPro items-center justify-evenly my-16">
-      <div className="bg-neutral-50 rounded-lg px-10 py-20 w-md">
+      <div
+        className="bg-neutral-50 rounded-lg px-10 py-20 w-md"
+        data-aos="fade-down"
+      >
         <h2 className="font-bold text-5xl text-primary-900 text-center pb-10 font-Exo">
           EqualWeb
         </h2>
@@ -40,7 +43,10 @@ export default function First() {
           ))}
         </div>
       </div>
-      <div className="bg-primary-500 text-neutral-50 rounded-lg px-10 py-20 w-md">
+      <div
+        className="bg-primary-500 text-neutral-50 rounded-lg px-10 py-20 w-md"
+        data-aos="fade-up"
+      >
         <h2 className="font-bold text-5xl text-center pb-10 font-Exo">
           Neuro.AI
         </h2>
@@ -60,7 +66,10 @@ export default function First() {
           </button>
         </div>
       </div>
-      <div className="bg-neutral-50 rounded-lg px-10 py-20 w-md">
+      <div
+        className="bg-neutral-50 rounded-lg px-10 py-20 w-md"
+        data-aos="fade-down"
+      >
         <h2 className="font-bold text-5xl text-primary-900 text-center pb-10 font-Exo">
           Userway
         </h2>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Accordion from "@/components/accordion";
 
 const list = [
   { title: "Widget Features", image: "Chart1", descriptions: [] },
@@ -31,27 +32,31 @@ const list = [
 
 export default function Second() {
   return (
-    <section>
-      {list.map((sec) => (
-        <div key={sec.title}>
-          <p
-            className="text-4xl font-bold text-primary-900 text-center"
-            data-aos="fade-up"
-          >
-            {sec.title}
-          </p>
-          <div className="max-w-full p-8" data-aos="flip-right">
-            <Image
-              src={`/images/neuro-vs-competition/${sec.image}.png`}
-              fill
-              className="!relative"
-            />
+    <section className="m-8 flex flex-col items-center gap-8">
+      <Accordion text="See Comparison Charts">
+        {list.map((sec) => (
+          <div key={sec.title}>
+            <p
+              className="text-4xl font-bold text-primary-900 text-center"
+              data-aos="fade-up"
+            >
+              {sec.title}
+            </p>
+            <div className="w-full p-8 max-w-7xl" data-aos="flip-right">
+              <Image
+                src={`/images/neuro-vs-competition/${sec.image}.png`}
+                fill
+                className="!relative"
+              />
+            </div>
+            {sec.descriptions.map((text) => (
+              <p key={text} className="text-lg font-medium" data-aos="fade-up">
+                {text}
+              </p>
+            ))}
           </div>
-          {sec.descriptions.map((text) => (
-            <p key={text}>{text}</p>
-          ))}
-        </div>
-      ))}
+        ))}
+      </Accordion>
     </section>
   );
 }
