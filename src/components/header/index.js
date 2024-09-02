@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="text-neutral-25 bg-gradient-to-b from-[#001549] to-[#090E1B] ">
       <Links locale={locale} />
-      <div className="flex items-center justify-center py-32">
+      <div className="flex items-center justify-center pt-28 pb-36">
         <h1
           className="md:text-7xl text-3xl max-w-2xl font-extrabold text-center"
           data-aos="fade-up"

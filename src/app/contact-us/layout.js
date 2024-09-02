@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Blü Creative",
-  description: "About Us",
+  description: "Contact Us",
 };
 
 export default function RootLayout({ children }) {
