@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Second() {
   return (
-    <section className="flex justify-center gap-10 flex-col items-center  text-center">
+    <section className="flex justify-center gap-10 flex-col items-center text-center">
       <h1 className="text-6xl font-bold font-Exo" data-aos="fade-up">
         <span className="text-primary-900">Automated </span>
         <span className="text-primary-500">Remediation</span>
