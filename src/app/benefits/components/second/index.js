@@ -7,7 +7,7 @@ export default function First({ translate }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[48px] gap-y-[22px] bg-mintcream w-full md:w-[80%] max-w-[80%]">
           <div
             data-aos="fade-button"
-            className="bg-[#F7F7F7] flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
+            className="bg-neutral-50 flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
           >
             <div className="flex-shrink-0 w-[20%] flex justify-center items-start h-[65%] ">
               <div className="w-[65px] h-[65px] rounded-full flex items-center justify-center bg-primary-500">
@@ -27,7 +27,7 @@ export default function First({ translate }) {
           </div>
           <div
             data-aos="fade-left"
-            className="bg-[#F7F7F7] flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
+            className="bg-neutral-50 flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
           >
             <div className="flex-shrink-0 w-[20%] flex justify-center items-start h-[65%] ">
               <div className="w-[65px] h-[65px] rounded-full flex items-center justify-center bg-primary-500">
@@ -48,7 +48,7 @@ export default function First({ translate }) {
           </div>
           <div
             data-aos="fade-right"
-            className="bg-[#F7F7F7] flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
+            className="bg-neutral-50 flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
           >
             <div className="flex-shrink-0 w-[20%] flex justify-center items-start h-[65%] ">
               <div className="w-[65px] h-[65px] rounded-full flex items-center justify-center bg-primary-500">
@@ -69,7 +69,7 @@ export default function First({ translate }) {
           </div>
           <div
             data-aos="fade-left"
-            className="bg-[#F7F7F7] flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
+            className="bg-neutral-50 flex items-center w-full max-w-[550px] h-[230px] rounded-xl p-4"
           >
             <div className="flex-shrink-0 w-[20%] flex justify-center items-start h-[65%] ">
               <div className="w-[65px] h-[65px] rounded-full flex items-center justify-center bg-primary-500">

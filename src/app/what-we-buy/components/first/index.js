@@ -20,7 +20,7 @@ export default function First({ translate, locale }) {
         </h2>
         <Link
           data-aos="fade-up"
-          href={`/get-an-estimate${locale === "fr" ? "?locale=fr" : ""}`}
+          href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
         >
           <button className="bg-primary-500 md:rounded-md md:px-8 md:py-4 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg">
             {translate("contact_us")}

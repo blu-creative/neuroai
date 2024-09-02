@@ -22,7 +22,7 @@ export default function First({ translate, locale }) {
         <Link
           className="hidden md:flex"
           data-aos="fade-up"
-          href={`/get-an-estimate${locale === "fr" ? "?locale=fr" : ""}`}
+          href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
         >
           <button className="bg-primary-500 text-neutral-25 md:rounded-lg md:px- md:py-2 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg">
             {translate("book_a_demo")}

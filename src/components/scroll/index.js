@@ -36,7 +36,9 @@ export default function Scroll() {
       }}
     >
       <i
-        className={`transition-all icon-mim-arrow ${isTop ? "" : "rotate-180"}`}
+        className={`transition-all icon-mim-chevron ${
+          isTop ? "" : "rotate-180"
+        }`}
       />
     </div>
   );

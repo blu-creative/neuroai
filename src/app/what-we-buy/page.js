@@ -1,7 +1,6 @@
 import First from "./components/first";
 import Second from "./components/second";
 
-import Form from "@/components/form";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function WWB({ searchParams }) {
@@ -17,7 +16,6 @@ export default function WWB({ searchParams }) {
     <main className="text-neutral-100">
       <First locale={lang} translate={t} />
       <Second translate={t} />
-      <Form />
     </main>
   );
 }

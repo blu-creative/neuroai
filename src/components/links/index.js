@@ -49,7 +49,7 @@ const MobileMenu = ({ locale = "en" }) => {
   };
 
   return (
-    <nav className="h-[140px] flex px-14 items-center justify-between">
+    <nav className="h-[140px] flex px-14 items-center justify-between font-CerebriSansPro">
       <Link
         href={`/${locale === "en" ? "" : "?locale=fr"}`}
         className="relative md:w-[42px] md:h-[42px] w-[42px] h-[42px]"
@@ -58,7 +58,7 @@ const MobileMenu = ({ locale = "en" }) => {
           src="/images/Logo.png"
           fill
           quality={100}
-          alt="Mitch's Iron & Metal Logo"
+          alt="Blü Creative Logo"
         />
       </Link>
       {/* Hamburger Menu Icon for Mobile */}
@@ -198,7 +198,7 @@ const MobileMenu = ({ locale = "en" }) => {
       <Link
         className="hidden md:flex"
         data-aos="fade-up"
-        href={`/get-an-estimate${locale === "fr" ? "?locale=fr" : ""}`}
+        href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
       >
         <button className="bg-primary-500 md:rounded-lg md:px- md:py-2 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg">
           {t("contact_us")}

@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import Scroll from "@/components/scroll";
 
 export const metadata = {
-  title: "mitch's iron & metal",
+  title: "Blü Creative",
   description:
     "Site Designed & Maintained by Blu Creative Digital Technologies",
 };

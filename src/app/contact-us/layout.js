@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "mitch's iron & metal",
-  description: "About Us",
+  title: "Blü Creative",
+  description: "Contact Us",
 };
 
 export default function RootLayout({ children }) {

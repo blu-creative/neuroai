@@ -1,9 +1,9 @@
 import First from "./components/first";
 import Second from "./components/second";
+import Third from "./components/third";
 import { useTranslation } from "@/hooks/useTranslation";
-import Form from "@/components/form";
 
-export default function GAE({ searchParams }) {
+export default function AU({ searchParams }) {
   const { locale } = searchParams;
   let lang = "en";
   if (typeof locale === "string") {
@@ -13,8 +13,8 @@ export default function GAE({ searchParams }) {
   return (
     <main>
       <First translate={t} locale={lang} />
-      <Form />
-      <Second />
+      <Second translate={t} />
+      <Third translate={t} />
     </main>
   );
 }
