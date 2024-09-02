@@ -58,7 +58,7 @@ const MobileMenu = ({ locale = "en" }) => {
           src="/images/Logo.png"
           fill
           quality={100}
-          alt="Mitch's Iron & Metal Logo"
+          alt="Blü Creative Logo"
         />
       </Link>
       {/* Hamburger Menu Icon for Mobile */}
