@@ -12,6 +12,9 @@ export default function Header({ text }) {
     "/accessibility": "Learn about accessibility",
     "/contact-us": "Let’s address accessibility",
     "/benefits": "Benefits for all users",
+    "/Neuro-vs-Competition": "Why choose Neuro",
+    "/fAQ": "Frequently Asked Questions",
+    "/litigation-Support": "Litigation Support",
   };
   const isHome = pathname === "/";
   const searchParams = useSearchParams();
