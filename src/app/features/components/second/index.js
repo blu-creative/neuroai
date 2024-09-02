@@ -1,92 +1,32 @@
 import Image from "next/image";
 
-export default function First({ translate }) {
+export default function Second() {
   return (
-    <section>
-      <div className="flex justify-center px-4 md:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-[40px] gap-y-[22px] bg-mintcream w-full md:w-[80%] max-w-[80%]">
-          <div
-            data-aos="fade-button"
-            className=" flex flex-col items-center w-full max-w-[274px] h-[188px] rounded-xl "
-          >
-            <div className="flex-shrink-0 w-[20%] flex justify-center items-start mb-4   ">
-              <i
-                className=" icon-mim-document
- block text-5xl weight300 font-light text-secondary-500"
-              />
-            </div>
-
-            <div className="w-[90%]">
-              <h2 className="text-2xl font-bold mb-2 text-primary-700 text-center">
-                Perceivable
-              </h2>
-              <p className="text-base font-bold text-center">
-                Providing alternative text, captions and text descriptions{" "}
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-left"
-            className=" flex flex-col items-center w-full max-w-[274px] h-[188px] rounded-xl"
-          >
-            <div className="flex-shrink-0 w-[20%] flex justify-center items-start mb-4   ">
-              <i
-                className=" icon-mim-chat
- block text-5xl weight300 font-light text-secondary-500"
-              />
-            </div>
-
-            <div className="w-[90%]">
-              <h2 className="text-2xl font-bold mb-2 text-primary-700 text-center">
-                Understandable
-              </h2>
-              <p className="text-base font-bold text-center">
-                Content and operation of the interface should be clear to all
-                users
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-right"
-            className=" flex flex-col items-center w-full max-w-[274px] h-[188px] rounded-xl"
-          >
-            <div className="flex-shrink-0 w-[20%] flex justify-center items-start mb-4   ">
-              <i className="icon-mim-click block text-5xl weight300 font-light text-secondary-500" />
-            </div>
-
-            <div className="w-[90%]">
-              <h2 className="text-2xl font-bold mb-2 text-primary-700 text-center">
-                Operable
-              </h2>
-              <p className="text-base font-bold text-center">
-                Making elements accessible with methods like keyboard, mouse or
-                voice commands
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-left"
-            className=" flex flex-col items-center w-full max-w-[274px] h-[188px] rounded-xl"
-          >
-            <div className="flex-shrink-0 w-[20%] flex justify-center items-start mb-4   ">
-              <i
-                className="icon-mim-scales
- block text-5xl weight300 font-light text-secondary-500"
-              />
-            </div>
-
-            <div className="w-[90%]">
-              <h2 className="text-2xl font-bold mb-2 text-primary-700 text-center">
-                Compliant{" "}
-              </h2>
-              <p className="text-base font-bold text-center">
-                Following accessibility standards and guidelines, such as the
-                WCAG{" "}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className="flex justify-center gap-10 flex-col items-center  text-center">
+      <h1 className="text-6xl font-bold font-Exo" data-aos="fade-up">
+        <span className="text-primary-900">Automated </span>
+        <span className="text-primary-500">Remediation</span>
+      </h1>
+      <p className="font-bold text-xl max-w-xl" data-aos="fade-down">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <button
+        data-aos="fade-up"
+        className="bg-primary-500 text-neutral-50 w-fit px-4 py-1 rounded-lg font-medium text-xl"
+      >
+        Book Now
+      </button>
+      <Image
+        data-aos="flip-left"
+        width={743}
+        height={610}
+        quality={100}
+        alt="img"
+        src="/images/features/computer.png"
+      />
     </section>
   );
 }
