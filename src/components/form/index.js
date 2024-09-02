@@ -130,8 +130,18 @@ export default function Form() {
           {status && <p>{status}</p>}
         </form>
       </div>
-      <div>
+      <div className="flex flex-col gap-6 items-center m-10">
         <Image width={80} height={80} src="/images/Logo2.png" alt="yt" />
+        <div className="flex gap-10">
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+        </div>
+        <p className="font-extrabold">Montreal | Toronto | Miami</p>
+        <p className="font-bold">
+          Copyright © 2024 Blü Creative. All rights reserved.
+        </p>
       </div>
     </section>
   );

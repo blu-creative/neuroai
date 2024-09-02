@@ -1,7 +1,6 @@
 import First from "./components/first";
 import Second from "./components/second";
 import { useTranslation } from "@/hooks/useTranslation";
-import Form from "@/components/form";
 
 export default function GAE({ searchParams }) {
   const { locale } = searchParams;
@@ -13,7 +12,6 @@ export default function GAE({ searchParams }) {
   return (
     <main>
       <First translate={t} locale={lang} />
-      <Form />
       <Second />
     </main>
   );

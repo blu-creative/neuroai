@@ -1,66 +1,148 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
+
 import { useTranslation } from "@/hooks/useTranslation";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
-export default function Footer() {
+import { useState } from "react";
+
+export default function Form() {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [status, setStatus] = useState("");
   const searchParams = useSearchParams();
-  const lang = searchParams.get("locale") || "en";
-  const { t } = useTranslation(lang);
+  const { t } = useTranslation(searchParams.get("locale"));
+
+  const list = [
+    "industry-1",
+    "industry-2",
+    "industry-3",
+    "industry-4",
+    "industry-5",
+  ];
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        lastName,
+        email,
+        message,
+      }),
+    });
+
+    if (response.ok) {
+      setStatus("Email sent successfully!");
+    } else {
+      setStatus("Failed to send email.");
+    }
+  };
+
   return (
-    <footer className="bg-neutral-800 text-neutral-25 px-6 py-8 md:px-20 md:py-12">
-      <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
-        <div className="w-full md:w-[344px] text-center md:text-left">
-          <Link
-            href={`/${lang === "fr" ? "?locale=fr" : ""}`}
-            className="relative m-auto md:m-0 md:w-[42px] md:h-[42px] w-[42px] h-[42px] block"
-          >
-            <Image
-              src="/images/Logo.png"
-              fill
-              quality={100}
-              alt="Mitch's Iron & Metal Logo"
-            />
-          </Link>
-          <p className="text-xs md:text-lg my-8 md:max-w-80 md:block hidden">
-            3155 De Miniac Street Saint-Laurent, Montreal, QC H4S 1S9
+    <section data-aos="fade-up">
+      <div className="md:my-16 my-12 flex mx-6 flex-col md:flex-row justify-evenly items-center gap-6">
+        <div className="font-bold max-w-[452px] w-[452px] flex flex-col gap-10">
+          <h1 className="text-primary-900 text-6xl w-fit whitespace-nowrap">
+            Request a Demo
+          </h1>
+          <p className="text-neutral-700 text-justify text-xl font-CerebriSansPro">
+            For more information or to schedule a consultation, fill this form
+            or contact us at your convenience.
           </p>
+          <div className="flex gap-5">
+            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
+            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
+            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
+            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
+          </div>
         </div>
-        <ul
-          className="hidden md:flex flex-col md:flex-row gap-4 lg:gap-8 text-lg md:text-xl md:mt-0 text-center md:text-left"
-          data-aos="fade-up"
+        <form
+          onSubmit={handleSubmit}
+          className="bg-primary-500 font-CerebriSansPro p-6 md:p-12 pb-17 rounded-lg w-10/12 md:w-10/12 flex flex-col gap-6 items-center max-w-2xl font-bold"
         >
-          <li>
-            <Link href={`/${lang === "fr" ? "?locale=fr" : ""}`}>
-              {t("Home")}
-            </Link>
-          </li>
-          <li>
-            <Link href={`/what-we-buy${lang === "fr" ? "?locale=fr" : ""}`}>
-              {t("what_we_buy")}
-            </Link>
-          </li>
-          <li>
-            <Link href={`/about-us${lang === "fr" ? "?locale=fr" : ""}`}>
-              {t("about_us")}
-            </Link>
-          </li>
-          <li>
-            <Link href={`/get-an-estimate${lang === "fr" ? "?locale=fr" : ""}`}>
-              {t("Contact")}
-            </Link>
-          </li>
-        </ul>
+          <div className="flex flex-col md:flex-row items-center gap-6 w-full">
+            <input
+              placeholder={t("Name")}
+              className="outline-none p-4 grow w-full"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <input
+              placeholder={t("Company")}
+              className="outline-none p-4 grow w-full"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+          </div>
+          <input
+            placeholder={t("Email_Address")}
+            className="outline-none p-4 w-full"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            type="email"
+          />
+          <input
+            placeholder={t("Phone_Number")}
+            className="outline-none p-4 w-full"
+            type="tel"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
+          <div className="w-full relative">
+            <i className="icon-mim-chevron absolute text-primary-500 right-4 top-5 pointer-events-none" />
+            <select
+              className={`outline-none p-4 w-full appearance-none ${
+                message ? "" : "text-neutral-400"
+              }`}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+              value={message}
+            >
+              <option value="" disabled selected hidden>
+                Industry
+              </option>
+              {list.map((x) => (
+                <option className="text-neutral-900" key={x} value={x}>
+                  {x}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button
+            type="submit"
+            className="bg-primary-900 text-neutral-25 md:rounded-md md:px-8 md:py-4 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg self-start"
+          >
+            {t("get_a_quote")}
+          </button>
+          {status && <p>{status}</p>}
+        </form>
       </div>
-      <div className="flex justify-between md:flex-row flex-col">
-        <p className="text-xs md:text-lg text-center mt-6 md:text-left md:mt-0">
-          {t("Copyright")}
-        </p>
-        <p className="text-xs md:text-lg text-center mt-6 md:text-right md:mt-0">
-          {t("Designed")}
+      <div className="flex flex-col gap-6 items-center mx-4 my-28 font-CerebriSansPro">
+        <Image width={80} height={80} src="/images/Logo2.png" alt="yt" />
+        <div className="flex gap-10">
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+          <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
+        </div>
+        <p className="font-extrabold">Montreal | Toronto | Miami</p>
+        <p className="font-semibold">
+          Copyright © 2024 Blü Creative. All rights reserved.
         </p>
       </div>
-    </footer>
+    </section>
   );
 }
