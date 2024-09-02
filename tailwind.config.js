@@ -39,6 +39,10 @@ module.exports = {
         Exo: ["Exo"],
         CerebriSansPro: ["CerebriSansPro"],
       },
+      borderWidth: {
+        '3': '3px',
+      },
+
     },
     container: {
       center: true,
