@@ -1,6 +1,4 @@
 import First from "./home/first";
-import Second from "./home/second";
-import Third from "./home/third";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Home({ searchParams }) {
@@ -13,8 +11,6 @@ export default function Home({ searchParams }) {
   return (
     <main>
       <First translate={t} locale={lang} />
-      <Second translate={t} />
-      <Third translate={t} locale={lang} />
     </main>
   );
 }

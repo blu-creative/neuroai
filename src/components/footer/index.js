@@ -24,7 +24,13 @@ export default function Footer() {
         <Form />
       </div>
       <div className="flex flex-col gap-6 items-center mx-4 mt-20 font-CerebriSansPro">
-        <Image width={80} height={80} src="/images/Logo2.png" alt="yt" />
+        <Image
+          width={80}
+          height={80}
+          src="/images/Logo2.png"
+          alt="yt"
+          quality={100}
+        />
         <div className="flex gap-10">
           <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
           <div className="w-10 h-10 min-w-10 min-h-10 bg-neutral-300 rounded-full" />
