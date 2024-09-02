@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function First({ translate, locale }) {
+export default function First() {
   return (
-    <div className=" bg-cover ">
+    <div className=" bg-cover">
       <section className="flex flex-col items-center gap-12 py-16 px-8">
         <div className="flex justify-center px-4 md:px-0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[48px] gap-y-[22px] bg-mintcream w-full md:w-[80%] max-w-[80%]">
