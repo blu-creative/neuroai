@@ -29,7 +29,7 @@ export default function Scroll() {
     <div
       className={`flex items-center justify-center ${
         isTop ? "animate-bounce" : "animate-bounce"
-      } fixed w-9 h-9 rounded-full bg-primary-800 bottom-6 right-6 text-neutral-25 cursor-pointer`}
+      } fixed w-9 h-9 rounded-full bg-primary-500 bottom-6 right-6 text-neutral-25 cursor-pointer`}
       onClick={() => {
         const top = isTop ? 99999999 : 0;
         window.scrollTo({ top, behavior: "smooth" });
