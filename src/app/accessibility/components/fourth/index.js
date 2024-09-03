@@ -9,6 +9,24 @@ export default function Fourth() {
     triggerOnce: true,
     threshold: 0.5,
   });
+  const items = [
+    { label: "Low Contrast Text", percentage: 81 },
+    { label: "No Alternative Text", percentage: 54 },
+    { label: "Missing Form Input Labels", percentage: 48 },
+    { label: "Empty Links", percentage: 44 },
+    { label: "Empty Buttons", percentage: 28 },
+    { label: "Missing Document Language", percentage: 17 },
+  ];
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    if (inView) {
+      const updatedWidths = {};
+      items.forEach((item, index) => {
+        updatedWidths[index] = item.percentage;
+      });
+      setWidth(updatedWidths);
+    }
+  }, [inView, items]);
 
   return (
     <div className="flex flex-col items-center gap-12 py-16 px-8 font-CerebriSansPro bg-primary-900">
@@ -23,21 +41,7 @@ export default function Fourth() {
               Most Common WCAG Failures
             </span>
 
-            {[
-              { label: "Low Contrast Text", percentage: 81 },
-              { label: "No Alternative Text", percentage: 54 },
-              { label: "Missing Form Input Labels", percentage: 48 },
-              { label: "Empty Links", percentage: 44 },
-              { label: "Empty Buttons", percentage: 28 },
-              { label: "Missing Document Language", percentage: 17 },
-            ].map((task, index) => {
-              const [width, setWidth] = useState(0);
-              useEffect(() => {
-                if (inView) {
-                  setWidth(task.percentage);
-                }
-              }, [inView, task.percentage]);
-
+            {items.map((task, index) => {
               return (
                 <div
                   key={index}
@@ -46,7 +50,7 @@ export default function Fourth() {
                   <div
                     className="bg-primary-500 h-full flex items-center justify-start pl-2"
                     style={{
-                      width: `${width}%`,
+                      width: `${width[index] || 0}%`,
                       transition: "width 2.5s ease-out",
                     }}
                   >

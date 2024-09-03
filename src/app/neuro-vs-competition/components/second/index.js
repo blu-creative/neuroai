@@ -47,6 +47,7 @@ export default function Second() {
                 src={`/images/neuro-vs-competition/${sec.image}.png`}
                 fill
                 className="!relative"
+                alt="Img"
               />
             </div>
             {sec.descriptions.map((text) => (

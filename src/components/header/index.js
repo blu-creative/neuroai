@@ -63,6 +63,7 @@ export default function Header({ text }) {
             <div className="absolute left-60 -bottom-16 font-CerebriSansPro font-bold text-xl text-neutral-50 flex gap-10">
               {textList.map((text) => (
                 <Link
+                  key={text}
                   className="bg-primary-500 [&:nth-child(odd)]:bg-primary-800 rounded-xl"
                   href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}
                 >

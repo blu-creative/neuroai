@@ -50,7 +50,7 @@ export default function Third() {
             24 hours to check and correct any new content added. These
             corrections are added to the neurodiverse profiles your users have
             chosen or the personalized modifications they have created and are
-            stored in your end users' cookies. Our application is a SaaS
+            stored in your end users cookies. Our application is a SaaS
             application. This type of cloud application allows us to maintain
             the technological base and the generative artificial intelligence
             technology connected to our servers to keep your instance of the
@@ -132,18 +132,19 @@ export default function Third() {
           <div className="font-CerebriSansPro font-medium text-xl">
             The installation of our application on your website is intended to
             demonstrate that your organization has an accessibility program for
-            your website. You will find a note of your organization's policy
-            based on the adoption of our application to comply with
-            accessibility laws. This policy details in our "compliance status"
-            the various elements and technologies applied to your website, which
-            meets the Canadian Disabilities Act and provincial requirements, in
-            which the organization in question (you) must demonstrate that you
-            are making, have made, and continue to make the best possible effort
-            to have an accessible website for the neurodiverse community. In
-            case of a complaint, our team can provide reports that show your
-            site was covered by our accessibility program at the date of the
-            complaint. Therefore, if you think you are a victim of a complaint
-            abuse, you may consider adding recurring audits to your websites.
+            your website. You will find a note of your organization&apos;s
+            policy based on the adoption of our application to comply with
+            accessibility laws. This policy details in our &quot;compliance
+            status&quot; the various elements and technologies applied to your
+            website, which meets the Canadian Disabilities Act and provincial
+            requirements, in which the organization in question (you) must
+            demonstrate that you are making, have made, and continue to make the
+            best possible effort to have an accessible website for the
+            neurodiverse community. In case of a complaint, our team can provide
+            reports that show your site was covered by our accessibility program
+            at the date of the complaint. Therefore, if you think you are a
+            victim of a complaint abuse, you may consider adding recurring
+            audits to your websites.
           </div>
         </Accordion>
       </div>

@@ -23,7 +23,7 @@ export default function First({ translate }) {
             Implementing accessibility practices not only makes your website
             more inclusive but also enhances its SEO performance. Investing in
             Neuro has a dual benefit of reaching a broader audience and
-            improving your site's search engine visibility and rankings.
+            improving your site&apos;s search engine visibility and rankings.
           </h2>
 
           <ul className="list-disc list-inside marker:text-primary-500 text-xl font-bold">
