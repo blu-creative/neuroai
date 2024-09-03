@@ -2,6 +2,7 @@ import First from "./components/first";
 import Second from "./components/second";
 import Third from "./components/third";
 import Fourth from "./components/fourth";
+import Fifth from "./components/fifth";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function AU({ searchParams }) {
@@ -16,7 +17,8 @@ export default function AU({ searchParams }) {
       <First translate={t} locale={lang} />
       <Second translate={t} />
       <Third translate={t} />
-      <Fourth  />
+      <Fourth />
+      <Fifth />
     </main>
   );
 }
