@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Second() {
+export default function Second({translate , locale}) {
   return (
     <section className="flex justify-center gap-10 flex-col items-center text-center">
       <h1 className="text-6xl font-bold font-Exo" data-aos="fade-up">
@@ -13,12 +14,20 @@ export default function Second() {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </p>
-      <button
+
+      <Link
+        className="hidden md:flex"
         data-aos="fade-up"
-        className="bg-primary-500 text-neutral-50 w-fit px-4 py-1 rounded-lg font-medium text-xl"
+        href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
       >
-        Book Now
-      </button>
+        <button
+          data-aos="fade-up"
+          className="bg-primary-500 text-neutral-50 w-fit px-4 py-1 rounded-lg font-medium text-xl"
+        >
+                      {translate("book_a_demo")}
+        </button>
+      </Link>
+
       <Image
         data-aos="flip-left"
         width={743}

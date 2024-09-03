@@ -13,7 +13,7 @@ export default function AU({ searchParams }) {
   return (
     <main>
       <First translate={t} locale={lang} />
-      <Second translate={t} />
+      <Second translate={t}  locale={lang}/>
       <Third translate={t} />
     </main>
   );
