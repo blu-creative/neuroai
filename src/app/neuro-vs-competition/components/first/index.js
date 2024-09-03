@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const EqualWeb = [
   "Ensures compliance on paid version",
   "Maintenance requires additional services",
@@ -22,7 +24,7 @@ const NeuroAI = [
   "AI Remediation of site to WCAG Compliance within 48 hours of installation",
 ];
 
-export default function First() {
+export default function First({ locale }) {
   return (
     <section className="flex font-CerebriSansPro items-center justify-evenly my-16">
       <div
@@ -61,9 +63,15 @@ export default function First() {
           ))}
         </div>
         <div className="w-full my-5 text-center">
-          <button className="bg-primary-900 text-neutral-50 px-6 py-1 rounded-md font-bold text-xl">
-            Get Started
-          </button>
+          <Link
+           
+            data-aos="fade-up"
+            href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
+          >
+            <button className="bg-primary-900 text-neutral-50 px-6 py-1 rounded-md font-bold text-xl">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
       <div

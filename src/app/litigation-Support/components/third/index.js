@@ -9,7 +9,7 @@ export default function First({ translate }) {
             {translate("about_us_mission")}
           </p> */}
           <h1
-            className="text-primary-700 mb-8 mt-2.5 text-3xl md:text-5xl font-extrabold"
+            className="text-primary-700 mb-8 mt-2.5 text-3xl md:text-5xl font-bold"
             data-aos="fade-up"
           >
             {/* {translate("our_objective")} */}

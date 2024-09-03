@@ -11,24 +11,16 @@ const Us = [
   "All functionalities available for people who cannot use a mouse",
 ];
 
-const NeuroAI = [
-  "Compliance with WCAG 2.1, ADA, s508 & more",
-  "Re-scanning every 24 hours",
-  "Monitoring starting at 10.000 pages",
-  "Industry's highest rate of compliance through automation widget",
-  "AI Remediation of site to WCAG Compliance within 48 hours of installation",
-];
-
 export default function First({ translate, locale }) {
   return (
     <div className=" bg-cover ">
       <section className="flex flex-col items-center gap-12 py-16 px-8">
         <h1
-          className="md:text-6xl text-3xl max-w-3xl font-extrabold text-center"
+          className="md:text-6xl text-3xl max-w-3xl font-bolds text-center"
           data-aos="fade-up"
         >
           {/* {translate("about_us")} */}
-          <span className="text-primary-800">Disabilities Acts in the</span>
+          <span className="text-primary-900">Disabilities Acts in the</span>
           <br />
           <span className="text-primary-500">United States and Canada</span>
         </h1>

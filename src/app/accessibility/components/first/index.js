@@ -42,7 +42,7 @@ export default function First({ translate, locale }) {
         </div>
 
         <h1
-          className="md:text-6xl text-3xl max-w-2xl font-extrabold text-center"
+          className="md:text-6xl text-3xl max-w-2xl font-bold text-center"
           data-aos="fade-up"
         >
           {/* {translate("about_us")} */}

@@ -5,11 +5,11 @@ export default function First({ translate, locale }) {
     <div className=" bg-cover">
       <section className="flex flex-col items-center gap-12 py-16 px-8">
         <h1
-          className="md:text-6xl text-3xl max-w-2xl font-extrabold text-center"
+          className="md:text-6xl text-3xl max-w-2xl font-bold text-center"
           data-aos="fade-up"
         >
           {/* {translate("about_us")} */}
-          <span className="text-primary-800"> What Neuro </span>
+          <span className="text-primary-900"> What Neuro </span>
           <span className="text-primary-500"> brings to your website</span>
         </h1>
         <h2
