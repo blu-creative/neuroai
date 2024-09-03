@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const textList = [
   { text: "Compliant with CDA & AODA, based on WCAG Standards", icon: "world" },
   { text: "Extensive NeuroDiverse Profiles Included", icon: "hand" },
@@ -10,19 +12,35 @@ const textList = [
 ];
 
 const clientList = [
-  { text: "Compliant with CDA & AODA, based on WCAG Standards", icon: "world" },
-  { text: "Extensive NeuroDiverse Profiles Included", icon: "hand" },
-  { text: "Accessibility Widget Interface", icon: "full-screen" },
-  { text: "Daily Compliance Monitoring and Analysis", icon: "mag" },
   {
-    text: "Does not Collect Personal Identifiable Information",
-    icon: "shield",
+    text: "Compliant with CDA & AODA, based on WCAG Standards",
+    icon: "MonAvenir",
+    width: 166,
+    fade: "fade-up",
+  },
+  {
+    text: "Extensive NeuroDiverse Profiles Included",
+    icon: "Milo",
+    width: 203,
+    fade: "fade-down",
+  },
+  {
+    text: "Daily Compliance Monitoring and Analysis",
+    icon: "PointeClaire",
+    width: 133,
+    fade: "fade-up",
+  },
+  {
+    text: "Accessibility Widget Interface",
+    icon: "Perry",
+    width: 273,
+    fade: "fade-down",
   },
 ];
 
 export default function First({ translate, locale }) {
   return (
-    <section className="flex flex-col items-center gap-12 md:pt-36 pt-20 md:pb-24 pb-12">
+    <section className="flex flex-col items-center md:pt-36 pt-20  pb-2">
       <h1
         data-aos="fade-down"
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
@@ -59,9 +77,18 @@ export default function First({ translate, locale }) {
         <span>Some clients that use </span>
         <span className="text-primary-500">Neuro</span>
       </h1>
-      <div className="h-64 flex justify-evenly w-full bg-primary-900 items-center mt-10">
+      <div className="h-64 flex justify-evenly w-full bg-primary-900 items-center mt-12 sm:mt-10 sm:h-48">
         {clientList.map((cli) => (
-          <div key={cli.icon} className="w-28 h-28 rounded-full bg-neutral-0" />
+          <Image
+            data-aos={cli.fade}
+            key={cli.icon}
+            width={cli.width}
+            height={80}
+            src={`/images/home/${cli.icon}.png`}
+            alt="phone"
+            quality={100}
+            className="max-w-full h-auto sm:mx-2"
+          />
         ))}
       </div>
     </section>

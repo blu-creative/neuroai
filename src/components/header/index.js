@@ -3,6 +3,7 @@ import { useSearchParams, usePathname } from "next/navigation";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
 import Links from "@/components/links";
+import Link from "next/link";
 
 export default function Header({ text }) {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ export default function Header({ text }) {
     "/benefits": "Benefits for all users",
     "/neuro-vs-competition": "Why choose Neuro",
     "/fAQ": "Frequently Asked Questions",
-    "/litigation-Support": "Litigation Support",
+    // "/litigation-Support": "Litigation Support",
   };
   const isHome = pathname === "/";
   const searchParams = useSearchParams();
@@ -61,12 +62,17 @@ export default function Header({ text }) {
             </div>
             <div className="absolute left-60 -bottom-16 font-CerebriSansPro font-bold text-xl text-neutral-50 flex gap-10">
               {textList.map((text) => (
-                <div
-                  key={text}
-                  className={`w-44 h-32 min-w-44 min-h-32 flex items-center justify-center rounded-xl bg-primary-500 [&:nth-child(odd)]:bg-primary-800`}
+                <Link
+                  className="bg-primary-500 [&:nth-child(odd)]:bg-primary-800 rounded-xl"
+                  href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}
                 >
-                  <p className="text-center px-4">{text}</p>
-                </div>
+                  <div
+                    key={text}
+                    className={`w-44 h-32 min-w-44 min-h-32 flex items-center justify-center  `}
+                  >
+                    <p className="text-center px-4">{text}</p>
+                  </div>
+                </Link>
               ))}
             </div>
           </>

@@ -14,12 +14,6 @@ export default function Footer() {
             For more information or to schedule a consultation, fill this form
             or contact us at your convenience.
           </p>
-          <div className="flex gap-5">
-            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
-            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
-            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
-            <div className="w-11 h-11 min-w-11 min-h-11 rounded-full bg-primary-800" />
-          </div>
         </div>
         <Form />
       </div>

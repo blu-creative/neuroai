@@ -16,11 +16,12 @@ export default function Form() {
   const { t } = useTranslation(searchParams.get("locale"));
 
   const list = [
-    "industry-1",
-    "industry-2",
-    "industry-3",
-    "industry-4",
-    "industry-5",
+    "Government",
+    "Education",
+    "Institutional",
+    "Non-Profit",
+    "Corporate",
+    "Small & Medium Business",
   ];
 
   const handleSubmit = async (e) => {
@@ -105,9 +106,10 @@ export default function Form() {
       </div>
       <button
         type="submit"
-        className="bg-primary-900 text-neutral-25 md:rounded-md md:px-8 md:py-4 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg self-start"
+        className="bg-primary-900 text-neutral-25 md:rounded-md md:px-8 md:py-3 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg self-start"
       >
-        {t("get_a_quote")}
+        {/* {t("get_a_quote")} */}
+        Submit
       </button>
       {status && <p>{status}</p>}
     </form>
