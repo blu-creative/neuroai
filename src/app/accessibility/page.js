@@ -16,7 +16,7 @@ export default function AU({ searchParams }) {
       <First translate={t} locale={lang} />
       <Second translate={t} />
       <Third translate={t} />
-      <Fourth translate={t} />
+      <Fourth  />
     </main>
   );
 }
