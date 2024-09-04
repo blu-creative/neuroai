@@ -30,7 +30,8 @@ export default function Header({ text }) {
   ];
 
   return (
-    <header className="text-neutral-25 bg-gradient-to-b from-[#001549] to-[#090E1B]">
+    // <header className="text-neutral-25 bg-gradient-to-b from-[#001549] to-[#090E1B]">
+    <header className="text-neutral-25  bg-gradient-to-b from-[#001549] to-[#090E1B]">
       <Links locale={locale} />
       <div
         className={`flex items-center pt-28 pb-36 relative px-24
@@ -50,7 +51,7 @@ export default function Header({ text }) {
           <>
             <div className="absolute right-60 top-10">
               <div className="w-60 h-60 rounded-full bg-primary-900 opacity-90 absolute -top-20 right-40" />
-              <div className="h-[230px] w-[460px] bg-neutral-0 rounded-tl-full rounded-tr-full absolute bottom-16 -right-20" />
+              {/* <div className="h-[230px] w-[460px] bg-neutral-0 rounded-tl-full rounded-tr-full absolute bottom-16 -right-20" /> */}
               <div className="relative w-[272px] h-[570px]">
                 <Image
                   fill
@@ -60,7 +61,7 @@ export default function Header({ text }) {
                 />
               </div>
             </div>
-            <div className="absolute left-60 -bottom-16 font-CerebriSansPro font-bold text-xl text-neutral-50 flex gap-10">
+            <div className="absolute left-30 -bottom-16 font-CerebriSansPro font-bold text-xl text-neutral-50 flex gap-10">
               {textList.map((text) => (
                 <Link
                   key={text}
