@@ -16,7 +16,7 @@ export default function First({ translate, locale }) {
     <div className=" bg-cover ">
       <section className="flex flex-col items-center gap-12 py-16 px-8">
         <h1
-          className="md:text-6xl text-3xl max-w-3xl font-bolds text-center"
+          className="md:text-6xl text-3xl max-w-3xl font-bold text-center"
           data-aos="fade-up"
         >
           {/* {translate("about_us")} */}
