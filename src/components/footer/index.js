@@ -20,12 +20,12 @@ export default function Footer() {
       </div>
       <div className="bg-primary-800 pt-12 px-20 font-CerebriSansPro text-neutral-50 font-bold">
         <div className="flex justify-between items-start">
-          <div>
+          <Link href="/">
             <Image src="/images/footerLogo.png" width={200} height={60} />
             <button className="mt-12 bg-primary-900 text-xl px-4 py-2 rounded-lg">
               Book a Demo
             </button>
-          </div>
+          </Link>
           <div className="flex flex-col gap-3">
             <p className="text-xl">About Neuro</p>
             <Link className="font-semibold text-lg" href="/features">
@@ -73,7 +73,7 @@ export default function Footer() {
             </a>
             <a
               className="font-semibold text-lg+ flex items-center gap-2"
-              href="mailto:sales@blucreative.dev"
+              href="https://www.linkedin.com"
             >
               <i className="icon-mim-linedin" />
               {/* <span>sales@blucreative.dev</span> */}

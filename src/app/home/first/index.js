@@ -61,7 +61,11 @@ export default function First({ translate, locale }) {
       </h2>
       <div className="flex justify-evenly w-full my-20">
         {textList.map((text) => (
-          <div key={text.icon} className="text-center font-CerebriSansPro">
+          <div
+            key={text.icon}
+            className="text-center font-CerebriSansPro"
+            data-aos="flip-right"
+          >
             <i className={`icon-mim-${text.icon} text-primary-500 text-5xl`} />
             <p className="text-primary-900 text-center font-bold text-xl max-w-52 mt-5">
               {text.text}

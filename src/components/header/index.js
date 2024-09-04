@@ -61,15 +61,16 @@ export default function Header({ text }) {
               </div>
             </div>
             <div className="absolute left-60 -bottom-16 font-CerebriSansPro font-bold text-xl text-neutral-50 flex gap-10">
-              {textList.map((text) => (
+              {textList.map((text, i) => (
                 <Link
                   key={text}
                   className="bg-primary-500 [&:nth-child(odd)]:bg-primary-800 rounded-xl"
                   href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}
+                  data-aos={i % 2 ? "flip-right" : "flip-left"}
                 >
                   <div
                     key={text}
-                    className={`w-44 h-32 min-w-44 min-h-32 flex items-center justify-center  `}
+                    className="w-44 h-32 min-w-44 min-h-32 flex items-center justify-center"
                   >
                     <p className="text-center px-4">{text}</p>
                   </div>
