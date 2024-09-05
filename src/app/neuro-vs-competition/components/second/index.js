@@ -62,6 +62,7 @@ export default function Second() {
           </div>
         ))}
       </Accordion>
+      <div className="w-full border-t border-gray-300 -mt-[50px]"></div>
     </section>
   );
 }

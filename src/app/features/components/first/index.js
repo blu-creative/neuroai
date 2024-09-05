@@ -75,7 +75,7 @@ export default function First() {
               />
             </div>
           </section>
-          <div className="w-full border-t border-gray-300 my-4"></div>
+          <div className="w-full border-t border-gray-300 my-8"></div>
         </div>
       ))}
     </div>
