@@ -34,8 +34,8 @@ export default function Second() {
   return (
     <section className="m-8 flex flex-col items-center gap-8">
       <Accordion text="See Comparison Charts" simple>
-        {list.map((sec) => (
-          <div key={sec.title}>
+        {list.map((sec, index) => (
+          <div key={sec.title} className={index !== 3 ? `mb-16` : ""}>
             <p
               className="text-4xl font-bold text-primary-900 text-center"
               data-aos="fade-up"
@@ -51,7 +51,11 @@ export default function Second() {
               />
             </div>
             {sec.descriptions.map((text) => (
-              <p key={text} className="text-lg font-medium" data-aos="fade-up">
+              <p
+                key={text}
+                className="text-lg font-medium px-8"
+                data-aos="fade-up"
+              >
                 {text}
               </p>
             ))}

@@ -9,10 +9,9 @@ export default function Second({ translate, locale }) {
         <span className="text-primary-500">Remediation</span>
       </h1>
       <p className="font-bold text-xl max-w-xl" data-aos="fade-down">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        By leveraging Generative AI, Neuro.AI automatically monitors and
+        remediates websites to meet WCAG standards while creating personalized
+        user profiles tailored to individual cognitive and sensory needs.
       </p>
 
       <Link

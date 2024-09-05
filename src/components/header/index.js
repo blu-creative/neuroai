@@ -52,7 +52,7 @@ export default function Header({ text }) {
             <div className="absolute right-60 top-10">
               <div className="w-60 h-60 rounded-full bg-primary-900 opacity-90 absolute -top-20 right-40" />
               {/* <div className="h-[230px] w-[460px] bg-neutral-0 rounded-tl-full rounded-tr-full absolute bottom-16 -right-20" /> */}
-              <div className="relative w-[272px] h-[570px]">
+              <div className="relative w-[288px] h-[602px]">
                 <Image
                   fill
                   src="/images/header/Neuro-Menu.gif"

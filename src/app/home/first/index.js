@@ -33,7 +33,7 @@ const clientList = [
   {
     text: "Accessibility Widget Interface",
     icon: "Perry",
-    width: 273,
+    width: 326,
     fade: "fade-down",
   },
 ];

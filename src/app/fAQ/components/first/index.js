@@ -71,7 +71,7 @@ export default function Third() {
             <ul className=" font-medium text-xl mt-2 ">
               {list.map((text) => (
                 <li className="flex items-center gap-4 mb-2" key={text}>
-                  <div className="h-4 bg-primary-500 w-4 rounded-full" />
+                  {/* <div className="h-4 bg-primary-500 w-4 rounded-full" /> */}
                   <p>{text}</p>
                 </li>
               ))}
@@ -161,7 +161,7 @@ export default function Third() {
             <ul className=" font-medium text-xl mt-2 ">
               {list1.map((text) => (
                 <li className="flex items-center gap-4 mb-2" key={text}>
-                  <div className="h-4 bg-primary-500 w-4 rounded-full" />
+                  {/* <div className="h-4 bg-primary-500 w-4 rounded-full" /> */}
                   <p>{text}</p>
                 </li>
               ))}
