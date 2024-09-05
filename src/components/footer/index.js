@@ -10,7 +10,7 @@ export default function Footer() {
   const isContact = pathname === "/contact-us";
   const isNeuro = pathname === "/neuro-vs-competition";
   return (
-    <footer data-aos="fade-up" className={isNeuro ? "mt-4" : "m-24"}>
+    <footer data-aos="fade-up" className={isNeuro ? "mt-4" : "mt-24"}>
       <div className="md:my-16 my-12 flex mx-6 flex-col md:flex-row justify-evenly items-center gap-6">
         <div className="font-bold max-w-[452px] w-[452px] flex flex-col gap-10">
           <h1 className="text-primary-900 text-6xl w-fit whitespace-nowrap">
