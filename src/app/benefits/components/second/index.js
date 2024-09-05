@@ -20,8 +20,9 @@ export default function First({ translate }) {
                 Inclusion and Equity
               </h2>
               <p className="text-base font-bold">
-                Neuro provides accessible digital content, allowing people with
-                disabilities to have the same opportunities as everyone else.
+                Neuro.AI provides accessible digital content, allowing people
+                with disabilities to have the same opportunities as everyone
+                else.
               </p>
             </div>
           </div>
@@ -61,7 +62,7 @@ export default function First({ translate }) {
                 Minor Remediation Powered by AI
               </h2>
               <p className="text-base font-bold">
-                Neuro uses artificial intelligence to monitor, perform minor
+                Neuro.AI uses artificial intelligence to monitor, perform minor
                 corrections in real-time and suggest more significant updates as
                 needed.{" "}
               </p>

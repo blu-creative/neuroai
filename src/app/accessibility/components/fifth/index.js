@@ -14,7 +14,7 @@ const Us = [
 export default function First({ translate, locale }) {
   return (
     <div className=" bg-cover ">
-      <section className="flex flex-col items-center gap-12 py-16 px-8">
+      <section className="flex flex-col items-center gap-12 pt-16 px-8">
         <h1
           className="md:text-6xl text-3xl max-w-3xl font-bold text-center"
           data-aos="fade-up"
@@ -47,9 +47,12 @@ export default function First({ translate, locale }) {
               </div>
 
               <div className="w-[100%] p-8">
-                <ul className="font-CerebriSansPro font-medium text-xl">
+                <ul className=" font-bold text-xl">
                   {Canada.map((text) => (
-                    <li className="flex items-center gap-4 mb-2" key={text}>
+                    <li
+                      className="flex items-center gap-4 mb-2 text-neutral-800"
+                      key={text}
+                    >
                       <div className="h-3 bg-primary-500 w-4 rounded-full" />
                       <p>{text}</p>
                     </li>
@@ -67,8 +70,32 @@ export default function First({ translate, locale }) {
                 </h2>
               </div>
 
+              <div className="w-[100%] p-8 ">
+                <ul className=" font-bold text-xl ">
+                  {Us.map((text) => (
+                    <li
+                      className="flex items-center gap-4 mb-2 text-neutral-800"
+                      key={text}
+                    >
+                      <div className="h-4 bg-primary-500 w-4 rounded-full" />
+                      <p className="w-4/5">{text}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            {/* <div
+              data-aos="fade-button"
+              className="bg-neutral-50 flex-col items-center w-full max-w-[550px] rounded-xl"
+            >
+              <div className="flex-shrink-0 w-full  flex justify-center items-start bg-primary-700 rounded-t-xl py-5">
+                <h2 className="text-3xl font-bold w-4/5 mb-2 text-neutral-25 text-center">
+                  American Disabilities Act (ADA) 
+                </h2>
+              </div>
+
               <div className="w-[100%] p-8">
-                <ul className="font-CerebriSansPro font-medium text-xl">
+                <ul className=" font-medium text-xl">
                   {Us.map((text) => (
                     <li className="flex items-center gap-4 mb-2" key={text}>
                       <div className="h-3 bg-primary-500 w-4 rounded-full" />
@@ -77,7 +104,7 @@ export default function First({ translate, locale }) {
                   ))}
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

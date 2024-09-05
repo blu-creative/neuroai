@@ -13,7 +13,8 @@ export default function First({ translate }) {
             data-aos="fade-up"
           >
             {/* {translate("our_objective")} */}
-            How Neuro <span className="text-primary-500"> helps your SEO </span>
+            How Neuro.AI{" "}
+            <span className="text-primary-500"> helps your SEO </span>
           </h1>
           <h2
             className="text-neutral-800 text-base md:text-xl font-bold py-4"
@@ -22,7 +23,7 @@ export default function First({ translate }) {
             {/* {translate("objective_description")} */}
             Implementing accessibility practices not only makes your website
             more inclusive but also enhances its SEO performance. Investing in
-            Neuro has a dual benefit of reaching a broader audience and
+            Neuro.AI has a dual benefit of reaching a broader audience and
             improving your site&apos;s search engine visibility and rankings.
           </h2>
 

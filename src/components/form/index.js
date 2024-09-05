@@ -50,7 +50,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-primary-500 font-CerebriSansPro p-6 md:p-12 pb-17 rounded-lg w-10/12 md:w-10/12 flex flex-col gap-6 items-center max-w-2xl font-bold"
+      className="bg-primary-500  p-6 md:p-12 pb-17 rounded-lg w-10/12 md:w-10/12 flex flex-col gap-6 items-center max-w-2xl font-bold"
     >
       <div className="flex flex-col md:flex-row items-center gap-6 w-full">
         <input

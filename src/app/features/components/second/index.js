@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Second({translate , locale}) {
+export default function Second({ translate, locale }) {
   return (
-    <section className="flex justify-center gap-10 flex-col items-center text-center">
+    <section className="flex justify-center gap-10 flex-col items-center text-center mt-8">
       <h1 className="text-6xl font-bold font-Exo" data-aos="fade-up">
         <span className="text-primary-900">Automated </span>
         <span className="text-primary-500">Remediation</span>
@@ -22,9 +22,9 @@ export default function Second({translate , locale}) {
       >
         <button
           data-aos="fade-up"
-          className="bg-primary-500 text-neutral-50 w-fit px-4 py-1 rounded-lg font-medium text-xl"
+          className="bg-primary-500 text-neutral-50 w-fit px-5 py-1 rounded-lg font-medium text-xl"
         >
-                      {translate("book_a_demo")}
+          {translate("book_a_demo")}
         </button>
       </Link>
 

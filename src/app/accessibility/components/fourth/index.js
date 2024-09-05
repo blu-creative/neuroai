@@ -29,7 +29,7 @@ export default function Fourth() {
   }, [inView, items]);
 
   return (
-    <div className="flex flex-col items-center gap-12 py-16 px-8 font-CerebriSansPro bg-primary-900">
+    <div className="flex flex-col items-center gap-12 py-16 px-8  bg-primary-900">
       <section className="flex flex-col md:flex-row items-center justify-center w-[80%] mx-auto gap-24 md:gap-[100px]">
         <div
           className="flex justify-center items-center w-full md:w-[50%] h-[200px] md:h-[420px] bg-primary-900 rounded-xl py-6 px-12"

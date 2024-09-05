@@ -8,8 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   font-family: Exo;
+} */
+
+body {
+  font-family: Arial;
 }
 
 .list-box {

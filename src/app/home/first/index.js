@@ -40,32 +40,28 @@ const clientList = [
 
 export default function First({ translate, locale }) {
   return (
-    <section className="flex flex-col items-center md:pt-36 pt-20  pb-2">
+    <section className="flex flex-col items-center md:pt-48 pt-20  pb-2">
       <h1
         data-aos="fade-down"
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
       >
         {/* {translate("trusted_leader")} */}
         <span>What is </span>
-        <span className="text-primary-500">Neuro?</span>
+        <span className="text-primary-500">Neuro.AI?</span>
       </h1>
       <h2
         data-aos="fade-up"
-        className="md:text-xl text-base max-w-2xl font-bold text-center mt-10 font-CerebriSansPro"
+        className="md:text-xl text-base max-w-2xl font-bold text-center mt-10 "
       >
         {/* {translate("full_service_company")} */}
-        Neuro is a customized extension set up in your website that provides the
-        power to address accessibility requirements relating to the UI, design,
-        and readability of your website by enabling users to modify your site’s
-        design to meet their individual needs.
+        Neuro.AI is a customized extension set up in your website that provides
+        the power to address accessibility requirements relating to the UI,
+        design, and readability of your website by enabling users to modify your
+        site’s design to meet their individual needs.
       </h2>
       <div className="flex justify-evenly w-full my-20">
         {textList.map((text) => (
-          <div
-            key={text.icon}
-            className="text-center font-CerebriSansPro"
-            data-aos="flip-right"
-          >
+          <div key={text.icon} className="text-center " data-aos="flip-right">
             <i className={`icon-mim-${text.icon} text-primary-500 text-5xl`} />
             <p className="text-primary-900 text-center font-bold text-xl max-w-52 mt-5">
               {text.text}
@@ -79,9 +75,9 @@ export default function First({ translate, locale }) {
       >
         {/* {translate("trusted_leader")} */}
         <span>Some clients that use </span>
-        <span className="text-primary-500">Neuro</span>
+        <span className="text-primary-500">Neuro.AI</span>
       </h1>
-      <div className="h-64 flex justify-evenly w-full bg-primary-900 items-center mt-12 sm:mt-10 sm:h-48">
+      <div className="h-64 flex justify-evenly w-full bg-primary-900 items-center mt-14 sm:mt-10 sm:h-48">
         {clientList.map((cli) => (
           <Image
             data-aos={cli.fade}

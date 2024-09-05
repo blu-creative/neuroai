@@ -11,6 +11,8 @@ const list = [
 export default function Third() {
   return (
     <section className="m-20">
+      <div className="w-full border-t border-gray-300 mb-16"></div>
+
       <h1
         className="text-6xl font-bold font-Exo text-center mb-10"
         data-aos="fade-up"
@@ -19,7 +21,7 @@ export default function Third() {
         <span className="text-primary-500">Features</span>
       </h1>
       <Accordion text="Content">
-        <ul className="font-CerebriSansPro font-medium text-xl">
+        <ul className=" font-medium text-xl">
           {list.map((text) => (
             <li className="flex items-center gap-4 mb-2" key={text}>
               <div className="h-4 bg-primary-500 w-4 rounded-full" />
@@ -29,7 +31,7 @@ export default function Third() {
         </ul>
       </Accordion>
       <Accordion text="Display">
-        <ul className="list-disc list-inside marker:text-primary-500 font-CerebriSansPro font-medium text-xl">
+        <ul className="list-disc list-inside marker:text-primary-500  font-medium text-xl">
           {list.map((text) => (
             <li className="flex items-center gap-4 mb-2" key={text}>
               <div className="h-4 bg-primary-500 w-4 rounded-full" />
@@ -39,7 +41,7 @@ export default function Third() {
         </ul>
       </Accordion>
       <Accordion text="Orientation">
-        <ul className="list-disc list-inside marker:text-primary-500 marker:text-2xl font-CerebriSansPro font-medium text-xl">
+        <ul className="list-disc list-inside marker:text-primary-500 marker:text-2xl  font-medium text-xl">
           {list.map((text) => (
             <li className="flex items-center gap-4 mb-2" key={text}>
               <div className="h-4 bg-primary-500 w-4 rounded-full" />

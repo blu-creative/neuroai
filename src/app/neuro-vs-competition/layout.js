@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Blü Creative",
-  description: "Neuro vs Competition",
+  description: "Neuro.AI vs Competition",
 };
 
 export default function RootLayout({ children }) {

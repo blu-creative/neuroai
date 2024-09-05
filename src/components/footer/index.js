@@ -1,9 +1,13 @@
+"use client";
 import Image from "next/image";
 
 import Form from "@/components/form";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isContact = pathname === "/contact-us";
   return (
     <footer data-aos="fade-up" className="mt-24">
       <div className="md:my-16 my-12 flex mx-6 flex-col md:flex-row justify-evenly items-center gap-6">
@@ -11,23 +15,45 @@ export default function Footer() {
           <h1 className="text-primary-900 text-6xl w-fit whitespace-nowrap">
             Request a Demo
           </h1>
-          <p className="text-neutral-700 text-justify text-xl font-CerebriSansPro">
+          <p className="text-neutral-700 text-justify text-xl ">
             For more information or to schedule a consultation, fill this form
             or contact us at your convenience.
           </p>
+          {isContact ? (
+            <>
+              <a href="tel:5143337800">
+                <div className="text-justify text-xl ">
+                  <div className="flex items-start" data-aos="fade-up">
+                    <i className="icon-mim-phone block text-xl mr-3 font-black text-primary-900" />
+                    <p className="text-primary-900">(514) 333-7800</p>
+                  </div>
+                </div>
+              </a>
+              <a href="mailto:sales@blucreative.dev">
+                <div className="text-justify text-xl ">
+                  <div className="flex items-start" data-aos="fade-up">
+                    <i className="icon-mim-email block text-xl mr-3 font-black text-primary-900" />
+                    <p className="text-primary-900">sales@blucreative.dev</p>
+                  </div>
+                </div>
+              </a>
+            </>
+          ) : (
+            ""
+          )}
         </div>
         <Form />
       </div>
-      <div className="bg-primary-800 pt-12 px-20 font-CerebriSansPro text-neutral-50 font-bold">
+      <div className="bg-primary-800 pt-12 px-20  text-neutral-50 font-bold">
         <div className="flex justify-between items-start">
-          <Link href="/">
+          <Link href="/contact-us">
             <Image src="/images/footerLogo.png" width={200} height={60} />
             <button className="mt-12 bg-primary-900 text-xl px-4 py-2 rounded-lg">
               Book a Demo
             </button>
           </Link>
           <div className="flex flex-col gap-3">
-            <p className="text-xl">About Neuro</p>
+            <p className="text-xl">About Neuro.AI</p>
             <Link className="font-semibold text-lg" href="/features">
               Features
             </Link>
@@ -38,7 +64,7 @@ export default function Footer() {
               className="font-semibold text-lg"
               href="/neuro-vs-competition"
             >
-              Neuro vs Competition
+              Neuro.AI vs Competition
             </Link>
           </div>
           <div className="flex flex-col gap-3">
@@ -75,7 +101,7 @@ export default function Footer() {
               className="font-semibold text-lg+ flex items-center gap-2"
               href="https://www.linkedin.com"
             >
-              <i className="icon-mim-linedin" />
+              <i className="icon-mim-linedin text-xl" />
               {/* <span>sales@blucreative.dev</span> */}
             </a>
           </div>

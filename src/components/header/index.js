@@ -8,12 +8,12 @@ import Link from "next/link";
 export default function Header({ text }) {
   const pathname = usePathname();
   const list = {
-    "/": "Accessibility compliance and remediation at your fingertips",
+    "/": "Accessibility compliance and remediation at your fingertips with Neuro.AI",
     "/features": "Customize your journey",
     "/accessibility": "Learn about accessibility",
     "/contact-us": "Let’s address accessibility",
     "/benefits": "Benefits for all users",
-    "/neuro-vs-competition": "Why choose Neuro",
+    "/neuro-vs-competition": "Why choose Neuro.AI",
     "/fAQ": "Frequently Asked Questions",
     // "/litigation-Support": "Litigation Support",
   };
@@ -39,7 +39,7 @@ export default function Header({ text }) {
         `}
       >
         <h1
-          className={`md:text-7xl text-3xl max-w-2xl font-extrabold ${
+          className={`md:text-6xl text-3xl max-w-3xl font-bold ${
             isHome ? "text-left" : "text-center"
           }`}
           data-aos="fade-up"
@@ -61,7 +61,7 @@ export default function Header({ text }) {
                 />
               </div>
             </div>
-            <div className="absolute left-30 -bottom-16 font-CerebriSansPro font-bold text-xl text-neutral-50 flex gap-10">
+            <div className="absolute left-30 -bottom-16  font-bold text-xl text-neutral-50 flex gap-10">
               {textList.map((text, i) => (
                 <Link
                   key={text}
