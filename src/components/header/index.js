@@ -55,7 +55,7 @@ export default function Header({ text }) {
               <div className="relative w-[272px] h-[570px]">
                 <Image
                   fill
-                  src="/images/header/Phone.png"
+                  src="/images/header/Neuro-Menu.gif"
                   alt="phone"
                   quality={100}
                 />

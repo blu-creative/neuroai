@@ -34,7 +34,7 @@ export default function Second({ translate, locale }) {
         height={610}
         quality={100}
         alt="img"
-        src="/images/features/computer.png"
+        src="/images/features/Remediation.gif"
       />
     </section>
   );
