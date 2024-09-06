@@ -49,9 +49,9 @@ export default function Header({ text }) {
         </h1>
         {isHome && (
           <>
-            <div className="absolute right-0 md:right-60 top-48 md:top-10 md:left-auto left-1/2 transform md:translate-x-0 -translate-x-1/2">
+            <div className="flex justify-center absolute right-0 md:right-60 top-48 md:top-10 md:left-auto left-1/2 transform md:translate-x-0 -translate-x-1/2">
               <div className="md:block hidden w-60 h-60 rounded-full bg-primary-900 opacity-90 absolute -top-20 right-40" />
-              <div className="relative md:w-[288px] w-[144px] md:h-[602px] h-[300px]">
+              <div className=" relative md:w-[288px] w-[144px] md:h-[602px] h-[300px]">
                 <Image
                   fill
                   src="/images/header/Neuro-Menu.gif"
