@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function First({ translate }) {
   return (
     <div className="w-full flex justify-center my-20 px-2">
-      <div className="flex flex-col md:flex-row justify-center md:justify-around md:gap-40 gap-12 items-center">
+      <div className="flex flex-col lg:flex-row justify-center lg:justify-around xl:gap-40 lg:gap-32 gap-12 items-center lg:px-4">
         <div className="max-w-xl text-center md:text-left mb-8 md:mb-0">
           {/* <p className="text-neutral-500 text-xl font-bold" data-aos="fade-up">
             {translate("about_us_mission")}

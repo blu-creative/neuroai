@@ -26,7 +26,7 @@ const NeuroAI = [
 
 export default function First({ locale }) {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-evenly my-16">
+    <section className="flex flex-col lg:flex-row items-center justify-evenly my-16">
       <div
         className="bg-neutral-50 rounded-lg px-10 py-20 w-full md:w-md"
         data-aos="fade-down"

@@ -4,7 +4,7 @@ export default function First({ translate }) {
   return (
     <section>
       <div className="flex justify-center px-4 md:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-[40px] gap-y-[22px] bg-mintcream w-full md:w-[80%] max-w-[80%]">
+        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-x-[40px] gap-y-[22px] bg-mintcream w-full md:w-[80%] max-w-[80%]">
           <div
             data-aos="fade-button"
             className="flex flex-col items-center justify-center w-full max-w-[274px] h-[188px] rounded-xl"

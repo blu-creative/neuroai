@@ -30,9 +30,9 @@ export default function Fourth() {
 
   return (
     <div className="flex flex-col items-center gap-12 py-16 px-8 bg-primary-900">
-      <section className="flex flex-col md:flex-row items-center justify-center w-full md:w-[80%] mx-auto gap-12 md:gap-[100px]">
+      <section className="flex flex-col lg:flex-row items-center justify-center w-full lg:w-[80%] mx-auto gap-12 md:gap-[100px]">
         <div
-          className="flex flex-col items-center w-full md:w-[50%] h-auto md:h-[420px] bg-primary-900 rounded-xl py-6 px-8 md:px-12"
+          className="flex flex-col items-center w-full md:w-[50%] lg:w-full h-auto md:h-[420px] bg-primary-900 rounded-xl py-6 px-8 md:px-12"
           data-aos="flip-left"
           ref={ref}
         >
@@ -73,9 +73,9 @@ export default function Fourth() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-7 w-full md:w-[50%] text-neutral-50">
+        <div className="flex flex-col gap-7 w-full md:w-[50%] lg:w-full text-neutral-50">
           <h1
-            className="text-3xl md:text-6xl font-bold font-Exo text-center"
+            className="text-3xl md:text-6xl lg:text-3xl font-bold font-Exo text-center"
             data-aos="fade-up"
           >
             Web Content
