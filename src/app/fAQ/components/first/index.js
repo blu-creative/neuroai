@@ -24,8 +24,8 @@ export default function Third() {
   return (
     <section className="m-20">
       <h1
-        className="text-6xl font-bold font-Exo text-center mb-10"
-        data-aos="fade-up"
+        className="md:text-6xl text-3xl font-bold font-Exo text-center mb-10"
+        data-aos="fade-left"
       >
         <span className="text-primary-900">How can we help? </span>
       </h1>

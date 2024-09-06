@@ -32,18 +32,18 @@ const list2 = [
 
 export default function Third() {
   return (
-    <section className="m-20 mt-4 font-Exo ">
+    <section className="md:m-20 my-20 mt-4 font-Exo ">
       <div className="w-full border-t border-gray-300 mb-16"></div>
 
       <h1
-        className="text-6xl font-bold font-Exo text-center mb-10"
+        className="md:text-6xl text-4xl font-bold font-Exo text-center mb-10"
         data-aos="fade-up"
       >
         <span className="text-primary-900">See all of our </span>
         <span className="text-primary-500">Features</span>
       </h1>
       <div className="w-full flex justify-center ">
-        <div className="w-3/4">
+        <div className="md:w-3/4 w-full md:px-0 px-4">
           <Accordion text="Content">
             <ul className=" font-medium text-xl">
               {list.map((text) => (

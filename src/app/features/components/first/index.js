@@ -41,16 +41,16 @@ const textList = [
 
 export default function First() {
   return (
-    <div className="flex flex-col items-center gap-0 py-2 px-8">
+    <div className="flex flex-col items-center gap-0 py-2 px-8 lg:pt-0 pt-10">
       {textList.map((text, index) => (
         <div key={index}>
           <section
             key={index}
-            className="flex flex-col md:flex-row md:justify-center gap-10 items-center md:[&:nth-child(even)]:flex-row-reverse"
+            className="flex flex-col lg:flex-row md:justify-center gap-10 items-center md:[&:nth-child(even)]:flex-row-reverse"
           >
             <div className="flex flex-col gap-7">
               <h1
-                className="text-3xl md:text-5xl font-bold font-Exo"
+                className=" md:text-5xl text-2xl font-bold font-Exo"
                 data-aos="fade-up"
               >
                 <p className="text-primary-500">{text.first}</p>
