@@ -49,7 +49,7 @@ const MobileMenu = ({ locale = "en" }) => {
   };
 
   return (
-    <nav className="md:h-[140px] h-[80px] flex px-14 items-center justify-between ">
+    <nav className="lg:h-[140px] h-[80px] flex px-14 items-center justify-between ">
       <Link
         href={`/${locale === "en" ? "" : "?locale=fr"}`}
         className="relative md:w-[42px] md:h-[42px] w-[42px] h-[42px]"
@@ -62,7 +62,7 @@ const MobileMenu = ({ locale = "en" }) => {
         />
       </Link>
       {/* Hamburger Menu Icon for Mobile */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <button
           onClick={toggleMenu}
           className="text-3xl focus:outline-none relative"
@@ -73,9 +73,9 @@ const MobileMenu = ({ locale = "en" }) => {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 w-3/4 bg-neutral-800 text-neutral-25 h-full z-50 transform ${
+        className={`fixed top-0 right-0 w-3/4 bg-gradient-to-b from-[#3366ff] to-[#090E1B]  text-neutral-25 bg-primary-500 h-full z-50 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out md:hidden`}
+        } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div className="flex justify-end p-6">
           <button
@@ -86,6 +86,16 @@ const MobileMenu = ({ locale = "en" }) => {
           </button>
         </div>
         <ul className="flex flex-col items-center gap-6 mt-20">
+          <div className="flex flex-col items-center lg:items-start">
+            <Link href="/">
+              <Image src="/images/footerLogo.png" width={200} height={60} />
+            </Link>
+            <Link href="/contact-us">
+              <button className="mt-12 bg-primary-900 text-xl px-4 py-2 rounded-lg lg:mt-5 lg:ml-4">
+                Book a Demo
+              </button>
+            </Link>
+          </div>
           <li>
             <Link
               href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}
@@ -149,7 +159,7 @@ const MobileMenu = ({ locale = "en" }) => {
         </ul>
       </div>
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-8 text-xl items-center">
+      <ul className="hidden lg:flex gap-8 text-xl items-center">
         <li>
           <Link href={`/benefits${locale === "en" ? "" : "?locale=fr"}`}>
             {t("Benefits")}
@@ -196,7 +206,7 @@ const MobileMenu = ({ locale = "en" }) => {
         </li> */}
       </ul>
       <Link
-        className="hidden md:flex"
+        className="hidden lg:flex"
         data-aos="fade-up"
         href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
       >

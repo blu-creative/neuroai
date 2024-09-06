@@ -30,28 +30,28 @@ export default function Header({ text }) {
   ];
 
   return (
-    // <header className="text-neutral-25 bg-gradient-to-b from-[#001549] to-[#090E1B]">
-    <header className="text-neutral-25  bg-gradient-to-b from-[#001549] to-[#090E1B]">
+    <header className="text-neutral-25 bg-gradient-to-b from-[#001549] to-[#090E1B]">
       <Links locale={locale} />
       <div
-        className={`flex items-center md:pt-28 pt-4 pb-36 relative px-24
-        ${isHome ? "justify-start" : "justify-center"}
-        `}
+        className={`flex items-center xl:pt-28 pt-4 pb-36 relative px-24
+    ${isHome ? "xl:justify-start justify-center" : "justify-center"}
+    `}
       >
         <h1
-          className={`md:text-6xl text-2xl max-w-3xl font-bold ${
-            isHome ? "md:text-left text-center" : "text-center"
+          className={`lg:text-4xl xl:text-6xl text-2xl max-w-3xl font-bold ${
+            isHome
+              ? "lg:text-4xl xl:text-left lg:text-center text-center"
+              : "text-center"
           }`}
           data-aos="fade-up"
         >
-          {/* {t("customize-your-journey")} */}
           {list[pathname] || "Customize your journey"}
         </h1>
         {isHome && (
           <>
-            <div className="flex justify-center absolute right-0 md:right-60 top-48 md:top-10 md:left-auto left-1/2 transform md:translate-x-0 -translate-x-1/2">
-              <div className="md:block hidden w-60 h-60 rounded-full bg-primary-900 opacity-90 absolute -top-20 right-40" />
-              <div className=" relative md:w-[288px] w-[144px] md:h-[602px] h-[300px]">
+            <div className="flex justify-center absolute right-0 xl:right-60 top-48 xl:top-10 lg:top-32 md:top-24 sm:top-24 xl:left-auto left-1/2 transform xl:translate-x-0 -translate-x-1/2">
+              <div className="xl:block hidden w-60 h-60 rounded-full bg-primary-900 opacity-90 absolute -top-20 right-40" />
+              <div className="relative  xl:w-[288px] w-[144px] xl:h-[602px] h-[300px]   lg:w-[192px] lg:h-[401px]">
                 <Image
                   fill
                   src="/images/header/Neuro-Menu.gif"
@@ -61,7 +61,7 @@ export default function Header({ text }) {
               </div>
             </div>
 
-            <div className="absolute left-30 -bottom-16  font-bold text-xl text-neutral-50 md:flex hidden gap-10">
+            <div className="absolute left-30 -bottom-16 font-bold text-xl text-neutral-50 xl:flex hidden gap-10">
               {textList.map((text, i) => (
                 <Link
                   key={text}

@@ -40,7 +40,7 @@ const clientList = [
 
 export default function First({ translate, locale }) {
   return (
-    <section className="flex flex-col items-center md:pt-48 pt-48  pb-2">
+    <section className="flex flex-col items-center md:pt-48 lg:pt-80 pt-48  pb-2">
       <h1
         data-aos="fade-down"
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
@@ -92,9 +92,9 @@ export default function First({ translate, locale }) {
         <span>Some clients that use </span>
         <span className="text-primary-500">Neuro.AI</span>
       </h1>
-      <div className="flex flex-col sm:flex-row justify-evenly w-full bg-primary-900 items-center mt-14 sm:mt-10 h-auto sm:h-48">
+      <div className="flex flex-col lg:flex-row  justify-evenly w-full bg-primary-900 items-center mt-14 sm:mt-10 h-auto sm:h-52 md:h-[30rem]">
         {clientList.map((cli) => (
-          <div key={cli.icon} className="flex-shrink-0 mb-4 sm:mb-0">
+          <div key={cli.icon} className="flex-shrink-0 mb-4 sm:mb-0 md:py-4">
             <Image
               data-aos={cli.fade}
               width={cli.width}
