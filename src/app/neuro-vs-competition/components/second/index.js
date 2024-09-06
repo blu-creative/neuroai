@@ -32,28 +32,34 @@ const list = [
 
 export default function Second() {
   return (
-    <section className="m-8 flex flex-col items-center gap-8">
+    <section className="md:m-8 m-0 flex flex-col items-center gap-8">
       <Accordion text="See Comparison Charts" simple>
         {list.map((sec, index) => (
-          <div key={sec.title} className={index !== 3 ? `mb-16` : ""}>
+          <div
+            key={sec.title}
+            className={`w-full ${index !== 3 ? "mb-16" : ""}`}
+          >
             <p
               className="text-4xl font-bold text-primary-900 text-center"
               data-aos="fade-up"
             >
               {sec.title}
             </p>
-            <div className="w-full p-8 max-w-7xl" data-aos="flip-right">
+            <div
+              className="w-full p-4 md:p-8 max-w-7xl mx-auto"
+              data-aos="flip-right"
+            >
               <Image
                 src={`/images/neuro-vs-competition/${sec.image}.png`}
                 fill
-                className="!relative"
+                className="!relative w-full h-auto"
                 alt="Img"
               />
             </div>
             {sec.descriptions.map((text) => (
               <p
                 key={text}
-                className="text-lg font-medium px-8"
+                className="text-lg font-medium px-4 md:px-8"
                 data-aos="fade-up"
               >
                 {text}

@@ -29,10 +29,10 @@ export default function Fourth() {
   }, [inView, items]);
 
   return (
-    <div className="flex flex-col items-center gap-12 py-16 px-8  bg-primary-900">
-      <section className="flex flex-col md:flex-row items-center justify-center w-[80%] mx-auto gap-24 md:gap-[100px]">
+    <div className="flex flex-col items-center gap-12 py-16 px-8 bg-primary-900">
+      <section className="flex flex-col md:flex-row items-center justify-center w-full md:w-[80%] mx-auto gap-12 md:gap-[100px]">
         <div
-          className="flex justify-center items-center w-full md:w-[50%] h-[200px] md:h-[420px] bg-primary-900 rounded-xl py-6 px-12"
+          className="flex flex-col items-center w-full md:w-[50%] h-auto md:h-[420px] bg-primary-900 rounded-xl py-6 px-8 md:px-12"
           data-aos="flip-left"
           ref={ref}
         >
@@ -45,7 +45,7 @@ export default function Fourth() {
               return (
                 <div
                   key={index}
-                  className="flex items-center w-full mb-0.5 h-[40px] bg-primary-900 rounded-md border-3 border-primary-500 overflow-hidden"
+                  className="flex items-center w-full mb-2 h-[40px] bg-primary-900 rounded-md border-3 border-primary-500 overflow-hidden"
                 >
                   <div
                     className="bg-primary-500 h-full flex items-center justify-start pl-2"
@@ -63,7 +63,7 @@ export default function Fourth() {
                       %
                     </span>
 
-                    <span className="ml-[40px] text-sm font-bold text-neutral-50 whitespace-nowrap">
+                    <span className="ml-4 text-sm font-bold text-neutral-50 whitespace-nowrap">
                       {task.label}
                     </span>
                   </div>
@@ -75,14 +75,14 @@ export default function Fourth() {
 
         <div className="flex flex-col gap-7 w-full md:w-[50%] text-neutral-50">
           <h1
-            className="text-3xl md:text-6xl font-bold font-Exo "
+            className="text-3xl md:text-6xl font-bold font-Exo text-center"
             data-aos="fade-up"
           >
             Web Content
             <span className=""> Accessibility</span> Guidelines
           </h1>
           <p
-            className="font-bold text-base md:text-xl max-w-xl"
+            className="font-bold text-base md:text-xl max-w-xl text-center"
             data-aos="fade-down"
           >
             The Web Content Accessibility Guidelines (WCAG) are technical

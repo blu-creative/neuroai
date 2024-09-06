@@ -17,7 +17,7 @@ export default function First({ translate }) {
             <span className="text-primary-900"> and Neurodiversity </span>
           </h1>
           <h2
-            className="text-neutral-800 text-base md:text-xl font-bold py-4"
+            className="text-neutral-800 text-base md:text-xl font-bold md:py-4 md:px-0 px-4"
             data-aos="fade-up"
           >
             {/* {translate("objective_description")} */}A disability is any

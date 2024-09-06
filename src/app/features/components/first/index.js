@@ -41,36 +41,41 @@ const textList = [
 
 export default function First() {
   return (
-    <div className="flex flex-col items-center gap-0 py-2 px-8 ">
+    <div className="flex flex-col items-center gap-0 py-2 px-8">
       {textList.map((text, index) => (
         <div key={index}>
-          {" "}
           <section
             key={index}
-            className="flex justify-center gap-10 flex-row [&:nth-child(even)]:flex-row-reverse items-center"
+            className="flex flex-col md:flex-row md:justify-center gap-10 items-center md:[&:nth-child(even)]:flex-row-reverse"
           >
             <div className="flex flex-col gap-7">
-              <h1 className="text-5xl font-bold font-Exo" data-aos="fade-up">
+              <h1
+                className="text-3xl md:text-5xl font-bold font-Exo"
+                data-aos="fade-up"
+              >
                 <p className="text-primary-500">{text.first}</p>
                 <p className="text-primary-900">{text.second}</p>
               </h1>
-              <p className="font-bold text-xl max-w-xl" data-aos="fade-down">
+              <p
+                className="font-bold text-lg md:text-xl max-w-xs md:max-w-xl"
+                data-aos="fade-down"
+              >
                 {text.description}
               </p>
               <button
                 data-aos="fade-up"
-                className="bg-primary-500 text-neutral-50 w-fit px-5 py-1 rounded-lg font-medium text-xl"
+                className="bg-primary-500 text-neutral-50 w-fit px-4 py-2 rounded-lg font-medium text-lg md:text-xl"
               >
                 Learn More
               </button>
             </div>
-            <div className="relative w-[500px] h-[420px]">
+            <div className="relative w-full md:w-[500px] h-[250px] md:h-[420px]">
               <Image
                 data-aos="flip-left"
-                className="w-[500px] h-[420px]"
+                className="w-full h-full object-cover"
                 fill
                 quality={100}
-                alt={text.img} // Make alt text dynamic
+                alt={text.img}
                 src={`/images/features/${text.img}`}
               />
             </div>

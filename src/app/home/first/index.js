@@ -40,7 +40,7 @@ const clientList = [
 
 export default function First({ translate, locale }) {
   return (
-    <section className="flex flex-col items-center md:pt-48 pt-20  pb-2">
+    <section className="flex flex-col items-center md:pt-48 pt-48  pb-2">
       <h1
         data-aos="fade-down"
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
@@ -51,7 +51,7 @@ export default function First({ translate, locale }) {
       </h1>
       <h2
         data-aos="fade-up"
-        className="md:text-xl text-base max-w-2xl font-bold text-center mt-10 "
+        className="md:text-xl text-base max-w-2xl font-bold text-center mt-10 md:mx-0 mx-5"
       >
         {/* {translate("full_service_company")} */}
         Neuro.AI is a customized extension set up in your website that provides
@@ -59,7 +59,7 @@ export default function First({ translate, locale }) {
         design, and readability of your website by enabling users to modify your
         site’s design to meet their individual needs.
       </h2>
-      <div className="flex justify-evenly w-full my-20">
+      {/* <div className="flex justify-evenly w-full my-20">
         {textList.map((text) => (
           <div key={text.icon} className="text-center " data-aos="flip-right">
             <i className={`icon-mim-${text.icon} text-primary-500 text-5xl`} />
@@ -68,7 +68,22 @@ export default function First({ translate, locale }) {
             </p>
           </div>
         ))}
+      </div> */}
+      <div className="flex flex-wrap justify-evenly w-full my-20">
+        {textList.map((text) => (
+          <div
+            key={text.icon}
+            className="text-center mb-8 md:mb-0"
+            data-aos="flip-right"
+          >
+            <i className={`icon-mim-${text.icon} text-primary-500 text-5xl`} />
+            <p className="text-primary-900 text-center font-bold text-xl max-w-xs md:max-w-52 mt-5">
+              {text.text}
+            </p>
+          </div>
+        ))}
       </div>
+
       <h1
         data-aos="fade-down"
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
@@ -77,18 +92,19 @@ export default function First({ translate, locale }) {
         <span>Some clients that use </span>
         <span className="text-primary-500">Neuro.AI</span>
       </h1>
-      <div className="h-64 flex justify-evenly w-full bg-primary-900 items-center mt-14 sm:mt-10 sm:h-48">
+      <div className="flex flex-col sm:flex-row justify-evenly w-full bg-primary-900 items-center mt-14 sm:mt-10 h-auto sm:h-48">
         {clientList.map((cli) => (
-          <Image
-            data-aos={cli.fade}
-            key={cli.icon}
-            width={cli.width}
-            height={80}
-            src={`/images/home/${cli.icon}.png`}
-            alt="phone"
-            quality={100}
-            className="max-w-full h-auto sm:mx-2"
-          />
+          <div key={cli.icon} className="flex-shrink-0 mb-4 sm:mb-0">
+            <Image
+              data-aos={cli.fade}
+              width={cli.width}
+              height={80}
+              src={`/images/home/${cli.icon}.png`}
+              alt={cli.text}
+              quality={100}
+              className="max-w-full h-auto sm:mx-2 md:mb-0 mb-2"
+            />
+          </div>
         ))}
       </div>
     </section>

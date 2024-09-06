@@ -26,9 +26,9 @@ const NeuroAI = [
 
 export default function First({ locale }) {
   return (
-    <section className="flex  items-center justify-evenly my-16">
+    <section className="flex flex-col md:flex-row items-center justify-evenly my-16">
       <div
-        className="bg-neutral-50 rounded-lg px-10 py-20 w-md"
+        className="bg-neutral-50 rounded-lg px-10 py-20 w-full md:w-md"
         data-aos="fade-down"
       >
         <h2 className="font-bold text-5xl text-primary-900 text-center pb-10 font-Exo">
@@ -36,7 +36,7 @@ export default function First({ locale }) {
         </h2>
         <div className="flex flex-col gap-12">
           {EqualWeb.map((text) => (
-            <div className="flex gap-5" key={text}>
+            <div className="flex gap-5 items-start" key={text}>
               <div className="w-7 h-7 min-w-7 min-h-7 rounded-full bg-primary-900 flex items-center justify-center">
                 <i className="icon-mim-close block text-neutral-50 text-base" />
               </div>
@@ -46,7 +46,7 @@ export default function First({ locale }) {
         </div>
       </div>
       <div
-        className="bg-primary-500 text-neutral-50 rounded-lg px-10 py-20 w-md"
+        className="bg-primary-500 text-neutral-50 rounded-lg px-10 py-20 w-full md:w-md"
         data-aos="fade-up"
       >
         <h2 className="font-bold text-5xl text-center pb-10 font-Exo">
@@ -54,7 +54,7 @@ export default function First({ locale }) {
         </h2>
         <div className="flex flex-col gap-12">
           {NeuroAI.map((text) => (
-            <div className="flex gap-5" key={text}>
+            <div className="flex gap-5 items-start" key={text}>
               <div className="w-7 h-7 min-w-7 min-h-7 rounded-full bg-primary-900 flex items-center justify-center">
                 <i className="icon-mim-check block text-neutral-50 text-base" />
               </div>
@@ -74,7 +74,7 @@ export default function First({ locale }) {
         </div>
       </div>
       <div
-        className="bg-neutral-50 rounded-lg px-10 py-20 w-md"
+        className="bg-neutral-50 rounded-lg px-10 py-20 w-full md:w-md"
         data-aos="fade-down"
       >
         <h2 className="font-bold text-5xl text-primary-900 text-center pb-10 font-Exo">
@@ -82,7 +82,7 @@ export default function First({ locale }) {
         </h2>
         <div className="flex flex-col gap-12">
           {Userway.map((text) => (
-            <div className="flex gap-5" key={text}>
+            <div className="flex gap-5 items-start" key={text}>
               <div className="w-7 h-7 min-w-7 min-h-7 rounded-full bg-primary-900 flex items-center justify-center">
                 <i className="icon-mim-close block text-neutral-50 text-base" />
               </div>

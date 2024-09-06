@@ -49,7 +49,7 @@ const MobileMenu = ({ locale = "en" }) => {
   };
 
   return (
-    <nav className="h-[140px] flex px-14 items-center justify-between ">
+    <nav className="md:h-[140px] h-[80px] flex px-14 items-center justify-between ">
       <Link
         href={`/${locale === "en" ? "" : "?locale=fr"}`}
         className="relative md:w-[42px] md:h-[42px] w-[42px] h-[42px]"
