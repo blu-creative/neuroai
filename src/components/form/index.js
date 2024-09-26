@@ -237,6 +237,8 @@ export default function Form() {
       }),
     });
 
+    console.log(response);
+
     if (response.ok) {
       setStatus("Email sent successfully!");
       setName("");

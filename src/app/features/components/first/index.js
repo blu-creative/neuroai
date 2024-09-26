@@ -77,6 +77,7 @@ export default function First() {
                 quality={100}
                 alt={text.img}
                 src={`/images/features/${text.img}`}
+              
               />
             </div>
           </section>
