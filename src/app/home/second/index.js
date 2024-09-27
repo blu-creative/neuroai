@@ -3,30 +3,6 @@
 import Link from "next/link";
 import BlogPreview from "@/components/blog-preview";
 
-// const blogList = [
-//   {
-//     title: "Title of the Blog Post",
-//     documentId: "documentId",
-//     minute: 5,
-//     src: "/images/blogs/blog1.png",
-//     description: "Brief description / keywords about the Blog Post",
-//   },
-//   {
-//     title: "Title of the Blog Post",
-//     documentId: "11",
-//     minute: 8,
-//     src: "/images/blogs/blog2.png",
-//     description: "Brief description / keywords about the Blog Post",
-//   },
-//   {
-//     title: "Title of the Blog Post",
-//     documentId: "12",
-//     minute: 11,
-//     src: "/images/blogs/blog3.png",
-//     description: "Brief description / keywords about the Blog Post",
-//   },
-// ];
-
 export default function Second({ posts }) {
   return (
     <section className="flex flex-col items-center md:pt-6 lg:pt-10 pt-6 pb-2">

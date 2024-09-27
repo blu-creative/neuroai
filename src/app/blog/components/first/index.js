@@ -11,7 +11,7 @@ export default function First({ big, latests, blogList }) {
           {latests.map((blog, index) => (
             <div
               data-aos={`fade-${index % 2 === 1 ? "up" : "down"}`}
-              key={blog.id}
+              key={blog.documentId}
               className="w-fit"
             >
               <BlogPreview {...blog} size="small" />
@@ -32,7 +32,7 @@ export default function First({ big, latests, blogList }) {
             className="w-fit"
             data-aos={`fade-${index % 2 === 0 ? "up" : "down"}`}
             data-aos-delay={`${(index % 3) * 100}`}
-            key={blog.id}
+            key={blog.documentId}
           >
             <BlogPreview {...blog} />
           </div>
