@@ -27,10 +27,10 @@ const blogList = [
 
 export default function Second() {
   return (
-    <section className="flex flex-col items-center md:pt-6 lg:pt-10 pt-6  pb-2">
+    <section className="flex flex-col items-center md:pt-6 lg:pt-10 pt-6 pb-2">
       <h1
         data-aos="fade-down"
-        className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
+        className="md:text-6xl text-3xl font-bold text-center text-primary-900 font-Exo"
       >
         <span>Check our latest </span>
         <span className="text-primary-500">blog posts</span>

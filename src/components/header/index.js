@@ -15,6 +15,7 @@ export default function Header({ text }) {
     "/benefits": "Benefits for all users",
     "/neuro-vs-competition": "Why choose Neuro.AI",
     "/fAQ": "Frequently Asked Questions",
+    "/blog": "Check our blog posts",
     // "/litigation-Support": "Litigation Support",
   };
   const isHome = pathname === "/";
