@@ -16,7 +16,7 @@ export default function BlogPreview({
   let titleSizeClass = "text-2xl";
 
   if (size === "big") {
-    sizeClass = "w-[630px] min-h-[630px]";
+    sizeClass = "md:w-[630px] min-h-[630px] w-full max-w-[630px]";
     imgSizeClass = "h-[343px]";
     titleSizeClass = "text-4xl";
   }

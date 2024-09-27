@@ -2,7 +2,7 @@ import BlogPreview from "@/components/blog-preview";
 
 export default function First({ big, latests, blogList }) {
   return (
-    <section className="m-20 lg:m-12 md:m-10 sm:m-8 sx:m-4">
+    <section className="m-4 lg:m-20 md:m-12 sm:m-8">
       <div className="flex items-center justify-evenly flex-wrap gap-y-8">
         <div data-aos="fade-up" className="w-fit">
           <BlogPreview {...big} size="big" />
