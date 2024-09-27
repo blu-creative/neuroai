@@ -210,7 +210,7 @@ const MobileMenu = ({ locale = "en" }) => {
         data-aos="fade-up"
         href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
       >
-        <button className="bg-primary-500 md:rounded-lg md:px- md:py-2 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg">
+        <button className="text-neutral-25 bg-primary-500 md:rounded-lg md:px- md:py-2 px-6 py-3 font-extrabold md:text-xl text-xs rounded-lg">
           {t("contact_us")}
         </button>
       </Link>
