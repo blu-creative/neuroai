@@ -2,9 +2,9 @@ import BlogPreview from "@/components/blog-preview";
 
 export default function First({ big, latests, blogList }) {
   return (
-    <section className="m-20">
+    <section className="m-20 lg:m-12 md:m-8 sm:m-4">
       <div className="flex items-center justify-evenly">
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" className="w-fit">
           <BlogPreview {...big} size="big" />
         </div>
         <div className="flex flex-col gap-4">
@@ -12,6 +12,7 @@ export default function First({ big, latests, blogList }) {
             <div
               data-aos={`fade-${index % 2 === 1 ? "up" : "down"}`}
               key={blog.id}
+              className="w-fit"
             >
               <BlogPreview {...blog} size="small" />
             </div>
@@ -25,11 +26,12 @@ export default function First({ big, latests, blogList }) {
         <span>Check our latest </span>
         <span className="text-primary-500">blog posts</span>
       </h1>
-      <div className="grid grid-cols-3 justify-evenly gap-24">
+      <div className="grid grid-cols-1 max-lg:gap-24 justify-center lg:gap-12 md:gap-4 lg:grid-cols-3 md:grid-cols-2">
         {blogList.map((blog, index) => (
           <div
+            className="w-fit"
             data-aos={`fade-${index % 2 === 0 ? "up" : "down"}`}
-            data-aos-delay={`${(index % 3) * 400}`}
+            data-aos-delay={`${(index % 3) * 100}`}
             key={blog.id}
           >
             <BlogPreview {...blog} />

@@ -28,6 +28,7 @@ const latests = [
 const blogList = [
   {
     title: "Title of the Blog Post",
+    date: "JAN 20, 2024",
     id: "10",
     minute: 5,
     src: "/images/blogs/blog1.png",
@@ -35,6 +36,7 @@ const blogList = [
   },
   {
     title: "Title of the Blog Post",
+    date: "JAN 20, 2024",
     id: "11",
     minute: 8,
     src: "/images/blogs/blog2.png",
@@ -42,6 +44,7 @@ const blogList = [
   },
   {
     title: "Title of the Blog Post",
+    date: "JAN 20, 2024",
     id: "12",
     minute: 11,
     src: "/images/blogs/blog3.png",
@@ -49,6 +52,7 @@ const blogList = [
   },
   {
     title: "Title of the Blog Post",
+    date: "JAN 20, 2024",
     id: "13",
     minute: 5,
     src: "/images/blogs/blog1.png",
@@ -56,6 +60,7 @@ const blogList = [
   },
   {
     title: "Title of the Blog Post",
+    date: "JAN 20, 2024",
     id: "14",
     minute: 8,
     src: "/images/blogs/blog2.png",
@@ -63,6 +68,7 @@ const blogList = [
   },
   {
     title: "Title of the Blog Post",
+    date: "JAN 20, 2024",
     id: "15",
     minute: 11,
     src: "/images/blogs/blog3.png",

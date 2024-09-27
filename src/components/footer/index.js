@@ -59,7 +59,12 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
           <div className="flex flex-col items-center lg:items-start">
             <Link href="/">
-              <Image src="/images/footerLogo.png" width={200} height={60} />
+              <Image
+                src="/images/footerLogo.png"
+                width={200}
+                height={60}
+                alt="Blü Creative"
+              />
             </Link>
             <Link href="/contact-us">
               <button className="mt-12 bg-primary-900 text-xl px-4 py-2 rounded-lg lg:mt-5 lg:ml-4">

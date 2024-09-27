@@ -88,7 +88,12 @@ const MobileMenu = ({ locale = "en" }) => {
         <ul className="flex flex-col items-center gap-6 mt-20">
           <div className="flex flex-col items-center lg:items-start">
             <Link href="/">
-              <Image src="/images/footerLogo.png" width={200} height={60} />
+              <Image
+                src="/images/footerLogo.png"
+                width={200}
+                height={60}
+                alt="Blü Creative"
+              />
             </Link>
             <Link href="/contact-us">
               <button className="mt-12 bg-primary-900 text-xl px-4 py-2 rounded-lg lg:mt-5 lg:ml-4">

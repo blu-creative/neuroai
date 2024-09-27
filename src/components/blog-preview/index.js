@@ -26,7 +26,7 @@ export default function BlogPreview({
   }
 
   return (
-    <Link href={`/blog/${id}`}>
+    <Link href={`/blog/${id}`} className="w-fit block">
       <div
         className={`bg-neutral-200 ${sizeClass} overflow-hidden rounded-lg flex flex-col`}
       >
@@ -39,7 +39,7 @@ export default function BlogPreview({
             className="object-cover object-center"
           />
         </div>
-        <div className="justify-center flex flex-col gap-2 px-8 py-2 grow">
+        <div className="justify-center flex flex-col gap-2 px-8 py-4 grow">
           {date && size !== "small" ? (
             <p className="text-neutral-100 text-sm font-bold">{date}</p>
           ) : null}
