@@ -37,8 +37,8 @@ export default function Second() {
       <div className="flex items-center justify-evenly w-full mt-14">
         {blogList.map((blog, index) => (
           <div
-            data-aos="fade-up"
-            data-aos-delay={`${index * 300}`}
+            data-aos={`fade-${index % 2 === 0 ? "up" : "down"}`}
+            data-aos-delay={`${(index + 1) * 500}`}
             key={blog.id}
           >
             <BlogPreview
