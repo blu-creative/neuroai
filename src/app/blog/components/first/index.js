@@ -25,7 +25,7 @@ export default function First({ big, latests, blogList }) {
         <span>Check our latest </span>
         <span className="text-primary-500">blog posts</span>
       </h1>
-      <div className="flex flex-wrap justify-evenly gap-8">
+      <div className="grid grid-cols-3 justify-evenly gap-24">
         {blogList.map((blog, index) => (
           <div
             data-aos={`fade-${index % 2 === 0 ? "up" : "down"}`}
@@ -35,6 +35,9 @@ export default function First({ big, latests, blogList }) {
             <BlogPreview {...blog} />
           </div>
         ))}
+      </div>
+      <div className="flex gap-2 text-primary-500 items-center font-bold text-2xl mt-6 justify-center cursor-pointer">
+        <span>Load More</span> <i className="icon-mim-chevron block" />
       </div>
     </section>
   );
