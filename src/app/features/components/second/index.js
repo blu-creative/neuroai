@@ -29,6 +29,7 @@ export default function Second({ translate, locale }) {
 
       <Image
         data-aos="flip-left"
+        unoptimized
         width={743}
         height={610}
         quality={100}

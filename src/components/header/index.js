@@ -68,6 +68,7 @@ export default function Header({ text }) {
                     src="/images/header/Neuro-Menu.gif"
                     alt="phone"
                     quality={100}
+                    unoptimized
                   />
                 </div>
               </div>

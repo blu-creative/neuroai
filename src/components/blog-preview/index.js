@@ -3,14 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogPreview({
-  src,
+  cover,
   title,
-  brief,
-  minute,
-  id,
-  date,
+  description,
+  minute = 5,
+  documentId,
+  publishedAt,
   size,
 }) {
+  const url = process.env.NEXT_PUBLIC_URL;
   let sizeClass = "w-[350px] min-h-[370px]";
   let imgSizeClass = "h-[196px]";
   let titleSizeClass = "text-2xl";
@@ -26,28 +27,34 @@ export default function BlogPreview({
   }
 
   return (
-    <Link href={`/blog/${id}`} className="w-fit block">
+    <Link href={`/blog/${documentId}`} className="w-fit block">
       <div
         className={`bg-neutral-200 ${sizeClass} overflow-hidden rounded-lg flex flex-col`}
       >
         <div className={`relative w-full ${imgSizeClass}`}>
           <Image
-            src={src}
-            alt={title}
+            src={`${url}${cover.url}`}
+            alt={cover.caption || title}
             fill
             quality={100}
             className="object-cover object-center"
           />
         </div>
         <div className="justify-center flex flex-col gap-2 px-8 py-4 grow">
-          {date && size !== "small" ? (
-            <p className="text-neutral-100 text-sm font-bold">{date}</p>
+          {publishedAt && size !== "small" ? (
+            <p className="text-neutral-100 text-sm font-bold">
+              {new Date(publishedAt).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
           ) : null}
           <h2 className={`text-primary-900 font-bold ${titleSizeClass}`}>
             {title}
           </h2>
           {size !== "small" ? (
-            <p className="text-neutral-800 font-bold text-xl">{brief}</p>
+            <p className="text-neutral-800 font-bold text-xl">{description}</p>
           ) : null}
           <div className="bg-primary-900 text-white w-fit px-3 py-1 rounded">
             {`${minute} min read`}
