@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function BlogPreview({ src, title, brief, minute, id }) {
   return (
-    <Link href={`/blog/id/${id}`}>
+    <Link href={`/blog/${id}`}>
       <div className="bg-neutral-200 w-[350px] h-[368px] overflow-hidden rounded-lg">
         <div className="relative w-full h-[196px]">
           <Image

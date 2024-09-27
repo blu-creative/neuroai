@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BlogPreview from "@/components/blog-preview";
 
 const blogList = [
@@ -34,7 +35,7 @@ export default function Second() {
         <span>Check our latest </span>
         <span className="text-primary-500">blog posts</span>
       </h1>
-      <div className="flex items-center justify-evenly w-full mt-14">
+      <div className="flex items-center justify-evenly w-full mt-14 mb-8">
         {blogList.map((blog, index) => (
           <div
             data-aos={`fade-${index % 2 === 0 ? "up" : "down"}`}
@@ -51,6 +52,11 @@ export default function Second() {
           </div>
         ))}
       </div>
+      <Link href="/blog">
+        <button className="bg-primary-500 text-white px-8 py-2 rounded-lg font-bold text-xl">
+          View all
+        </button>
+      </Link>
     </section>
   );
 }
