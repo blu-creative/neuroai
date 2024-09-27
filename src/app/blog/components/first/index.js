@@ -2,8 +2,8 @@ import BlogPreview from "@/components/blog-preview";
 
 export default function First({ big, latests, blogList }) {
   return (
-    <section className="m-20 lg:m-12 md:m-8 sm:m-4">
-      <div className="flex items-center justify-evenly">
+    <section className="m-20 lg:m-12 md:m-10 sm:m-8 sx:m-4">
+      <div className="flex items-center justify-evenly flex-wrap gap-y-8">
         <div data-aos="fade-up" className="w-fit">
           <BlogPreview {...big} size="big" />
         </div>
@@ -26,7 +26,7 @@ export default function First({ big, latests, blogList }) {
         <span>Check our latest </span>
         <span className="text-primary-500">blog posts</span>
       </h1>
-      <div className="grid grid-cols-1 max-lg:gap-24 justify-center lg:gap-12 md:gap-4 lg:grid-cols-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 justify-items-center lg:grid-cols-3 md:grid-cols-2 gap-y-8">
         {blogList.map((blog, index) => (
           <div
             className="w-fit"
