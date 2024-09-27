@@ -25,11 +25,11 @@ export default function Third() {
     <section className="m-20">
       <h1
         className="md:text-6xl text-3xl font-bold font-Exo text-center mb-10"
-        data-aos="fade-left"
+        data-aos="fade-up"
       >
         <span className="text-primary-900">How can we help? </span>
       </h1>
-      <div data-aos="fade-left">
+      <div data-aos="fade-up">
         <Accordion text="Can you detail what is included in the support, maintenance, and regular updates service?">
           <div className=" font-medium text-xl">
             The included services are updating the application, ensuring that
@@ -41,8 +41,7 @@ export default function Third() {
         </Accordion>
       </div>
 
-      <div data-aos="fade-right">
-        {" "}
+      <div data-aos="fade-down">
         <Accordion text="How do you manage updates and patches to ensure the site remains compliant with accessibility standards?">
           <div className=" font-medium text-xl">
             The application uses generative artificial intelligence to generate
@@ -58,8 +57,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-left">
-        {" "}
+      <div data-aos="fade-up">
         <Accordion text="What is the procedure to obtain the initial CDA/AODA compliance certification after installation?">
           <div className=" font-medium text-xl">
             Once the application is installed, our office will generate an audit
@@ -82,8 +80,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-right">
-        {" "}
+      <div data-aos="fade-down">
         <Accordion text="Do you offer regular audits to ensure the continuous compliance of the website? If so, how frequently are these audits performed?">
           <div className=" font-medium text-xl">
             Yes, we offer audits to certify the compliance of the website at the
@@ -94,8 +91,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-left">
-        {" "}
+      <div data-aos="fade-up">
         <Accordion text="What is the procedure to follow to report a problem or request technical assistance?">
           <div className=" font-medium text-xl">
             You simply need to contact your account manager and report the
@@ -104,8 +100,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-right">
-        {" "}
+      <div data-aos="fade-down">
         <Accordion text="What are your fees for customer support services if we encounter problems with the widget?">
           <div className=" font-medium text-xl">
             There is no additional cost for the technical support of the tool.
@@ -116,8 +111,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-left">
-        {" "}
+      <div data-aos="fade-up">
         <Accordion text="How do you ensure that your widget will meet accessibility requirements in real time?">
           <div className=" font-medium text-xl">
             Our application examines the web pages every 24 hours, ensuring that
@@ -126,8 +120,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-right">
-        {" "}
+      <div data-aos="fade-down">
         <Accordion text="How do you handle accessibility-related complaints?">
           <div className=" font-medium text-xl">
             The installation of our application on your website is intended to
@@ -148,8 +141,7 @@ export default function Third() {
           </div>
         </Accordion>
       </div>
-      <div data-aos="fade-left">
-        {" "}
+      <div data-aos="fade-up">
         <Accordion text="Do you offer support in case of lawsuits related to    non-compliance of the website in Canada?">
           <div className=" font-medium text-xl">
             The risk of a lawsuit for non-compliance is based on a complaint

@@ -69,7 +69,7 @@ export default function First({ translate }) {
 
               <div className="w-[90%]">
                 <p className="text-base font-bold text-center text-primary-800">
-                  Canadians live with a disability{" "}
+                  Canadians live with a disability
                 </p>
               </div>
             </div>
