@@ -1,15 +1,18 @@
 "use client";
+import { usePathname, useParams } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 
 import Form from "@/components/form";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
+  const params = useParams();
+
+  const { id } = params;
+  const isBlog = pathname === `/blog/${id}` || pathname === "/blog";
   const isContact = pathname === "/contact-us";
   const isNeuro = pathname === "/neuro-vs-competition";
-  const isBlog = pathname === "/blog";
   return (
     <footer data-aos="fade-up" className={isNeuro ? "mt-4" : "mt-24"}>
       {!isBlog ? (
