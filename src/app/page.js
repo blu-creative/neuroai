@@ -25,6 +25,7 @@ export default async function Home({ searchParams }) {
     try {
       const object = await res.json();
       posts = object.data;
+      console.log(object);
     } catch (error) {
       console.error(error);
     }

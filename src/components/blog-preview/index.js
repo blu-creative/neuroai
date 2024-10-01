@@ -32,13 +32,15 @@ export default function BlogPreview({
         className={`bg-neutral-200 ${sizeClass} overflow-hidden rounded-lg flex flex-col`}
       >
         <div className={`relative w-full ${imgSizeClass}`}>
-          <Image
-            src={`${url}${cover.url}`}
-            alt={cover.caption || title}
-            fill
-            quality={100}
-            className="object-cover object-center"
-          />
+          {cover ? (
+            <Image
+              src={`${url}${cover.url}`}
+              alt={cover.caption || title}
+              fill
+              quality={100}
+              className="object-cover object-center"
+            />
+          ) : null}
         </div>
         <div className="justify-center flex flex-col gap-2 px-8 py-4 grow">
           {publishedAt && size !== "small" ? (
