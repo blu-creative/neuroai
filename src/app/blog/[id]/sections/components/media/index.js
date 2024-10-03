@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 const url = process.env.NEXT_PUBLIC_URL;
 const Media = ({ file }) => (
@@ -11,7 +10,7 @@ const Media = ({ file }) => (
         fill
       />
     </div>
-    <p>{file.caption}</p>
+    {file.caption ? <p>{file.caption}</p> : null}
   </div>
 );
 
