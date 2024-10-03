@@ -76,20 +76,32 @@ const blogList = [
   },
 ];
 
-export default function Blog(data) {
-  console.log("reza : ", data);
+export default async function Blog() {
+  const url = process.env.NEXT_PUBLIC_URL;
+
+  const res = await fetch(
+    `${url}api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=30`,
+    {
+      // Control caching behavior
+      cache: "no-store", // Fetch fresh data on every request
+      // next: { revalidate: 60 }, // Revalidate data every 60 seconds
+    }
+  );
+
+  let posts = [];
+  if (res.ok) {
+    try {
+      const object = await res.json();
+      posts = object.data;
+      console.log(object);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <main>
       <First big={big} latests={latests} blogList={blogList} />
     </main>
   );
-}
-
-export async function generateStaticParams() {
-  const url = process.env.NEXT_PUBLIC_URL;
-  const posts = await fetch(
-    `${url}api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=10`
-  ).then((res) => res.json());
-
-  return posts;
 }
