@@ -12,7 +12,6 @@ export default function AU({ searchParams }) {
   return (
     <main>
       <First translate={t} locale={lang} />
-    
     </main>
   );
 }

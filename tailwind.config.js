@@ -17,11 +17,14 @@ module.exports = {
           0: "#fff",
           25: "#F9F9F9",
           50: "#F7F7F7",
+          100: "#8B8B8B",
+          200: "#EEEEEE",
           300: "#D9D9D9",
           500: "#858585",
           800: "#383838",
         },
         primary: {
+          200: "#DCE7F4",
           500: "#3366FF",
           700: "#3366FF",
           800: "#1F4693",
@@ -40,9 +43,8 @@ module.exports = {
         CerebriSansPro: ["CerebriSansPro"],
       },
       borderWidth: {
-        '3': '3px',
+        3: "3px",
       },
-
     },
     container: {
       center: true,

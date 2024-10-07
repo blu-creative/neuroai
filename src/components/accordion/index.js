@@ -25,7 +25,7 @@ export default function Accordion({ text, children, simple }) {
             ${
               simple
                 ? ""
-                : "rounded-full bg-primary-700 w-9 h-9 flex items-center justify-center text-neutral-50"
+                : "rounded-full bg-primary-700 w-9 h-9 min-w-9 min-h-9 flex items-center justify-center text-neutral-50"
             }
              ${height ? "rotate-180" : ""}`}
         >

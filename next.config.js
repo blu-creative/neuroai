@@ -1,3 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {};
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "backend.blucreative.dev",
+      },
+    ],
+  },
+};

@@ -40,7 +40,7 @@ const clientList = [
 
 export default function First({ translate, locale }) {
   return (
-    <section className="flex flex-col items-center md:pt-48 lg:pt-80 pt-48  pb-2">
+    <section className="flex flex-col items-center md:pt-48 lg:pt-80 pt-48 pb-2">
       <h1
         data-aos="fade-down"
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
