@@ -13,7 +13,6 @@ const componentMap = {
 };
 const url = process.env.NEXT_PUBLIC_URL;
 export default function Section({ post }) {
-  console.log(post.blocks);
   const list = post.title.split(" "),
     lng = list.length,
     half = Math.ceil(lng / 2),
