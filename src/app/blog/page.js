@@ -1,81 +1,5 @@
 import First from "./components/first";
 
-const big = {
-  title: "Title of the Blog Post",
-  documentId: "7",
-  minute: 5,
-  cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-  description: "Brief description / keywords about the Blog Post",
-};
-
-const latests = [
-  {
-    title: "Title of the Blog Post",
-    documentId: "8",
-    minute: 8,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-  {
-    title: "Title of the Blog Post",
-    documentId: "9",
-    minute: 11,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-];
-
-const blogList = [
-  {
-    title: "Title of the Blog Post",
-    date: "JAN 20, 2024",
-    documentId: "10",
-    minute: 5,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-  {
-    title: "Title of the Blog Post",
-    date: "JAN 20, 2024",
-    documentId: "11",
-    minute: 8,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-  {
-    title: "Title of the Blog Post",
-    date: "JAN 20, 2024",
-    documentId: "12",
-    minute: 11,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-  {
-    title: "Title of the Blog Post",
-    date: "JAN 20, 2024",
-    documentId: "13",
-    minute: 5,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-  {
-    title: "Title of the Blog Post",
-    date: "JAN 20, 2024",
-    documentId: "14",
-    minute: 8,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-  {
-    title: "Title of the Blog Post",
-    date: "JAN 20, 2024",
-    documentId: "15",
-    minute: 11,
-    cover: { url: "/uploads/photo_5915634318967947972_y_bf862171c8.jpg" },
-    description: "Brief description / keywords about the Blog Post",
-  },
-];
-
 export default async function Blog() {
   const url = process.env.NEXT_PUBLIC_URL;
 
@@ -101,7 +25,11 @@ export default async function Blog() {
 
   return (
     <main>
-      <First big={big} latests={latests} blogList={blogList} />
+      <First
+        big={posts[0]}
+        latests={posts.slice(1, 3)}
+        blogList={posts.slice(3, posts.length)}
+      />
     </main>
   );
 }

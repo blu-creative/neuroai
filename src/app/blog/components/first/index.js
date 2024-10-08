@@ -1,6 +1,9 @@
+"use client";
+
 import BlogPreview from "@/components/blog-preview";
 
 export default function First({ big, latests, blogList }) {
+  console.log(big);
   return (
     <section className="m-4 lg:m-20 md:m-12 sm:m-8">
       <div className="flex items-center justify-evenly flex-wrap gap-y-8">
