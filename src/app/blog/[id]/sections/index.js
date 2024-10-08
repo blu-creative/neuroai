@@ -36,7 +36,7 @@ export default function Section({ post }) {
       {post.blocks.map((componentData) => {
         const Component = componentMap[componentData.__component]; // Get the corresponding component
         if (!Component) return null; // If no component matches, return null
-        return <Component {...componentData} />;
+        return <Component {...componentData} key={componentData.id} />;
       })}
     </div>
   );
