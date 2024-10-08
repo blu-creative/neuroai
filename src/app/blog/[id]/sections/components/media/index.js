@@ -2,8 +2,6 @@ import Image from "next/image";
 const url = process.env.NEXT_PUBLIC_URL;
 const Media = ({ file }) => {
   const fileType = file.mime.split("/")[0];
-
-  console.log({ fileType });
   return (
     <div className="w-full flex flex-col justify-center items-center gap-4">
       <div className="w-3/4 relative aspect-video overflow-hidden">
