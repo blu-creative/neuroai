@@ -4,7 +4,7 @@ export default async function Blog() {
   const url = process.env.NEXT_PUBLIC_URL;
 
   const res = await fetch(
-    `${url}api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=30`,
+    `${url}api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=10`,
     {
       // Control caching behavior
       cache: "no-store", // Fetch fresh data on every request
