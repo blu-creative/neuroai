@@ -1,3 +1,5 @@
+"use client";
+
 import BlogPreview from "@/components/blog-preview";
 
 export default function First({ big, latests, blogList }) {
