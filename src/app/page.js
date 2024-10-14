@@ -12,7 +12,7 @@ export default async function Home({ searchParams }) {
   const { t } = useTranslation(lang);
 
   const res = await fetch(
-    `${url}api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`,
+    `${url}/api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`,
     {
       // Control caching behavior
       cache: "no-store", // Fetch fresh data on every request

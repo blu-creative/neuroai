@@ -7,6 +7,10 @@ module.exports = {
         protocol: "https",
         hostname: "backend.blucreative.dev",
       },
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
     ],
   },
 };
