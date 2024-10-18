@@ -3,7 +3,8 @@
 import Link from "next/link";
 import BlogPreview from "@/components/blog-preview";
 
-export default function Second({ posts }) {
+export default function Second({ posts, lang }) {
+  console.log(1, { lang });
   return (
     <section className="flex flex-col items-center md:pt-6 lg:pt-10 pt-6 pb-2">
       <h1
@@ -17,14 +18,14 @@ export default function Second({ posts }) {
         {posts.map((blog, index) => (
           <div
             data-aos={`fade-${index % 2 === 0 ? "up" : "down"}`}
-            data-aos-delay={`${(index + 1) * 500}`}
+            data-aos-delay={`${(index + 1) * 200}`}
             key={blog.id}
           >
-            <BlogPreview {...blog} />
+            <BlogPreview {...blog} lang={lang} />
           </div>
         ))}
       </div>
-      <Link href="/blog">
+      <Link href={`/blog?locale=${lang}`}>
         <button className="bg-primary-500 text-white px-8 py-2 rounded-lg font-bold text-xl">
           View all
         </button>

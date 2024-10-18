@@ -3,10 +3,10 @@ const url = process.env.NEXT_PUBLIC_URL;
 
 export default async function Blog({ params, searchParams }) {
   const { id } = params;
-  const local = searchParams.local || "en";
+  const locale = searchParams.locale === "fr" ? "fr-CA" : "en";
 
   const res = await fetch(
-    `${url}/api/articles/${id}?local=${local}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags`,
+    `${url}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags`,
     {
       // Control caching behavior
       cache: "no-store", // Fetch fresh data on every request

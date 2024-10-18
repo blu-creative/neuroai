@@ -10,7 +10,9 @@ export default function BlogPreview({
   documentId,
   publishedAt,
   size,
+  lang,
 }) {
+  console.log(2, { lang });
   const url = process.env.NEXT_PUBLIC_URL;
   let sizeClass = "w-[350px] min-h-[370px]";
   let imgSizeClass = "h-[196px]";
@@ -27,7 +29,7 @@ export default function BlogPreview({
   }
 
   return (
-    <Link href={`/blog/${documentId}`} className="w-fit block">
+    <Link href={`/blog/${documentId}?locale=${lang}`} className="w-fit block">
       <div
         className={`bg-neutral-200 ${sizeClass} overflow-hidden rounded-lg flex flex-col`}
       >

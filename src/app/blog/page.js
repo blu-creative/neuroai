@@ -1,10 +1,11 @@
 import First from "./components/first";
 
-export default async function Blog() {
+export default async function Blog({ searchParams }) {
   const url = process.env.NEXT_PUBLIC_URL;
+  const locale = searchParams.locale === "fr" ? "fr-CA" : "en";
 
   const res = await fetch(
-    `${url}/api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
+    `${url}/api/articles?locale=${locale}&populate=cover&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
     {
       // Control caching behavior
       cache: "no-store", // Fetch fresh data on every request

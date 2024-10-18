@@ -11,8 +11,10 @@ export default async function Home({ searchParams }) {
   }
   const { t } = useTranslation(lang);
 
+  const localeLang = locale === "fr" ? "fr-CA" : "en";
+
   const res = await fetch(
-    `${url}/api/articles?populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`,
+    `${url}/api/articles?locale=${localeLang}&populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`,
     {
       // Control caching behavior
       cache: "no-store", // Fetch fresh data on every request
@@ -33,7 +35,7 @@ export default async function Home({ searchParams }) {
   return (
     <main>
       <First translate={t} locale={lang} />
-      <Second posts={posts} />
+      <Second posts={posts} lang={lang} />
     </main>
   );
 }
