@@ -54,6 +54,7 @@ export default function BlogPreview({
               })}
             </p>
           ) : null}
+          {/* . */}
           <h2 className={`text-primary-900 font-bold ${titleSizeClass}`}>
             {title}
           </h2>

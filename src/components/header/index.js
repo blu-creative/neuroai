@@ -9,22 +9,36 @@ export default function Header({ text }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const params = useParams();
-  const list = {
-    "/": "Accessibility compliance and remediation at your fingertips with Neuro.AI",
-    "/features": "Customize your journey",
-    "/accessibility": "Learn about accessibility",
-    "/contact-us": "Let’s address accessibility",
-    "/benefits": "Benefits for all users",
-    "/neuro-vs-competition": "Why choose Neuro.AI",
-    "/fAQ": "Frequently Asked Questions",
-    "/blog": "Check our blog posts",
-    // "/litigation-Support": "Litigation Support",
-  };
+
   const { id } = params;
   const isHome = pathname === "/";
   const isBlog = pathname === `/blog/${id}`;
   const locale = searchParams.get("locale") || "en";
   const { t } = useTranslation(searchParams.get("locale"));
+
+  // const list = {
+  //   "/": "Accessibility compliance and remediation at your fingertips with Neuro.AI",
+  //   "/features": "Customize your journey",
+  //   "/accessibility": "Learn about accessibility",
+  //   "/contact-us": "Let’s address accessibility",
+  //   "/benefits": "Benefits for all users",
+  //   "/neuro-vs-competition": "Why choose Neuro.AI",
+  //   "/fAQ": "Frequently Asked Questions",
+  //   "/blog": "Check our blog posts",
+  //   // "/litigation-Support": "Litigation Support",
+  // };
+
+  const list = {
+    "/": t("AccessibilityTitle"),
+    "/features": t("FeaturesTitle"),
+    "/accessibility": t("AccessibilityLearnTitle"),
+    "/contact-us": t("ContactUsTitle"),
+    "/benefits": t("BenefitsTitle"),
+    "/neuro-vs-competition": t("NeuroVsCompetitionTitle"),
+    "/fAQ": t("FAQTitle"),
+    "/blog": t("BlogTitle"),
+    // "/litigation-Support": t("LitigationSupportTitle"),
+  };
 
   const textList = [
     "Inclusion and Equity",

@@ -152,7 +152,7 @@ const MobileMenu = ({ locale = "en" }) => {
               {t("FAQ")}
             </Link>
           </li>
-          {/* <li>
+          <li>
             <div
               onClick={selectLanguage}
               className="text-3xl font-extrabold cursor-pointer"
@@ -160,7 +160,7 @@ const MobileMenu = ({ locale = "en" }) => {
             >
               {lang}
             </div>
-          </li> */}
+          </li>
         </ul>
       </div>
       {/* Desktop Menu */}
@@ -200,7 +200,7 @@ const MobileMenu = ({ locale = "en" }) => {
             {t("FAQ")}
           </Link>
         </li>
-        {/* <li>
+        <li>
           <div
             onClick={selectLanguage}
             className="text-3xl font-extrabold cursor-pointer"
@@ -208,7 +208,7 @@ const MobileMenu = ({ locale = "en" }) => {
           >
             {lang}
           </div>
-        </li> */}
+        </li>
       </ul>
       <Link
         className="hidden lg:flex"
