@@ -26,11 +26,11 @@ export default async function Blog({ params, searchParams }) {
   if (post.tags?.length) {
     let filter = "";
     post.tags.forEach((element, index) => {
-      filter += `filters[$or][${index}][tags][title][$eq]=${element.title}`;
+      filter += `filters[$or][${index}][tags][title][$eq]=${element.title}&`;
     });
 
     const related = await fetch(
-      `${url}/api/articles?${filter}&populate=cover`,
+      `${url}/api/articles?locale=${locale}&${filter}&populate=cover`,
       {
         // Control caching behavior
         cache: "no-store", // Fetch fresh data on every request
