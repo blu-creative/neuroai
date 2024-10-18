@@ -41,10 +41,10 @@ export default function Header({ text }) {
   };
 
   const textList = [
-    "Inclusion and Equity",
-    "Improved User Experience",
-    "Minor Remediation Powered by AI",
-    "Continuous Profile Generation",
+    t("InclusionAndEquity"),
+    t("ImprovedUserExperience"),
+    t("MinorRemediationAI"),
+    t("ContinuousProfileGeneration"),
   ];
 
   return (

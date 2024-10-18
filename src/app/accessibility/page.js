@@ -18,7 +18,7 @@ export default function AU({ searchParams }) {
       <Second translate={t} />
       <Third translate={t} />
       <Fourth />
-      <Fifth />
+      <Fifth translate={t} />
     </main>
   );
 }

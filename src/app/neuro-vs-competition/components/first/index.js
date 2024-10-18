@@ -1,30 +1,29 @@
 import Link from "next/link";
 
-const EqualWeb = [
-  "Ensures compliance on paid version",
-  "Maintenance requires additional services",
-  "Monitors select pages on paid version",
-  "Automation technology on paid version",
-  "Doesn’t store user preferences for visits",
-];
+export default function First({ locale, translate }) {
+  const EqualWeb = [
+    translate("EnsuresComplianceOnPaidVersion"),
+    translate("MaintenanceRequiresAdditionalServices"),
+    translate("MonitorsSelectPagesOnPaidVersion"),
+    translate("AutomationTechnologyOnPaidVersion"),
+    translate("DoesNotStoreUserPreferences"),
+  ];
 
-const Userway = [
-  "Ensures compliance on paid version",
-  "Maintenance requires additional services",
-  "Monitoring of 10 pages on paid version",
-  "Automation technology on paid version",
-  "Fixes issues only when site scanning is done",
-];
+  const Userway = [
+    translate("EnsuresComplianceOnPaidVersion"),
+    translate("MaintenanceRequiresAdditionalServices"),
+    translate("MonitoringOf10PagesOnPaidVersion"),
+    translate("AutomationTechnologyOnPaidVersion"),
+    translate("FixesIssuesWhenScanningDone"),
+  ];
 
-const NeuroAI = [
-  "Compliance with WCAG 2.1, ADA, s508 & more",
-  "Re-scanning every 24 hours",
-  "Monitoring starting at 10.000 pages",
-  "Industry's highest rate of compliance through automation widget",
-  "AI Remediation of site to WCAG Compliance within 48 hours of installation",
-];
-
-export default function First({ locale }) {
+  const NeuroAI = [
+    translate("ComplianceWithWCAG21ADA508"),
+    translate("ReScanningEvery24Hours"),
+    translate("MonitoringStartingAt10000Pages"),
+    translate("HighestRateOfComplianceThroughAutomation"),
+    translate("AIRemediationToWCAGComplianceWithin48Hours"),
+  ];
   return (
     <section className="flex flex-col lg:flex-row items-center justify-evenly my-16">
       <div
@@ -32,7 +31,7 @@ export default function First({ locale }) {
         data-aos="fade-down"
       >
         <h2 className="font-bold text-5xl text-primary-900 text-center pb-10 font-Exo">
-          EqualWeb
+          {translate("EqualWeb")}
         </h2>
         <div className="flex flex-col gap-12">
           {EqualWeb.map((text) => (
@@ -50,7 +49,7 @@ export default function First({ locale }) {
         data-aos="fade-up"
       >
         <h2 className="font-bold text-5xl text-center pb-10 font-Exo">
-          Neuro.AI
+          {translate("NeuroAI")}
         </h2>
         <div className="flex flex-col gap-12">
           {NeuroAI.map((text) => (
@@ -68,7 +67,7 @@ export default function First({ locale }) {
             href={`/contact-us${locale === "fr" ? "?locale=fr" : ""}`}
           >
             <button className="bg-primary-900 text-neutral-50 px-6 py-1 rounded-md font-bold text-xl">
-              Get Started
+              {translate("GetStarted")}
             </button>
           </Link>
         </div>
@@ -78,7 +77,7 @@ export default function First({ locale }) {
         data-aos="fade-down"
       >
         <h2 className="font-bold text-5xl text-primary-900 text-center pb-10 font-Exo">
-          Userway
+          {translate("Userway")}
         </h2>
         <div className="flex flex-col gap-12">
           {Userway.map((text) => (

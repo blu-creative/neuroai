@@ -1,44 +1,54 @@
 import Image from "next/image";
 
-const textList = [
-  { text: "Compliant with CDA & AODA, based on WCAG Standards", icon: "world" },
-  { text: "Extensive NeuroDiverse Profiles Included", icon: "hand" },
-  { text: "Accessibility Widget Interface", icon: "full-screen" },
-  { text: "Daily Compliance Monitoring and Analysis", icon: "mag" },
-  {
-    text: "Does not Collect Personal Identifiable Information",
-    icon: "shield",
-  },
-];
-
-const clientList = [
-  {
-    text: "Compliant with CDA & AODA, based on WCAG Standards",
-    icon: "MonAvenir",
-    width: 166,
-    fade: "fade-up",
-  },
-  {
-    text: "Extensive NeuroDiverse Profiles Included",
-    icon: "Milo",
-    width: 203,
-    fade: "fade-down",
-  },
-  {
-    text: "Daily Compliance Monitoring and Analysis",
-    icon: "PointeClaire",
-    width: 133,
-    fade: "fade-up",
-  },
-  {
-    text: "Accessibility Widget Interface",
-    icon: "Perry",
-    width: 326,
-    fade: "fade-down",
-  },
-];
-
 export default function First({ translate, locale }) {
+  // const textList = [
+  //   { text: "Compliant with CDA & AODA, based on WCAG Standards", icon: "world" },
+  //   { text: "Extensive NeuroDiverse Profiles Included", icon: "hand" },
+  //   { text: "Accessibility Widget Interface", icon: "full-screen" },
+  //   { text: "Daily Compliance Monitoring and Analysis", icon: "mag" },
+  //   {
+  //     text: "Does not Collect Personal Identifiable Information",
+  //     icon: "shield",
+  //   },
+  // ];
+
+  const textList = [
+    { text: translate("CDAAODACompliant"), icon: "world" },
+    { text: translate("NeuroDiverseProfilesIncluded"), icon: "hand" },
+    { text: translate("AccessibilityWidgetInterface"), icon: "full-screen" },
+    { text: translate("ComplianceMonitoringAndAnalysis"), icon: "mag" },
+    {
+      text: translate("NoPersonalIdentifiableInformationCollected"),
+      icon: "shield",
+    },
+  ];
+
+  const clientList = [
+    {
+      text: "Compliant with CDA & AODA, based on WCAG Standards",
+      icon: "MonAvenir",
+      width: 166,
+      fade: "fade-up",
+    },
+    {
+      text: "Extensive NeuroDiverse Profiles Included",
+      icon: "Milo",
+      width: 203,
+      fade: "fade-down",
+    },
+    {
+      text: "Daily Compliance Monitoring and Analysis",
+      icon: "PointeClaire",
+      width: 133,
+      fade: "fade-up",
+    },
+    {
+      text: "Accessibility Widget Interface",
+      icon: "Perry",
+      width: 326,
+      fade: "fade-down",
+    },
+  ];
   return (
     <section className="flex flex-col items-center md:pt-48 lg:pt-80 pt-48 pb-2">
       <h1
@@ -46,18 +56,15 @@ export default function First({ translate, locale }) {
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
       >
         {/* {translate("trusted_leader")} */}
-        <span>What is </span>
-        <span className="text-primary-500">Neuro.AI?</span>
+        <span>{translate("WhatIs")} </span>
+        <span className="text-primary-500">{translate("NeuroAI")}?</span>
       </h1>
       <h2
         data-aos="fade-up"
         className="md:text-xl text-base max-w-2xl font-bold text-center mt-10 md:mx-0 mx-5"
       >
         {/* {translate("full_service_company")} */}
-        Neuro.AI is a customized extension set up in your website that provides
-        the power to address accessibility requirements relating to the UI,
-        design, and readability of your website by enabling users to modify your
-        site’s design to meet their individual needs.
+        {translate("NeuroAIIntroPart1")}
       </h2>
       {/* <div className="flex justify-evenly w-full my-20">
         {textList.map((text) => (
@@ -89,8 +96,8 @@ export default function First({ translate, locale }) {
         className="md:text-6xl text-3xl  font-bold text-center text-primary-900"
       >
         {/* {translate("trusted_leader")} */}
-        <span>Some clients that use </span>
-        <span className="text-primary-500">Neuro.AI</span>
+        <span>{translate("SomeClientsThatUse")}</span>
+        <span className="text-primary-500">{translate("NeuroAI")}</span>
       </h1>
       <div className="flex flex-col lg:flex-row  justify-evenly w-full bg-primary-900 items-center mt-14 sm:mt-10 h-auto sm:h-52 md:h-[30rem]">
         {clientList.map((cli) => (

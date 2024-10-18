@@ -1,13 +1,17 @@
 "use client";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname, useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import Form from "@/components/form";
 
 export default function Footer() {
   const pathname = usePathname();
   const params = useParams();
+  const searchParams = useSearchParams();
+
+  const { t } = useTranslation(searchParams.get("locale"));
 
   const { id } = params;
   const isBlog = pathname === `/blog/${id}` || pathname === "/blog";
@@ -17,13 +21,16 @@ export default function Footer() {
     <footer data-aos="fade-up" className={isNeuro ? "mt-4" : "mt-24"}>
       {!isBlog ? (
         <div className="md:my-16 my-12 flex flex-col justify-center items-center gap-6 px-4 md:px-0">
-          <div className="font-bold max-w-[452px] w-full md:w-[452px] flex flex-col gap-10 items-center">
+          <div
+            className="font-bold
+           max-w-[600px] w-full md:w-[600px] 
+           flex flex-col gap-10 items-center"
+          >
             <h1 className="text-primary-900 md:text-6xl text-4xl w-full text-center whitespace-nowrap">
-              Request a Demo
+              {t("RequestDemoTitle")}
             </h1>
-            <p className="text-neutral-700 text-center text-xl mx-4">
-              For more information or to schedule a consultation, fill this form
-              or contact us at your convenience.
+            <p className="text-neutral-700 text-center text-xl mx-4 w-full">
+              {t("RequestDemoDescription")}
             </p>
             {isContact && (
               <>
@@ -68,36 +75,36 @@ export default function Footer() {
             </Link>
             <Link href="/contact-us">
               <button className="mt-12 bg-primary-900 text-xl px-4 py-2 rounded-lg lg:mt-5 lg:ml-4">
-                Book a Demo
+                {t("book_a_demo")}
               </button>
             </Link>
           </div>
           <div className="flex flex-col gap-3 mt-8 lg:mt-0">
-            <p className="text-xl">About Neuro.AI</p>
+            <p className="text-xl">{t("AboutNeuroAI")}</p>
             <Link className="font-semibold text-lg" href="/features">
-              Features
+              {t("Features")}
             </Link>
             <Link className="font-semibold text-lg" href="/benefits">
-              Benefits
+              {t("Benefits")}
             </Link>
             <Link
               className="font-semibold text-lg"
               href="/neuro-vs-competition"
             >
-              Neuro.AI vs Competition
+              {t("NeuroAIvsCompetition")}
             </Link>
           </div>
           <div className="flex flex-col gap-3 mt-8 lg:mt-0">
-            <p className="text-xl">Information</p>
+            <p className="text-xl">{t("Information")}</p>
             <Link className="font-semibold text-lg" href="/accessibility">
-              Accessibility
+              {t("Accessibility")}
             </Link>
             <Link className="font-semibold text-lg" href="/fAQ">
-              Frequent Asked Questions
+              {t("FAQ_Frequently")}
             </Link>
           </div>
           <div className="flex flex-col gap-3 mt-8 lg:mt-0">
-            <p className="text-xl">Contact Us</p>
+            <p className="text-xl">{t("ContactUs")}</p>
             <a
               className="font-semibold text-lg flex items-center gap-2"
               href="tel:+18559373726"

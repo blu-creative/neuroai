@@ -11,8 +11,8 @@ export default function AU({ searchParams }) {
   const { t } = useTranslation(lang);
   return (
     <main>
-      <First locale={locale} />
-      <Second />
+      <First translate={t} locale={locale} />
+      <Second translate={t} />
     </main>
   );
 }

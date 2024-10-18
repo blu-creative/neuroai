@@ -9,8 +9,14 @@ export default function First({ translate, locale }) {
           data-aos="fade-up"
         >
           {/* {translate("about_us")} */}
-          <span className="text-primary-900"> What Neuro.AI </span>
-          <span className="text-primary-500"> brings to your website</span>
+          <span className="text-primary-900">
+            {" "}
+            {translate("WhatNeuroAIBringsPart1")}
+          </span>
+          <span className="text-primary-500">
+            {" "}
+            {translate("WhatNeuroAIBringsPart2")}
+          </span>
         </h1>
         <h2
           className="md:text-2xl text-xs max-w-4xl font-bold text-center text-secondary-500"

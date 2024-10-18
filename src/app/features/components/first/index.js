@@ -1,44 +1,76 @@
 import Image from "next/image";
 
-const textList = [
-  {
-    first: "ADHD Friendly",
-    second: "Profile",
-    description:
-      "Significantly reduces distractions and noise, to help people with ADHD and others to browse, read, and focus on the essential elements of the website more easily.",
-    img: "Feature - ADHD.gif",
-  },
-  {
-    first: "Cognitive Disability",
-    second: "Profile",
-    description:
-      "Provides various assistive features to help users with cognitive disabilities such as Autism, Dyslexia, CVA, and others to focus on the essential elements of the website more easily.",
-    img: "Feature2.gif",
-  },
-  {
-    first: "Content",
-    second: "Adjustments",
-    description:
-      "Neuro.AI provides customized content adjustment support, for example, adjusting font size, line height and letter spacing.",
-    img: "Feature - Content.gif",
-  },
-  {
-    first: "Display",
-    second: "Adjustments",
-    description:
-      "Neuro.AI empowers users to adjust the colors and contrast of the site, with customized adjustments like monochrome, background and text colorization and more.",
-    img: "Feature4.gif",
-  },
-  {
-    first: "Orientation",
-    second: "Adjustments",
-    description:
-      "Achieved through links, shortcuts and guiding elements, as well as reducing distractions and noise for individuals with impairments, Neuro.AI permits reorienting the website to suit their needs, like activating the read mode, stopping animations or hiding images.",
-    img: "Feature5.gif",
-  },
-];
+// const textList = [
+//   {
+//     first: "ADHD Friendly",
+//     second: "Profile",
+//     description:
+//       "Significantly reduces distractions and noise, to help people with ADHD and others to browse, read, and focus on the essential elements of the website more easily.",
+//     img: "Feature - ADHD.gif",
+//   },
+//   {
+//     first: "Cognitive Disability",
+//     second: "Profile",
+//     description:
+//       "Provides various assistive features to help users with cognitive disabilities such as Autism, Dyslexia, CVA, and others to focus on the essential elements of the website more easily.",
+//     img: "Feature2.gif",
+//   },
+//   {
+//     first: "Content",
+//     second: "Adjustments",
+//     description:
+//       "Neuro.AI provides customized content adjustment support, for example, adjusting font size, line height and letter spacing.",
+//     img: "Feature - Content.gif",
+//   },
+//   {
+//     first: "Display",
+//     second: "Adjustments",
+//     description:
+//       "Neuro.AI empowers users to adjust the colors and contrast of the site, with customized adjustments like monochrome, background and text colorization and more.",
+//     img: "Feature4.gif",
+//   },
+//   {
+//     first: "Orientation",
+//     second: "Adjustments",
+//     description:
+//       "Achieved through links, shortcuts and guiding elements, as well as reducing distractions and noise for individuals with impairments, Neuro.AI permits reorienting the website to suit their needs, like activating the read mode, stopping animations or hiding images.",
+//     img: "Feature5.gif",
+//   },
+// ];
 
-export default function First() {
+export default function First({ translate }) {
+  const textList = [
+    {
+      first: translate("ADHDFriendly"),
+      second: translate("Profile"),
+      description: translate("ADHDFriendlyDescription"),
+      img: "Feature - ADHD.gif",
+    },
+    {
+      first: translate("CognitiveDisability"),
+      second: translate("Profile"),
+      description: translate("CognitiveDisabilityDescription"),
+      img: "Feature2.gif",
+    },
+    {
+      first: translate("ContentAdjustments"),
+      second: translate("Adjustments"),
+      description: translate("ContentAdjustmentsDescription"),
+      img: "Feature - Content.gif",
+    },
+    {
+      first: translate("DisplayAdjustments"),
+      second: translate("Adjustments"),
+      description: translate("DisplayAdjustmentsDescription"),
+      img: "Feature4.gif",
+    },
+    {
+      first: translate("OrientationAdjustments"),
+      second: translate("Adjustments"),
+      description: translate("OrientationAdjustmentsDescription"),
+      img: "Feature5.gif",
+    },
+  ];
   return (
     <div className="flex flex-col items-center gap-0 py-2 px-8 lg:pt-0 pt-10">
       {textList.map((text, index) => (
@@ -76,7 +108,6 @@ export default function First() {
                 quality={100}
                 alt={text.img}
                 src={`/images/features/${text.img}`}
-              
               />
             </div>
           </section>

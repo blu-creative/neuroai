@@ -343,7 +343,7 @@ export default function Form() {
             }}
           ></div>
         ) : (
-          <span>Submit</span>
+          <span>{t("Submit")}</span>
         )}
       </button>
       <Toast
