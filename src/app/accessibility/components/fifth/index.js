@@ -19,17 +19,19 @@ export default function First({ translate, locale }) {
           className="md:text-6xl text-3xl max-w-3xl font-bold text-center"
           data-aos="fade-up"
         >
-          <span className="text-primary-900">Disabilities Acts in the</span>
+          <span className="text-primary-900">
+            {translate("DisabilitiesActsIn")}{" "}
+          </span>
           <br />
-          <span className="text-primary-500">United States and Canada</span>
+          <span className="text-primary-500">
+            {translate("UnitedStatesAndCanada")}
+          </span>
         </h1>
         <h2
           className="md:text-2xl text-xs max-w-4xl font-bold text-center text-secondary-500"
           data-aos="fade-down"
         >
-          They require websites to be accessible to neurodiverse individuals,
-          ensuring they have equal access to the content and functionality of
-          the site.
+          {translate("AccessibilityRequirement")}
         </h2>
 
         <div className="flex justify-center px-4 md:px-0">
@@ -40,7 +42,7 @@ export default function First({ translate, locale }) {
             >
               <div className="flex-shrink-0 w-full  flex justify-center items-start bg-primary-900 rounded-t-xl py-5">
                 <h2 className="text-3xl font-bold w-3/5 mb-2 text-neutral-25 text-center">
-                  Accessible Canada Act (ACA)
+                  {translate("AccessibleCanadaAct")}
                 </h2>
               </div>
 
@@ -64,7 +66,7 @@ export default function First({ translate, locale }) {
             >
               <div className="flex-shrink-0 w-full  flex justify-center items-start bg-primary-700 rounded-t-xl py-5">
                 <h2 className="text-3xl font-bold w-4/5 mb-2 text-neutral-25 text-center">
-                  American Disabilities Act (ADA) 
+                  {translate("AmericanDisabilitiesAct")}
                 </h2>
               </div>
 
