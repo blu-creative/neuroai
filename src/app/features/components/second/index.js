@@ -5,13 +5,11 @@ export default function Second({ translate, locale }) {
   return (
     <section className="flex justify-center gap-10 flex-col items-center text-center mt-8">
       <h1 className="text-6xl font-bold font-Exo" data-aos="fade-up">
-        <span className="text-primary-900">Automated </span>
-        <span className="text-primary-500">Remediation</span>
+        <span className="text-primary-900">{translate("Automated")}</span>
+        <span className="text-primary-500">{translate("Remediation")}</span>
       </h1>
       <p className="font-bold text-xl max-w-xl" data-aos="fade-down">
-        By leveraging Generative AI, Neuro.AI automatically monitors and
-        remediates websites to meet WCAG standards while creating personalized
-        user profiles tailored to individual cognitive and sensory needs.
+        {translate("AutomatedRemediationDescription")}
       </p>
 
       <Link

@@ -13,35 +13,33 @@ export default function First({ translate }) {
             data-aos="fade-up"
           >
             {/* {translate("our_objective")} */}
-            How Neuro.AI{" "}
-            <span className="text-primary-500"> helps your SEO </span>
+            {translate("HowNeuroAI")}{" "}
+            <span className="text-primary-500">
+              {translate("HelpsYourSEO")}{" "}
+            </span>
           </h1>
           <h2
             className="text-neutral-800 text-base md:text-xl font-bold py-4"
             data-aos="fade-up"
           >
-            {/* {translate("objective_description")} */}
-            Implementing accessibility practices not only makes your website
-            more inclusive but also enhances its SEO performance. Investing in
-            Neuro.AI has a dual benefit of reaching a broader audience and
-            improving your site&apos;s search engine visibility and rankings.
+            {translate("ObjectiveDescription")}
           </h2>
 
           <ul className="list-disc list-inside marker:text-primary-500 text-xl font-bold">
             <li data-aos="fade-right" className="mb-2">
-              Improved usability
+              {translate("ImprovedUsability")}
             </li>
             <li data-aos="fade-left" className="mb-2">
-              Mobile friendliness
+              {translate("MobileFriendliness")}
             </li>
             <li data-aos="fade-right" className="mb-2">
-              Enhanced readability
+              {translate("EnhancedReadability")}
             </li>
             <li data-aos="fade-left" className="mb-2">
-              Reduced bounce rates
+              {translate("ReducedBounceRates")}
             </li>
             <li data-aos="fade-right" className="mb-2">
-              Faster page loading times
+              {translate("FasterPageLoadingTimes")}
             </li>
           </ul>
         </div>

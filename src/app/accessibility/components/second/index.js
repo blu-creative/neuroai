@@ -14,10 +14,10 @@ export default function First({ translate }) {
             </div>
             <div className="w-[90%] text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Perceivable
+                {translate("Perceivable")}
               </h2>
               <p className="text-base font-bold">
-                Providing alternative text, captions and text descriptions
+                {translate("ProvidingAlternativeText")}
               </p>
             </div>
           </div>
@@ -30,11 +30,10 @@ export default function First({ translate }) {
             </div>
             <div className="w-[90%] text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Understandable
+                {translate("Understandable")}
               </h2>
               <p className="text-base font-bold">
-                Content and operation of the interface should be clear to all
-                users
+                {translate("ContentOperationClear")}
               </p>
             </div>
           </div>
@@ -47,11 +46,10 @@ export default function First({ translate }) {
             </div>
             <div className="w-[90%] text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Operable
+                {translate("Operable")}
               </h2>
               <p className="text-base font-bold">
-                Making elements accessible with methods like keyboard, mouse or
-                voice commands
+                {translate("AccessibleMethods")}
               </p>
             </div>
           </div>
@@ -64,11 +62,10 @@ export default function First({ translate }) {
             </div>
             <div className="w-[90%] text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Compliant
+                {translate("Compliant")}
               </h2>
               <p className="text-base font-bold">
-                Following accessibility standards and guidelines, such as the
-                WCAG
+                {translate("AccessibilityStandards")}
               </p>
             </div>
           </div>

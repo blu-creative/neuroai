@@ -12,21 +12,17 @@ export default function First({ translate }) {
             className="text-primary-700 mb-8 mt-2.5 text-3xl md:text-5xl font-bold"
             data-aos="fade-up"
           >
-            {/* {translate("our_objective")} */}
-            Disability{" "}
-            <span className="text-primary-900"> and Neurodiversity </span>
+            {translate("Disability")}
+            <span className="text-primary-900">
+              {translate("andNeurodiversity")}
+            </span>
           </h1>
           <h2
             className="text-neutral-800 text-base md:text-xl font-bold md:py-4 md:px-0 px-4"
             data-aos="fade-up"
           >
-            {/* {translate("objective_description")} */}A disability is any
-            condition of the body or mind that makes it more difficult for the
-            person with the condition to do certain activities and interact with
-            the world around them. For neurodiversity, it describes the idea
-            that there is a wide range of ways that people perceive and respond
-            to the world, and some neurodiverse conditions could fall under the
-            umbrella of disability.
+            {translate("objective_description")}
+            {translate("disability_definition")}
           </h2>
         </div>
         {/* Image Section */}
@@ -50,7 +46,7 @@ export default function First({ translate }) {
 
               <div className="w-[90%]">
                 <p className="text-base font-bold text-center text-neutral-25">
-                  of the world’s population is neurodivergence
+                  {translate("neurodivergent_population")}
                 </p>
               </div>
             </div>
@@ -69,7 +65,7 @@ export default function First({ translate }) {
 
               <div className="w-[90%]">
                 <p className="text-base font-bold text-center text-primary-800">
-                  Canadians live with a disability
+                  {translate("canadians_with_disability")}
                 </p>
               </div>
             </div>
@@ -88,7 +84,7 @@ export default function First({ translate }) {
 
               <div className="w-[90%]">
                 <p className="text-base font-bold text-center text-primary-800">
-                  experience significant disability worldwide
+                  {translate("global_disability")}
                 </p>
               </div>
             </div>
@@ -107,7 +103,7 @@ export default function First({ translate }) {
 
               <div className="w-[90%]">
                 <p className="text-base font-bold text-center text-neutral-25">
-                  Americans are neurodivergent
+                  {translate("americans_neurodivergent")}
                 </p>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function First({ translate }) {
+export default function Firstranslate({ translate }) {
   return (
     <section>
       <div className="flex justify-center px-4 md:px-0">
@@ -17,12 +17,10 @@ export default function First({ translate }) {
 
             <div className="w-full md:w-[80%] pl-0 md:pl-4 md:text-left text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Inclusion and Equity
+                {translate("InclusionAndEquity")}
               </h2>
               <p className="text-base font-bold">
-                Neuro.AI provides accessible digital content, allowing people
-                with disabilities to have the same opportunities as everyone
-                else.
+                {translate("NeuroAIProvidesAccessibleContent")}
               </p>
             </div>
           </div>
@@ -39,12 +37,10 @@ export default function First({ translate }) {
 
             <div className="w-full md:w-[80%] pl-0 md:pl-4 md:text-left text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Improved User Experience
+                {translate("ImprovedUserExperience")}
               </h2>
               <p className="text-base font-bold">
-                By enhancing the usability of digital platforms with features
-                such as clear navigation, alt text for images, and readable
-                fonts.
+                {translate("EnhancingUsabilityDescription")}
               </p>
             </div>
           </div>
@@ -61,12 +57,10 @@ export default function First({ translate }) {
 
             <div className="w-full md:w-[80%] pl-0 md:pl-4 md:text-left text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Minor Remediation Powered by AI
+                {translate("MinorRemediationAI")}
               </h2>
               <p className="text-base font-bold">
-                Neuro.AI uses artificial intelligence to monitor, perform minor
-                corrections in real-time, and suggest more significant updates
-                as needed.
+                {translate("AIForMonitoringAndCorrections")}
               </p>
             </div>
           </div>
@@ -83,11 +77,10 @@ export default function First({ translate }) {
 
             <div className="w-full md:w-[80%] pl-0 md:pl-4 md:text-left text-center">
               <h2 className="text-2xl font-bold mb-2 text-primary-700">
-                Continuous Profile Generation
+                {translate("ContinuousProfileGeneration")}
               </h2>
               <p className="text-base font-bold">
-                Settings include profiles for safe spaces, visually impaired,
-                ADHD, and individuals with cognitive challenges, among others.
+                {translate("ProfileSettingsDescription")}
               </p>
             </div>
           </div>

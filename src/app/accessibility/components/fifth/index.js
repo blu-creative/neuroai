@@ -1,17 +1,17 @@
 import Link from "next/link";
-const Canada = [
-  "Availability in formats accessible to various disabilities",
-  "Alternatives for multimedia and ensuring navigability",
-  "Usability of the site through assistive technologies",
-];
-
-const Us = [
-  "Text alternatives for non-text content",
-  "Availability in captions for videos",
-  "All functionalities available for people who cannot use a mouse",
-];
 
 export default function First({ translate, locale }) {
+  const Canada = [
+    translate("AvailabilityInFormats"),
+    translate("AlternativesForMultimedia"),
+    translate("UsabilityOfTheSite"),
+  ];
+
+  const Us = [
+    translate("TextAlternatives"),
+    translate("AvailabilityInCaptions"),
+    translate("AllFunctionalitiesAvailable"),
+  ];
   return (
     <div className=" bg-cover ">
       <section className="flex flex-col items-center gap-12 pt-16 px-8">
@@ -19,7 +19,6 @@ export default function First({ translate, locale }) {
           className="md:text-6xl text-3xl max-w-3xl font-bold text-center"
           data-aos="fade-up"
         >
-          {/* {translate("about_us")} */}
           <span className="text-primary-900">Disabilities Acts in the</span>
           <br />
           <span className="text-primary-500">United States and Canada</span>
@@ -28,7 +27,6 @@ export default function First({ translate, locale }) {
           className="md:text-2xl text-xs max-w-4xl font-bold text-center text-secondary-500"
           data-aos="fade-down"
         >
-          {/* {translate("integrating ")} */}
           They require websites to be accessible to neurodiverse individuals,
           ensuring they have equal access to the content and functionality of
           the site.
