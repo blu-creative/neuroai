@@ -6,7 +6,7 @@ export default function BlogPreview({
   cover,
   title,
   description,
-  minute = 5,
+  readTime = 5,
   documentId,
   publishedAt,
   size,
@@ -25,8 +25,6 @@ export default function BlogPreview({
   if (size === "small") {
     sizeClass = "w-[350px] min-h-[315px]";
   }
-
-  console.log(cover.url);
 
   return (
     <Link href={`/blog/${documentId}`} className="w-fit block">
@@ -54,7 +52,6 @@ export default function BlogPreview({
               })}
             </p>
           ) : null}
-          {/* . */}
           <h2 className={`text-primary-900 font-bold ${titleSizeClass}`}>
             {title}
           </h2>
@@ -62,7 +59,7 @@ export default function BlogPreview({
             <p className="text-neutral-800 font-bold text-xl">{description}</p>
           ) : null}
           <div className="bg-primary-900 text-white w-fit px-3 py-1 rounded">
-            {`${minute} min read`}
+            {`${readTime} min read`}
           </div>
         </div>
       </div>
