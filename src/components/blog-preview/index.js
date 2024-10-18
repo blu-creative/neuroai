@@ -26,6 +26,8 @@ export default function BlogPreview({
     sizeClass = "w-[350px] min-h-[315px]";
   }
 
+  console.log(cover.url);
+
   return (
     <Link href={`/blog/${documentId}`} className="w-fit block">
       <div
