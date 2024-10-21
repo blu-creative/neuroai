@@ -50,7 +50,7 @@ export default async function Blog({ params, searchParams }) {
 
   return (
     <main>
-      <Sections post={post} />
+      <Sections post={post} locale={locale} />
     </main>
   );
 }

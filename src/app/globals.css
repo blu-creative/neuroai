@@ -16,6 +16,10 @@ body {
   font-family: Arial;
 }
 
+.slick-arrow {
+  display: none;
+}
+
 .list-box {
   @apply w-fit gap-3 rounded-xl font-bold bg-primary-700 md:text-2xl text-neutral-25 grid grid-rows-1 items-center justify-center mx-auto my-20 list-disc py-4 px-12;
 }
