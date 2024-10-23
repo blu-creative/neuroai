@@ -67,23 +67,25 @@ export default function Section({ post, locale }) {
         return <Component {...componentData} key={componentData.id} />;
       })}
 
-      <div className="w-full relative px-14">
-        <i
-          className="icon-mim-chevron absolute text-2xl -rotate-90 right-0 z-50 cursor-pointer p-4"
-          onClick={next}
-        />
-        <i
-          className="icon-mim-chevron absolute text-2xl rotate-90 left-0 z-50 cursor-pointer p-4"
-          onClick={previous}
-        />
-        <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
-          {post?.related.map((rel) => (
-            <div className="h-full mx-5">
-              <BlogPreview key={rel.id} {...rel} lang={locale} />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      {post?.related.length ? (
+        <div className="w-full relative px-14">
+          <i
+            className="icon-mim-chevron absolute text-2xl -rotate-90 right-0 z-50 cursor-pointer p-4"
+            onClick={next}
+          />
+          <i
+            className="icon-mim-chevron absolute text-2xl rotate-90 left-0 z-50 cursor-pointer p-4"
+            onClick={previous}
+          />
+          <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
+            {post?.related.map((rel) => (
+              <div className="h-full mx-5">
+                <BlogPreview key={rel.id} {...rel} lang={locale} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      ) : null}
     </div>
   );
 }
