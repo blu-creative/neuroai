@@ -67,7 +67,7 @@ export default function Section({ post, locale }) {
         return <Component {...componentData} key={componentData.id} />;
       })}
 
-      {post?.related.length ? (
+      {post?.related?.length ? (
         <div className="w-full relative px-14">
           <i
             className="icon-mim-chevron absolute text-2xl -rotate-90 right-0 z-50 cursor-pointer p-4"
