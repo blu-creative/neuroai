@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "aos": "^2.3.4",
+    "axios": "^1.7.7",
     "i18next": "^23.13.0",
     "marked": "^14.1.2",
     "next": "14.2.5",

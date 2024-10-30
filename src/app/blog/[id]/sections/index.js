@@ -12,6 +12,8 @@ import Media from "./components/media";
 import BlogPreview from "@/components/blog-preview";
 import Slider from "react-slick";
 
+import APIClient from "@/config/services";
+
 const componentMap = {
   "shared.rich-text": RichText,
   "shared.quote": Quote,
