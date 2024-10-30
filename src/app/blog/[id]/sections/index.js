@@ -81,6 +81,12 @@ export default function Section({ post, locale }) {
         return <Component {...componentData} key={componentData.id} />;
       })}
 
+      <div>
+        <h2 className="md:text-6xl text-3xl font-bold text-center text-primary-900 font-Exo my-24 aos-init aos-animate">
+          Related <span className="text-primary-500">blog posts</span>
+        </h2>
+      </div>
+
       {post?.related?.length ? (
         <div className="w-full relative px-14">
           <i
