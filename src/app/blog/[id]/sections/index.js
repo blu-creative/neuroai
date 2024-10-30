@@ -47,7 +47,8 @@ export default function Section({ post, locale }) {
     first = list?.slice(0, half).join(" ") + " ",
     second = list?.slice(half, lng).join(" ");
 
-  const link = `/blog/${post.nextId}${locale ? `locale=${locale}` : ""}`;
+  const qs = locale ? `?locale=${locale}` : "";
+  const link = `/blog/${post.nextId}${qs}`;
 
   return (
     <div className="flex flex-col items-center py-2 px-8 lg:pt-0 pt-10 max-w-5xl m-auto gap-5">
@@ -99,6 +100,11 @@ export default function Section({ post, locale }) {
           </Slider>
         </div>
       ) : null}
+      <Link href={`/blog${qs}`}>
+        <button className="bg-primary-500 text-white px-8 py-2 rounded-lg font-bold text-xl">
+          View all
+        </button>
+      </Link>
     </div>
   );
 }
