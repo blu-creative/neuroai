@@ -3,7 +3,12 @@ const url = process.env.NEXT_PUBLIC_URL;
 
 export default async function Blog({ params, searchParams }) {
   const { id } = params;
-  const locale = searchParams.locale === "fr" ? "fr-CA" : "en";
+  const locale =
+    searchParams.locale === "fr"
+      ? "fr-CA"
+      : searchParams.locale === "en"
+      ? "en"
+      : "";
 
   const res = await fetch(
     `${url}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags`,
@@ -45,6 +50,27 @@ export default async function Blog({ params, searchParams }) {
       } catch (error) {
         console.error(error);
       }
+    }
+  }
+
+  const nextPost = await fetch(
+    `${url}/api/articles?filters[publishedAt][$gt]=${post.publishedAt}&sort=publishedAt:asc&pagination[limit]=1`,
+    {
+      // Control caching behavior
+      cache: "no-store", // Fetch fresh data on every request
+      // next: { revalidate: 60 }, // Revalidate data every 60 seconds
+    }
+  );
+
+  if (nextPost.ok) {
+    try {
+      const object = await nextPost.json();
+      if (object.data.length) {
+        post.nextId = object.data[0].documentId;
+      }
+      post.next = object.data;
+    } catch (error) {
+      console.error(error);
     }
   }
 

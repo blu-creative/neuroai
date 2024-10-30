@@ -1,7 +1,8 @@
 "use client";
-
 import { useRef } from "react";
+import Link from "next/link";
 import Image from "next/image";
+import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,9 +11,6 @@ import RichText from "./components/richText";
 import Quote from "./components/quote";
 import Media from "./components/media";
 import BlogPreview from "@/components/blog-preview";
-import Slider from "react-slick";
-
-import APIClient from "@/config/services";
 
 const componentMap = {
   "shared.rich-text": RichText,
@@ -23,6 +21,8 @@ const componentMap = {
 const url = process.env.NEXT_PUBLIC_URL;
 export default function Section({ post, locale }) {
   let sliderRef = useRef(null);
+
+  console.log("reza:", { locale });
 
   const next = () => {
     sliderRef.slickNext();
@@ -47,8 +47,19 @@ export default function Section({ post, locale }) {
     first = list?.slice(0, half).join(" ") + " ",
     second = list?.slice(half, lng).join(" ");
 
+  const link = `/blog/${post.nextId}${locale ? `locale=${locale}` : ""}`;
+
   return (
     <div className="flex flex-col items-center py-2 px-8 lg:pt-0 pt-10 max-w-5xl m-auto gap-5">
+      {post.nextId ? (
+        <Link
+          className="flex justify-center items-center gap-3 ml-auto text-primary-900 font-bold mb-4"
+          href={link}
+        >
+          <p>Next Post</p>
+          <i className="icon-mim-chevron -rotate-90 relative" />
+        </Link>
+      ) : null}
       {post.cover ? (
         <div className="w-full relative aspect-video">
           <Image
@@ -81,7 +92,7 @@ export default function Section({ post, locale }) {
           />
           <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
             {post?.related.map((rel) => (
-              <div className="h-full mx-5">
+              <div className="h-full mx-5" key={rel.id}>
                 <BlogPreview key={rel.id} {...rel} lang={locale} />
               </div>
             ))}
