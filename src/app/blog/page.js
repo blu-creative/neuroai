@@ -22,6 +22,8 @@ export default async function Blog({ searchParams }) {
   //   }
   // );
 
+  // GET /articles?filters[$or][0][from][$null]=true&filters[$or][1][from][$gte]=2023-10-01&filters[$or][0][to][$null]=true&filters[$or][1][to][$lte]=2023-12-31
+
   const res = await fetch(
     `${url}/api/articles?locale=${locale}&populate=*&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
     {

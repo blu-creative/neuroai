@@ -15,6 +15,10 @@ module.exports = {
         protocol: "https",
         hostname: "phpstack-171372-4936316.cloudwaysapps.com",
       },
+      {
+        protocol: "https",
+        hostname: "backend.neurocompliance.ai",
+      },
     ],
   },
 };
