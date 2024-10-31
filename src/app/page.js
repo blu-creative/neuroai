@@ -13,14 +13,16 @@ export default async function Home({ searchParams }) {
 
   const localeLang = locale === "fr" ? "fr-CA" : "en";
 
-  const res = await fetch(
-    `${url}/api/articles?locale=${localeLang}&populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`,
-    {
-      // Control caching behavior
-      cache: "no-store", // Fetch fresh data on every request
-      // next: { revalidate: 60 }, // Revalidate data every 60 seconds
-    }
-  );
+  const today = new Date().toLocaleDateString();
+
+  const b = `${url}/api/articles?locale=${localeLang}&populate=cover&filters[$or][0][from][$null]=true&filters[$or][0][from][$gte]=${today}&filters[$or][1][to][$null]=true&filters[$or][2][to][$lte]=${today}&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`;
+  const c = `${url}/api/articles?locale=${localeLang}&populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`;
+
+  const res = await fetch(c, {
+    // Control caching behavior
+    cache: "no-store", // Fetch fresh data on every request
+    // next: { revalidate: 60 }, // Revalidate data every 60 seconds
+  });
 
   let posts = [];
   if (res.ok) {

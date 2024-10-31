@@ -22,7 +22,8 @@ const url = process.env.NEXT_PUBLIC_URL;
 export default function Section({ post, locale }) {
   let sliderRef = useRef(null);
 
-  console.log("reza:", { locale });
+  console.log("reza1:", { locale });
+  console.log("reza2:", { post });
 
   const next = () => {
     sliderRef.slickNext();
