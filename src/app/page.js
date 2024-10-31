@@ -3,7 +3,7 @@ import Second from "./home/second";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default async function Home({ searchParams }) {
-  const url = process.env.NEXT_PUBLIC_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_URL;
   const { locale } = searchParams;
   let lang = "en";
   if (typeof locale === "string") {
@@ -13,12 +13,13 @@ export default async function Home({ searchParams }) {
 
   const localeLang = locale === "fr" ? "fr-CA" : "en";
 
-  const today = new Date().toLocaleDateString();
+  const nowTime = new Date().toISOString();
 
-  const b = `${url}/api/articles?locale=${localeLang}&populate=cover&filters[$or][0][from][$null]=true&filters[$or][0][from][$gte]=${today}&filters[$or][1][to][$null]=true&filters[$or][2][to][$lte]=${today}&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`;
-  const c = `${url}/api/articles?locale=${localeLang}&populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`;
+  const fromToFilter = `filters[$and][0][$or][0][from][$lte]=${nowTime}&filters[$and][0][$or][1][from][$null]=true&filters[$and][1][$or][0][to][$gte]=${nowTime}&filters[$and][1][$or][1][to][$null]=true`;
 
-  const res = await fetch(c, {
+  const url = `${baseUrl}/api/articles?locale=${localeLang}&populate=cover&${fromToFilter}&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`;
+
+  const res = await fetch(url, {
     // Control caching behavior
     cache: "no-store", // Fetch fresh data on every request
     // next: { revalidate: 60 }, // Revalidate data every 60 seconds
