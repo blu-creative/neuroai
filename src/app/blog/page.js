@@ -2,8 +2,8 @@ import Head from "next/head";
 import First from "./components/first";
 
 export default async function Blog({ searchParams }) {
-  const url = process.env.NEXT_PUBLIC_URL;
-  const locale = searchParams.locale === "fr" ? "fr-CA" : "en";
+  const baseUrl = process.env.NEXT_PUBLIC_URL;
+  const { locale } = searchParams;
 
   // const res = await fetch(
   //   `${url}/api/articles?locale=${locale}&populate=cover&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
@@ -22,14 +22,17 @@ export default async function Blog({ searchParams }) {
   //   }
   // );
 
-  const today = new Date().toLocaleDateString();
+  const localeLang = locale === "fr" ? "fr-CA" : "en";
 
-  const res = await fetch(
-    `${url}/api/articles?locale=${locale}&filters[$or][0][from][$null]=true&filters[$or][1][from][$gte]=${today}&filters[$or][0][to][$null]=true&filters[$or][1][to][$lte]=${today}&populate=cover&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
-    {
-      cache: "no-store",
-    }
-  );
+  const nowTime = new Date().toISOString();
+
+  const fromToFilter = `filters[$and][0][$or][0][from][$lte]=${nowTime}&filters[$and][0][$or][1][from][$null]=true&filters[$and][1][$or][0][to][$gte]=${nowTime}&filters[$and][1][$or][1][to][$null]=true`;
+
+  const url = `${baseUrl}/api/articles?locale=${localeLang}&populate=cover&${fromToFilter}&populate=cover&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`;
+
+  const res = await fetch(url, {
+    cache: "no-store",
+  });
 
   let posts = [];
   let seo = { title: "Default Title", description: "Default Description" }; // Default SEO values
