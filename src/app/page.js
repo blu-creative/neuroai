@@ -13,9 +13,7 @@ export default async function Home({ searchParams }) {
 
   const localeLang = locale === "fr" ? "fr-CA" : "en";
 
-  const nowTime = new Date().toISOString();
-
-  const fromToFilter = `filters[$and][0][$or][0][from][$lte]=${nowTime}&filters[$and][0][$or][1][from][$null]=true&filters[$and][1][$or][0][to][$gte]=${nowTime}&filters[$and][1][$or][1][to][$null]=true`;
+  const fromToFilter = fromTo();
 
   const url = `${baseUrl}/api/articles?locale=${localeLang}&populate=cover&${fromToFilter}&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`;
 
