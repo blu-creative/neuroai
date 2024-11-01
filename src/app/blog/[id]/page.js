@@ -98,7 +98,7 @@
 // }
 
 import Sections from "./sections";
-const url = process.env.NEXT_PUBLIC_URL;
+const baseUrl = process.env.NEXT_PUBLIC_URL;
 
 export async function generateMetadata({ params, searchParams }) {
   const { id } = params;
@@ -110,7 +110,7 @@ export async function generateMetadata({ params, searchParams }) {
       : "";
 
   const res = await fetch(
-    `${url}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo`,
+    `${baseUrl}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo`,
     { cache: "no-store" }
   );
 
@@ -148,8 +148,12 @@ export default async function Blog({ params, searchParams }) {
       ? "en"
       : "";
 
+  const nowTime = new Date().toISOString();
+
+  const fromToFilter = `filters[$and][0][$or][0][from][$lte]=${nowTime}&filters[$and][0][$or][1][from][$null]=true&filters[$and][1][$or][0][to][$gte]=${nowTime}&filters[$and][1][$or][1][to][$null]=true`;
+
   const res = await fetch(
-    `${url}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo`,
+    `${baseUrl}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo`,
     { cache: "no-store" }
   );
 
@@ -167,11 +171,13 @@ export default async function Blog({ params, searchParams }) {
   if (post.tags?.length) {
     let filter = "";
     post.tags.forEach((element, index) => {
-      filter += `filters[$or][${index}][tags][title][$eq]=${element.title}&`;
+      filter += `filters[$or][${index + 2}][tags][title][$eq]=${
+        element.title
+      }&`;
     });
 
     const related = await fetch(
-      `${url}/api/articles?locale=${locale}&${filter}&populate=cover`,
+      `${baseUrl}/api/articles?locale=${locale}&${filter}&${fromToFilter}&populate=cover`,
       { cache: "no-store" }
     );
 
@@ -187,7 +193,7 @@ export default async function Blog({ params, searchParams }) {
 
   // Fetch the next post
   const nextPost = await fetch(
-    `${url}/api/articles?filters[publishedAt][$gt]=${post.publishedAt}&sort=publishedAt:asc&pagination[limit]=1`,
+    `${baseUrl}/api/articles?filters[publishedAt][$gt]=${post.publishedAt}&${fromToFilter}&sort=publishedAt:asc&pagination[limit]=1`,
     { cache: "no-store" }
   );
 
