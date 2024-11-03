@@ -1,11 +1,9 @@
 "use client";
-import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Slider from "react-slick";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
 
 import RichText from "./components/richText";
 import Quote from "./components/quote";
@@ -20,28 +18,6 @@ const componentMap = {
 
 const url = process.env.NEXT_PUBLIC_URL;
 export default function Section({ post, locale }) {
-  let sliderRef = useRef(null);
-
-  console.log("reza1:", { locale });
-  console.log("reza2:", { post });
-
-  const next = () => {
-    sliderRef.slickNext();
-  };
-  const previous = () => {
-    sliderRef.slickPrev();
-  };
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToScroll: 1,
-    autoplay: false,
-    centerMode: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-  };
-
   const list = post.title?.split(" "),
     lng = list?.length || 0,
     half = Math.ceil(lng / 2),
@@ -91,20 +67,28 @@ export default function Section({ post, locale }) {
       {post?.related?.length ? (
         <div className="w-full relative px-14">
           <i
-            className="icon-mim-chevron absolute text-2xl -rotate-90 right-0 z-50 cursor-pointer p-4"
-            onClick={next}
+            className="icon-mim-chevron absolute text-2xl -rotate-90 top-1/2 right-0 z-50 cursor-pointer p-4"
+            id="next"
           />
           <i
-            className="icon-mim-chevron absolute text-2xl rotate-90 left-0 z-50 cursor-pointer p-4"
-            onClick={previous}
+            className="icon-mim-chevron absolute text-2xl rotate-90 left-0 top-1/2 z-50 cursor-pointer p-4"
+            id="prev"
           />
-          <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
+          <Swiper
+            slidesPerView="auto"
+            modules={[Navigation, Autoplay]}
+            navigation={{ nextEl: "#next", prevEl: "#prev" }}
+            autoplay={{ disableOnInteraction: true }}
+            updateOnWindowResize
+          >
             {post?.related.map((rel) => (
-              <div className="h-full mx-5" key={rel.id}>
-                <BlogPreview key={rel.id} {...rel} lang={locale} />
-              </div>
+              <SwiperSlide key={rel.id} className="!w-fit">
+                <div className="h-full mx-5" key={rel.id}>
+                  <BlogPreview key={rel.id} {...rel} lang={locale} />
+                </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </div>
       ) : null}
       <Link href={`/blog${qs}`}>
