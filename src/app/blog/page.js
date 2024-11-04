@@ -6,23 +6,6 @@ export default async function Blog({ searchParams }) {
   const baseUrl = process.env.NEXT_PUBLIC_URL;
   const { locale } = searchParams;
 
-  // const res = await fetch(
-  //   `${url}/api/articles?locale=${locale}&populate=cover&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
-  //   {
-  //     // Control caching behavior
-  //     cache: "no-store", // Fetch fresh data on every request
-  //     // next: { revalidate: 60 }, // Revalidate data every 60 seconds
-  //   }
-  // );
-
-  //with from to
-  // const res = await fetch(
-  //   `${url}/api/articles?locale=${locale}&populate[cover]=true&populate=from&populate=to&pagination[page]=1&pagination[pageSize]=10&sort=publishedAt:desc`,
-  //   {
-  //     cache: "no-store",
-  //   }
-  // );
-
   const localeLang = locale === "fr" ? "fr-CA" : "en";
 
   const fromToFilter = fromTo();

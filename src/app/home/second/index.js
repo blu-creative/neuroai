@@ -4,7 +4,6 @@ import Link from "next/link";
 import BlogPreview from "@/components/blog-preview";
 
 export default function Second({ posts, lang }) {
-  console.log(1, { lang });
   return (
     <section className="flex flex-col items-center md:pt-6 lg:pt-10 pt-6 pb-2">
       <h1

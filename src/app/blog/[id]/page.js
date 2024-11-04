@@ -1,102 +1,3 @@
-// import Sections from "./sections";
-// const url = process.env.NEXT_PUBLIC_URL;
-
-// export let metadata = {
-//   title: "Default Title",
-//   description: "Default Description",
-//   keywords: "Default Keywords",
-// };
-
-// export default async function Blog({ params, searchParams }) {
-//   const { id } = params;
-//   const locale =
-//     searchParams.locale === "fr"
-//       ? "fr-CA"
-//       : searchParams.locale === "en"
-//       ? "en"
-//       : "";
-
-//   const res = await fetch(
-//     `${url}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo`,
-//     {
-//       // Control caching behavior
-//       cache: "no-store", // Fetch fresh data on every request
-//       // next: { revalidate: 60 }, // Revalidate data every 60 seconds
-//     }
-//   );
-
-//   let post = {};
-//   if (res.ok) {
-//     try {
-//       const object = await res.json();
-//       console.log("object:", object);
-
-//       post = object.data;
-//       console.log("post:", post);
-//       if (post.seo && post.seo.length > 0) {
-//         metadata = {
-//           title: post.seo[0].metaTitle || "",
-//           description: post.seo[0].metaDescription || "",
-//           keywords: post.seo[0].keywords || "",
-//         };
-//       }
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-//   if (post.tags?.length) {
-//     let filter = "";
-//     post.tags.forEach((element, index) => {
-//       filter += `filters[$or][${index}][tags][title][$eq]=${element.title}&`;
-//     });
-
-//     const related = await fetch(
-//       `${url}/api/articles?locale=${locale}&${filter}&populate=cover`,
-//       {
-//         // Control caching behavior
-//         cache: "no-store", // Fetch fresh data on every request
-//         // next: { revalidate: 60 }, // Revalidate data every 60 seconds
-//       }
-//     );
-
-//     if (related.ok) {
-//       try {
-//         const object = await related.json();
-//         post.related = object.data;
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     }
-//   }
-
-//   const nextPost = await fetch(
-//     `${url}/api/articles?filters[publishedAt][$gt]=${post.publishedAt}&sort=publishedAt:asc&pagination[limit]=1`,
-//     {
-//       // Control caching behavior
-//       cache: "no-store", // Fetch fresh data on every request
-//       // next: { revalidate: 60 }, // Revalidate data every 60 seconds
-//     }
-//   );
-
-//   if (nextPost.ok) {
-//     try {
-//       const object = await nextPost.json();
-//       if (object.data.length) {
-//         post.nextId = object.data[0].documentId;
-//       }
-//       post.next = object.data;
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-
-//   return (
-//     <main>
-//       <Sections post={post} locale={locale} />
-//     </main>
-//   );
-// }
-
 import Sections from "./sections";
 import { fromTo } from "@/utils/dateFilter";
 const baseUrl = process.env.NEXT_PUBLIC_URL;
@@ -149,9 +50,12 @@ export default async function Blog({ params, searchParams }) {
       ? "en"
       : "";
 
+  const populate =
+    "populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo";
+
   const fromToFilter = fromTo();
   const res = await fetch(
-    `${baseUrl}/api/articles/${id}?locale=${locale}&populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo`,
+    `${baseUrl}/api/articles/${id}?locale=${locale}&${populate}`,
     { cache: "no-store" }
   );
 
