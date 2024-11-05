@@ -1,20 +1,13 @@
 import Sections from "./sections";
-import { fromTo } from "@/utils/dateFilter";
-const baseUrl = process.env.NEXT_PUBLIC_URL;
+import { urlBuilder } from "@/utils/urlBuilder";
 
 export async function generateMetadata({ params, searchParams }) {
   const { id } = params;
-  const locale =
-    searchParams.locale === "fr"
-      ? "fr-CA"
-      : searchParams.locale === "en"
-      ? "en"
-      : "";
+  const { locale } = searchParams;
 
-  const res = await fetch(
-    `${baseUrl}/api/articles/${id}?locale=${locale}&populate=seo`,
-    { cache: "no-store" }
-  );
+  const url = urlBuilder({ locale, id, populate: ["seo"] });
+
+  const res = await fetch(url, { cache: "no-store" });
 
   if (res.ok) {
     try {
@@ -43,21 +36,14 @@ export async function generateMetadata({ params, searchParams }) {
 
 export default async function Blog({ params, searchParams }) {
   const { id } = params;
-  const locale =
-    searchParams.locale === "fr"
-      ? "fr-CA"
-      : searchParams.locale === "en"
-      ? "en"
-      : "";
+  const { locale } = searchParams;
 
-  const populate =
-    "populate[0]=blocks.file&populate[1]=blocks.files&populate[2]=cover&populate[3]=author&populate[4]=tags&populate[5]=seo";
-
-  const fromToFilter = fromTo();
-  const res = await fetch(
-    `${baseUrl}/api/articles/${id}?locale=${locale}&${populate}`,
-    { cache: "no-store" }
-  );
+  const url = urlBuilder({
+    locale,
+    id,
+    populate: ["blocks.file", "blocks.files", "cover", "author", "tags", "seo"],
+  });
+  const res = await fetch(url, { cache: "no-store" });
 
   let post = {};
   if (res.ok) {
@@ -78,10 +64,9 @@ export default async function Blog({ params, searchParams }) {
       }&`;
     });
 
-    const related = await fetch(
-      `${baseUrl}/api/articles?locale=${locale}&${filter}&${fromToFilter}&populate=cover`,
-      { cache: "no-store" }
-    );
+    const url = urlBuilder({ locale, filter });
+
+    const related = await fetch(url, { cache: "no-store" });
 
     if (related.ok) {
       try {
@@ -94,10 +79,16 @@ export default async function Blog({ params, searchParams }) {
   }
 
   // Fetch the next post
-  const nextPost = await fetch(
-    `${baseUrl}/api/articles?filters[publishedAt][$gt]=${post.publishedAt}&${fromToFilter}&sort=publishedAt:asc&pagination[limit]=1`,
-    { cache: "no-store" }
-  );
+
+  const nextUrl = urlBuilder({
+    locale,
+    filter: `filters[publishedAt][$gt]=${post.publishedAt}`,
+    size: 1,
+    populate: [],
+    sortType: "asc",
+  });
+
+  const nextPost = await fetch(nextUrl, { cache: "no-store" });
 
   if (nextPost.ok) {
     try {
