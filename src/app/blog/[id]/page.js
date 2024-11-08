@@ -13,25 +13,60 @@ export async function generateMetadata({ params, searchParams }) {
     try {
       const data = await res.json();
       const post = data.data;
+      const keyValue = {
+        og: "openGraph",
+        opengraph: "openGraph",
+        twitter: "twitter",
+      };
 
       // Define dynamic metadata based on fetched SEO data or defaults
       const metadata = {
-        title: post.seo?.[0]?.metaTitle || "Default Title",
-        description: post.seo?.[0]?.metaDescription || "Default Description",
-        keywords: post.seo?.[0]?.keywords || "Default Keywords",
+        title: post.title,
+        description: post.description,
+        twitter: {
+          images: [
+            {
+              url: "https://nextjs.org/og.png", // Must be an absolute URL
+              width: 800,
+              height: 600,
+            },
+          ],
+        },
+        openGraph: {},
       };
+
+      if (post.seo.length) {
+        post.seo.forEach((seoParam) => {
+          if (seoParam.name.includes(":")) {
+            const [type, name, unit] = seoParam.name.split(":");
+
+            console.log({ type, name, unit, content: seoParam.content });
+            const lowType = type.toLowerCase();
+            console.log(keyValue[lowType]);
+            if (keyValue[lowType]) {
+              if (!metadata[keyValue[lowType]]) {
+                metadata[keyValue[lowType]] = {};
+              }
+              if (unit) {
+                // if (!metadata[keyValue[lowType]][name]) {
+                //   metadata[keyValue[lowType]][name] = {};
+                // }
+                // metadata[keyValue[lowType]][name][unit] = seoParam.content;
+              } else {
+                metadata[keyValue[lowType]][name] = seoParam.content;
+              }
+            }
+          } else {
+            metadata[seoParam.name] = seoParam.content;
+          }
+        });
+      }
+
       return metadata;
     } catch (error) {
       console.error("Error generating metadata:", error);
     }
   }
-
-  // Fallback metadata in case of fetch failure
-  return {
-    title: "Default Title",
-    description: "Default Description",
-    keywords: "Default Keywords",
-  };
 }
 
 export default async function Blog({ params, searchParams }) {
