@@ -7,11 +7,14 @@ const CheckerPage = ({ searchParams }) => {
     const script = document.createElement('script');
     script.src = 'https://acsbace.com/embedders/config/674e119ba88b00d47df94ab6';
     script.async = true;
+    script.onload = () => {
+      // Hide upper part of the page after the script is loaded
+      const upperSections = document.getElementsByClassName('start674e119ba88b00d47df94ab6');
+      for (const section of upperSections) {
+        section.style.display = 'none';
+      }
+    };
     document.body.appendChild(script);
-
-    //hide upper part of the page
-    const UpperSection = document.getElementsByClassName('start674e119ba88b00d47df94ab6');
-    UpperSection.style.display = 'none';
   }, []);
 
   return (
