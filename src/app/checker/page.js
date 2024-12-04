@@ -8,6 +8,10 @@ const CheckerPage = ({ searchParams }) => {
     script.src = 'https://acsbace.com/embedders/config/674e119ba88b00d47df94ab6';
     script.async = true;
     document.body.appendChild(script);
+
+    //hide upper part of the page
+    const UpperSection = document.getElementsByClassName('start674e119ba88b00d47df94ab6');
+    UpperSection.style.display = 'none';
   }, []);
 
   return (
