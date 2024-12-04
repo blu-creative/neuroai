@@ -37,6 +37,7 @@ export default function Header({ text }) {
     "/neuro-vs-competition": t("NeuroVsCompetitionTitle"),
     "/fAQ": t("FAQTitle"),
     "/blog": t("BlogTitle"),
+    "/checker": t("AuditToolTitle"),
     // "/litigation-Support": t("LitigationSupportTitle"),
   };
 

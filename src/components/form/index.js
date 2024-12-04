@@ -249,6 +249,7 @@ export default function Form() {
         lastName,
         email,
         message,
+        phone,
       }),
     });
 
