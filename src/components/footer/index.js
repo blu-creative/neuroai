@@ -3,7 +3,6 @@ import { usePathname, useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "@/hooks/useTranslation";
-
 import Form from "@/components/form";
 
 export default function Footer() {

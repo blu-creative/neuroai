@@ -12,8 +12,7 @@ const CheckerPage = ({ searchParams }) => {
 
   return (
     <main>
-      <h1>Checker Page</h1>
-      <div id="p674e119ba88b00d47df94ab6"></div>
+      <div id="p674e119ba88b00d47df94ab6" className="pt-6"></div>
     </main>
   );
 };

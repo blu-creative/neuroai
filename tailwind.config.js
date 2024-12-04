@@ -45,6 +45,9 @@ module.exports = {
       borderWidth: {
         3: "3px",
       },
+      screens: {
+        'md2': '680px',
+      }
     },
     container: {
       center: true,
