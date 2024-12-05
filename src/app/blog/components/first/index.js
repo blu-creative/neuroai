@@ -1,8 +1,13 @@
 "use client";
 
 import BlogPreview from "@/components/blog-preview";
+import { useSearchParams } from "next/navigation";
 
 export default function First({ big, latests, blogList }) {
+
+  const searchParams = useSearchParams();
+  const locale = searchParams.get("locale") || "en";
+
   return (
     <section className="m-4 lg:m-20 md:m-12 sm:m-8">
       <div className="flex items-center justify-evenly flex-wrap gap-y-8">
@@ -25,8 +30,8 @@ export default function First({ big, latests, blogList }) {
         data-aos="fade-down"
         className="md:text-6xl text-3xl font-bold text-center text-primary-900 font-Exo my-24"
       >
-        <span>Check our latest </span>
-        <span className="text-primary-500">blog posts</span>
+        <span>{locale === "en" ? "Check our lates " : "Découvrez nos derniers "} </span>
+        <span className="text-primary-500">{locale === "en" ? "blog posts" : "articles de blog"}</span>
       </h1>
       <div className="grid grid-cols-1 justify-items-center lg:grid-cols-3 md:grid-cols-2 gap-y-8">
         {blogList.map((blog, index) => (
@@ -41,7 +46,7 @@ export default function First({ big, latests, blogList }) {
         ))}
       </div>
       <div className="flex gap-2 text-primary-500 items-center font-bold text-2xl mt-6 justify-center cursor-pointer">
-        <span>Load More</span> <i className="icon-mim-chevron block" />
+        <span>{locale === "en" ? "Load More" : "Charger plus"}</span> <i className="icon-mim-chevron block" />
       </div>
     </section>
   );
