@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 
 const CheckerPage = ({ searchParams }) => {
+  const { locale } = searchParams;
   // useEffect(() => {
   //   const script = document.createElement('script');
   //   script.src = 'https://acsbace.com/embedders/config/674e119ba88b00d47df94ab6';
@@ -23,10 +24,10 @@ const CheckerPage = ({ searchParams }) => {
     // </main>
     
     <iframe
-      className="mt-6"
-        src="/accessibility/674e119ba88b00d47df94ab6_code.html"
+      className="mt-20"
+        src={ `/accessibility/674e119ba88b00d47df94ab6_code_${locale ==="fr" ? "FR" : "EN"}.html`}
         width="100%"
-        height="900"
+        height="850"
         title="Accessiblity Checker"
       />
   );
