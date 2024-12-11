@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CheckerPage = ({ searchParams }) => {
+  const [checkerURL, setCheckerURL] = useState('/accessibility/674e119ba88b00d47df94ab6_code_EN.html');
   const { locale } = searchParams;
   // useEffect(() => {
   //   const script = document.createElement('script');
@@ -17,6 +18,10 @@ const CheckerPage = ({ searchParams }) => {
   //   };
   //   document.body.appendChild(script);
   // }, []);
+
+  useEffect(() => {
+    setCheckerURL(`/accessibility/674e119ba88b00d47df94ab6_code_${locale ==="fr" ? "FR" : "EN"}.html`);
+  }, [locale]);
 
   return (
     // <main>
