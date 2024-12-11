@@ -20,6 +20,7 @@ const CheckerPage = ({ searchParams }) => {
   // }, []);
 
   useEffect(() => {
+    console.log("Locale: ", locale); 
     setCheckerURL(`/accessibility/674e119ba88b00d47df94ab6_code_${locale ==="fr" ? "FR" : "EN"}.html`);
   }, [locale]);
 
@@ -29,7 +30,8 @@ const CheckerPage = ({ searchParams }) => {
     // </main>
     
     <iframe
-      className="mt-20"
+        key={checkerURL} 
+        className="mt-20"
         src={checkerURL}
         width="100%"
         height="850"
