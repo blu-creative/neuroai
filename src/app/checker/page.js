@@ -30,7 +30,7 @@ const CheckerPage = ({ searchParams }) => {
     
     <iframe
       className="mt-20"
-        src={ `/accessibility/674e119ba88b00d47df94ab6_code_${locale ==="fr" ? "FR" : "EN"}.html`}
+        src={checkerURL}
         width="100%"
         height="850"
         title="Accessiblity Checker"
