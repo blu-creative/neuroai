@@ -17,7 +17,7 @@ const CheckerIframe = ({ locale }) => {
         className="mt-20"
         src={checkerURL}
         width="100%"
-        height="850"
+        height={locale ==="fr" ? "920px" : "850px"}
         title="Accessiblity Checker"
       />
   );
