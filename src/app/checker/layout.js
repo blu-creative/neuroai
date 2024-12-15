@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "Blü Creative",
-  description: "Checker Tool",
+  description: "Accessibility Checker Tool",
 };
 
 export default function RootLayout({ children }) {
