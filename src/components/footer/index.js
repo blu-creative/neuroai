@@ -33,14 +33,14 @@ export default function Footer() {
             </p>
             {isContact && (
               <>
-                <a href="tel:5143337800">
+                <a href="tel:18559373726">
                   <div className="text-center text-xl">
                     <div
                       className="flex justify-center items-center"
                       data-aos="fade-up"
                     >
                       <i className="icon-mim-phone block text-xl mr-3 font-black text-primary-900" />
-                      <p className="text-primary-900">(514) 333-7800</p>
+                      <p className="text-primary-900">1-855-937-3726</p>
                     </div>
                   </div>
                 </a>

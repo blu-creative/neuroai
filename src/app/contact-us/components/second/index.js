@@ -30,7 +30,7 @@ export default function First() {
           </div>
           <div className="flex items-start" data-aos="fade-up">
             <i className="icon-mim-phone block text-xl mr-3 font-black text-primary-700" />
-            <p className="text-primary-800">(514) 333-7800</p>
+            <p className="text-primary-800">1-855-937-3726</p>
           </div>
         </div>
       </div>
