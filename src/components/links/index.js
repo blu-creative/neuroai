@@ -146,6 +146,14 @@ const MobileMenu = ({ locale = "en" }) => {
           </li>
           <li>
             <Link
+              href={`/checker${locale === "en" ? "" : "?locale=fr"}`}
+              onClick={toggleMenu}
+            >
+              {t("Accessibility_Checker")}
+            </Link>
+          </li>
+          <li>
+            <Link
               href={`/fAQ${locale === "en" ? "" : "?locale=fr"}`}
               onClick={toggleMenu}
             >
@@ -196,6 +204,14 @@ const MobileMenu = ({ locale = "en" }) => {
           </Link>
         </li>
         <li>
+            <Link
+              href={`/checker${locale === "en" ? "" : "?locale=fr"}`}
+              onClick={toggleMenu}
+            >
+              {t("Accessibility_Checker")}
+            </Link>
+          </li>
+        <li>
           <Link href={`/fAQ${locale === "en" ? "" : "?locale=fr"}`}>
             {t("FAQ")}
           </Link>
@@ -203,7 +219,7 @@ const MobileMenu = ({ locale = "en" }) => {
         <li>
           <div
             onClick={selectLanguage}
-            className="text-3xl font-extrabold cursor-pointer"
+            className="text-xl font-extrabold cursor-pointer"
             id={lang.toLowerCase()}
           >
             {lang}

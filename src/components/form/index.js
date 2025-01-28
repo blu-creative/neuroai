@@ -179,6 +179,7 @@
 import { useTranslation } from "@/hooks/useTranslation";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import Calendly from "@/components/calendly";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -189,6 +190,7 @@ export default function Form() {
   const [status, setStatus] = useState("");
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
+
   const { t } = useTranslation(searchParams.get("locale"));
 
   const list = [
@@ -218,13 +220,7 @@ export default function Form() {
     setLoading(true);
 
     // Submitting to Mailchimp form
-    const form = document.getElementById("mc-embedded-subscribe-form");
-    if (form) {
-      form.submit();
-    }
-
-    // Additional logic for email sending process
-    const response = await fetch("/api/send-email", {
+    fetch("/api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -236,32 +232,56 @@ export default function Form() {
         message,
       }),
     });
+    
+    // const form = document.getElementById("mc-embedded-subscribe-form");
+    // if (form) {
+    //   form.submit();
+    // }
 
-    if (response.ok) {
-      setStatus("Email sent successfully!");
-      setName("");
-      setLastName("");
-      setEmail("");
-      setPhone("");
-      setMessage("");
-      setLoading(false);
-      setTimeout(() => setStatus(""), 3000);
-      window.location.href =
-        "https://calendly.com/d/cqbc-49w-8dk/neuro-ai-demo";
-    } else {
-      setStatus("Failed to send email.");
-      setLoading(false);
-      setTimeout(() => setStatus(""), 3000);
-    }
+    // Additional logic for email sending process
+    const response = fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        lastName,
+        email,
+        message,
+        phone,
+      }),
+    });
+
+
+
+    // if (response.ok) {
+    //   setStatus("Email sent successfully!");
+    //   setName("");
+    //   setLastName("");
+    //   setEmail("");
+    //   setPhone("");
+    //   setMessage("");
+    //   setLoading(false);
+    //   setTimeout(() => setStatus(""), 3000);
+    //   window.location.href =
+    //     "https://calendly.com/d/cqbc-49w-8dk/neuro-ai-demo";
+    // } else {
+    //   setStatus("Failed to send email.");
+    //   setLoading(false);
+    //   setTimeout(() => setStatus(""), 3000);
+    // }
   };
 
   return (
+    <>
+    { !loading ?
     <form
-      action="https://dev.us11.list-manage.com/subscribe/post?u=2632e0c8da2d62f07c4c1f8d7&amp;id=3ea7295903&amp;f_id=00cf15e0f0"
+      // action="https://dev.us11.list-manage.com/subscribe/post?u=2632e0c8da2d62f07c4c1f8d7&amp;id=3ea7295903&amp;f_id=00cf15e0f0"
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
-      target="_blank"
+      // target="_blank"
       onSubmit={handleSubmit}
       className="bg-primary-500 p-6 md:p-12 pb-17 rounded-lg w-10/12 md:w-10/12 flex flex-col gap-6 items-center max-w-2xl font-bold"
     >
@@ -352,5 +372,13 @@ export default function Form() {
         onClose={() => setStatus("")}
       />
     </form>
+    : <Calendly
+      name={name}
+      email={email}
+      phone={`1${phone}`}
+      lastName={lastName}/> }
+
+    {/* <Calendly name={"name"} email={"email"} phone={1123456789} lastName={'test'}/> */}
+    </>
   );
 }

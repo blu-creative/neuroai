@@ -86,6 +86,7 @@
   "Benefits": "Avantages",
   "Features": "Caractéristiques",
   "Accessibility": "Accessibilité",
+  "Accessibility_Checker": "Vérificateur d'accessibilité",
   "Litigation-Support": "Soutien en matière de litiges",
   "Neuro-vs-Competition": "Neuro.AI vs la concurrence",
   "FAQ": "FAQ",
@@ -93,6 +94,7 @@
 
   "AccessibilityTitle": "Conformité et remédiation en matière d'accessibilité à portée de main avec Neuro.AI",
   "FeaturesTitle": "Personnalisez votre parcours",
+  "AuditToolTitle": "Audit d'accessibilité web gratuit",
   "AccessibilityLearnTitle": "Découvrez l'accessibilité",
   "ContactUsTitle": "Abordons l'accessibilité",
   "BenefitsTitle": "Avantages pour tous les utilisateurs",

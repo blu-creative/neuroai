@@ -91,6 +91,7 @@
   "Accessibility": "Accessibility",
   "Litigation-Support": "Litigation Support",
   "Neuro-vs-Competition": "Neuro.AI vs Competition",
+  "Accessibility_Checker": "Accessibility Checker",
   "FAQ": "FAQ",
   "book_a_demo": "Book a Demo",
 
@@ -102,6 +103,7 @@
   "NeuroVsCompetitionTitle": "Why choose Neuro.AI",
   "FAQTitle": "Frequently Asked Questions",
   "BlogTitle": "Check our blog posts",
+  "AuditToolTitle": "Free Web Accessibility Audit",
 
   "CDAAODACompliant": "Compliant with CDA & AODA, based on WCAG Standards",
   "NeuroDiverseProfilesIncluded": "Extensive NeuroDiverse Profiles Included",
@@ -277,4 +279,4 @@
   "AccessibilityComplaintsAnswer": "The installation of our application on your website is intended to demonstrate that your organization has an accessibility program for your website. You will find a note of your organization's policy based on the adoption of our application to comply with accessibility laws. This policy details in our 'compliance status' the various elements and technologies applied to your website, which meets the Canadian Disabilities Act and provincial requirements, in which the organization in question (you) must demonstrate that you are making, have made, and continue to make the best possible effort to have an accessible website for the neurodiverse community. In case of a complaint, our team can provide reports that show your site was covered by our accessibility program at the date of the complaint. Therefore, if you think you are a victim of a complaint abuse, you may consider adding recurring audits to your websites.",
   "LawsuitSupportQuestion": "Do you offer support in case of lawsuits related to non-compliance of the website in Canada?",
   "LawsuitSupportAnswer": "The risk of a lawsuit for non-compliance is based on a complaint filed in Canada and is managed by the government of each province that has an accessibility law in place. In Ontario, for example, any complaint and possible fine is administered by the Ministry for Seniors and Accessibility, which is the Ministry responsible for enforcing the law. In Canada, we offer the following services:"
-}
+} 

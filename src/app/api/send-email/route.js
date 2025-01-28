@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { name, lastName, email, message } = await req.json();
+    const { name, lastName, email, message, phone } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -21,12 +21,13 @@ export async function POST(req) {
 
     const message1 = {
       from: `${process.env.SMTP_FROM_NAME} <${process.env.SMTP_FROM}>`,
-      to: email,
-      subject: "New Quote Request",
-      text: `Name: ${name} ${lastName}\nEmail: ${email}\nMessage: ${message}`,
+      to: "info@blucreative.dev",
+      subject: `New demo request submitted - ${email}`,
+      text: `Name: ${name} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
       html: `<p><strong>Name:</strong> ${name} ${lastName}</p>
               <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Message:</strong> ${message}</p>`,
+              <p><strong>Business:</strong> ${message}</p>
+              <p><strong>Phone:</strong> ${phone}</p>`,
     };
 
     await transporter.sendMail(message1);

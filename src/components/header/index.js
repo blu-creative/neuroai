@@ -37,6 +37,7 @@ export default function Header({ text }) {
     "/neuro-vs-competition": t("NeuroVsCompetitionTitle"),
     "/fAQ": t("FAQTitle"),
     "/blog": t("BlogTitle"),
+    "/checker": t("AuditToolTitle"),
     // "/litigation-Support": t("LitigationSupportTitle"),
   };
 
@@ -55,7 +56,7 @@ export default function Header({ text }) {
           : "text-neutral-25 bg-gradient-to-b from-[#001549] to-[#090E1B]"
       }
     >
-      <Links locale={locale} />
+      <Links locale={locale}/>
       {!isBlog ? (
         <div
           className={`flex items-center xl:pt-28 pt-4 pb-36 relative px-24
