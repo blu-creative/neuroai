@@ -1,9 +1,9 @@
 import First from "./home/first";
 import Second from "./home/second";
 import { useTranslation } from "@/hooks/useTranslation";
+import { urlBuilder } from "@/utils/urlBuilder";
 
 export default async function Home({ searchParams }) {
-  const url = process.env.NEXT_PUBLIC_URL;
   const { locale } = searchParams;
   let lang = "en";
   if (typeof locale === "string") {
@@ -11,16 +11,13 @@ export default async function Home({ searchParams }) {
   }
   const { t } = useTranslation(lang);
 
-  const localeLang = locale === "fr" ? "fr-CA" : "en";
+  const url = urlBuilder({ locale, size: 3 });
 
-  const res = await fetch(
-    `${url}/api/articles?locale=${localeLang}&populate=cover&pagination[page]=1&pagination[pageSize]=3&sort=publishedAt:desc`,
-    {
-      // Control caching behavior
-      cache: "no-store", // Fetch fresh data on every request
-      // next: { revalidate: 60 }, // Revalidate data every 60 seconds
-    }
-  );
+  const res = await fetch(url, {
+    // Control caching behavior
+    cache: "no-store", // Fetch fresh data on every request
+    // next: { revalidate: 60 }, // Revalidate data every 60 seconds
+  });
 
   let posts = [];
   if (res.ok) {
