@@ -66,7 +66,7 @@ export function Hero() {
             <div className="relative bg-white rounded-2xl shadow-2xl p-4 border border-gray-200">
               <div className="bg-gradient-to-br from-[#F0F5FF] to-white rounded-lg overflow-hidden aspect-video">
                 <img 
-                  src="https://images.unsplash.com/photo-1651886312896-c7af63c0fc8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBtb2NrdXAlMjBzY3JlZW4lMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MXx8fHwxNzczNzY4OTMyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                  src="/images/hero-dashboard.jpg" 
                   alt="NeuroCompliance Platform Dashboard showing accessibility compliance metrics and reports"
                   className="w-full h-full object-cover"
                 />

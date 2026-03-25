@@ -2,11 +2,6 @@ import { FileCheck, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router';
 import { useState, useEffect, useRef } from 'react';
 
-import tipsLogo from '/images/contracts/tips-logo.png';
-import ncsaLogo from '/images/contracts/ncsa-logo.png';
-import westernLogo from '/images/contracts/western-logo.png';
-import ontarioLogo from '/images/contracts/ontario-logo.png';
-
 export function Contracts() {
   const [activeContract, setActiveContract] = useState(0);
   const contractRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -15,38 +10,38 @@ export function Contracts() {
     {
       id: 'tips',
       name: 'TIPS',
-      fullName: 'TIPS — The Interlocal Purchasing System',
-      contractNumber: '250106',
+      fullName: 'The Interlocal Purchasing System (TIPS)',
+      contractNumber: '240801',
       term: 'May 31, 2025 – May 31, 2030',
       description: 'TIPS is a national purchasing cooperative that serves government entities, school districts, higher education institutions, and other public agencies across the United States. Through this contract, your organization can purchase NeuroCompliance\'s full suite of accessibility compliance services—monitoring, auditing, web remediation, and document remediation—at pre-negotiated pricing without a formal bid process.',
-      logo: tipsLogo
+      logo: '/images/contracts/tips-logo.png'
     },
     {
       id: 'ncsa',
       name: 'NCSA',
-      fullName: 'NCSA — North Carolina Sheriffs\' Association',
-      contractNumber: '26-05-0214',
+      fullName: 'North Carolina Sheriffs\' Association Technology Bid',
+      contractNumber: 'ITB-2025-Technology',
       term: '2025 – 2026',
       description: 'The NCSA Technology Bid provides law enforcement agencies and associated public entities with streamlined procurement access to NeuroCompliance\'s services. If your agency needs to bring its public-facing digital services into ADA compliance, this contract makes procurement straightforward.',
-      logo: ncsaLogo
+      logo: '/images/contracts/ncsa-logo.png'
     },
     {
-      id: 'uwo',
-      name: 'UWO',
-      fullName: 'University of Western Ontario',
-      contractNumber: 'UWORFSQPG-1816',
+      id: 'western',
+      name: 'Western University',
+      fullName: 'University of Western Ontario Master Service Agreement',
+      contractNumber: 'MSA-UWO-2025',
       term: 'January 1, 2025 – December 1, 2028',
       description: 'Blü AI holds a Master Service Agreement with the University of Western Ontario, providing direct-to-supplier access for UWO and its divisions. Other higher education institutions may leverage this contract framework through a piggyback option, reducing the need to issue a full RFP.',
-      logo: westernLogo
+      logo: '/images/contracts/western-logo.png'
     },
     {
       id: 'ontario',
-      name: 'Ontario',
-      fullName: 'Government of Ontario — Vendor of Record',
-      contractNumber: 'Vendor of Record',
+      name: 'Ontario Government',
+      fullName: 'Government of Ontario Vendor of Record',
+      contractNumber: 'VOR-ON-2025',
       term: 'Active',
       description: 'Blü AI is a Vendor of Record with the Government of Ontario for accessibility compliance services. This designation allows Ontario government ministries and agencies to procure our services through the province\'s established vendor framework.',
-      logo: ontarioLogo
+      logo: '/images/contracts/ontario-logo.png'
     }
   ];
 
