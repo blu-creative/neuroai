@@ -9,11 +9,15 @@ const reasons = [
   {
     icon: Award,
     title: 'Award-Winning Technology',
-    description: 'Gold Stevie Award 2025 for Technical Innovation in Assistive Technology. Fluxx Awards Hong Kong 2025 for Leadership in AI. PMEMontreal 2024 for Community Impact.',
+    description: [
+      'Gold Stevie Award 2025 for Technical Innovation in Assistive Technology',
+      'Fluxx Awards Hong Kong 2025 for Leadership in AI',
+      'PMEMontreal 2024 for Community Impact'
+    ],
   },
   {
     icon: ShieldCheck,
-    title: 'Full-Spectrum Compliance',
+    title: 'Compliance in US, Canada and Europe',
     description: 'We cover the complete compliance lifecycle: WCAG 2.1/2.2, ADA Title II, Section 508, ACA, AODA, and the European Accessibility Act.',
   },
 ];
@@ -51,9 +55,17 @@ export function WhyChoose() {
               >
                 {/* Icon */}
                 <div className="mb-6" aria-hidden="true">
-                  <div className="w-14 h-14 bg-[#E8F5E9] rounded-xl flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-[#3366FF]" />
-                  </div>
+                  {index === 0 ? (
+                    <div className="flex items-center gap-3">
+                      <img src="/images/contracts/tips-logo.png" alt="TIPS" className="h-10 w-auto object-contain" />
+                      <img src="/images/contracts/ncsa-logo.png" alt="NCSA" className="h-10 w-auto object-contain" />
+                      <img src="/images/contracts/ontario-logo.png" alt="Ontario" className="h-10 w-auto object-contain" />
+                    </div>
+                  ) : (
+                    <div className="w-14 h-14 bg-[#E8F5E9] rounded-xl flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-[#3366FF]" />
+                    </div>
+                  )}
                 </div>
                 
                 {/* Title */}
@@ -62,9 +74,17 @@ export function WhyChoose() {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed text-sm">
-                  {reason.description}
-                </p>
+                {Array.isArray(reason.description) ? (
+                  <ul className="text-gray-600 leading-relaxed text-sm list-disc pl-5">
+                    {reason.description.map((desc, i) => (
+                      <li key={i}>{desc}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {reason.description}
+                  </p>
+                )}
               </article>
             );
           })}

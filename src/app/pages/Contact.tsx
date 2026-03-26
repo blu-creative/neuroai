@@ -268,16 +268,6 @@ export function Contact() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-[#3366FF] flex-shrink-0 mt-1" aria-hidden="true" />
-                    <div>
-                      <h4 className="font-semibold text-[#001957] text-sm mb-1">Email</h4>
-                      <a href="mailto:sales@blucreative.dev" className="text-gray-600 text-sm hover:text-[#3366FF] transition-colors">
-                        sales@blucreative.dev
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
                     <Globe className="w-5 h-5 text-[#3366FF] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
                       <h4 className="font-semibold text-[#001957] text-sm mb-1">Websites</h4>

@@ -1,10 +1,11 @@
 import { ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router';
 
 export function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const serviceItems = [
     { name: 'Website Accessibility Monitoring', path: '/services/website-monitoring' },
@@ -13,6 +14,22 @@ export function Header() {
     { name: 'Document Accessibility Remediation', path: '/services/document-remediation' },
   ];
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    }
+
+    if (isServicesOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }
+  }, [isServicesOpen]);
+
   return (
     <header className="fixed top-0 md:top-[40px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-6 md:py-4">
@@ -20,7 +37,7 @@ export function Header() {
           {/* Logo - Left */}
           <div className="flex items-center flex-shrink-0">
             <Link to="/" aria-label="NeuroCompliance Home">
-              <img src="/images/logo.png" alt="NeuroCompliance" className="h-8" />
+              <img src="/images/Logo.png" alt="NeuroCompliance" className="h-8" />
             </Link>
           </div>
           
@@ -28,6 +45,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2" aria-label="Main navigation">
             {/* Services Dropdown */}
             <div 
+              ref={dropdownRef}
               className="relative"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}>

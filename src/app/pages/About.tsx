@@ -150,18 +150,6 @@ export function About() {
                   </div>
                 </div>
 
-                {/* Email */}
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-[#69BCFF] flex-shrink-0 mt-1" aria-hidden="true" />
-                  <div>
-                    <p className="text-white/90 leading-relaxed">
-                      <a href="mailto:sales@blucreative.dev" className="hover:text-[#69BCFF] transition-colors">
-                        sales@blucreative.dev
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
                 {/* Websites */}
                 <div className="flex items-start gap-3">
                   <Globe className="w-5 h-5 text-[#69BCFF] flex-shrink-0 mt-1" aria-hidden="true" />

@@ -57,11 +57,11 @@ export function Services() {
               >
                 {/* Visual Element */}
                 <div className="bg-gradient-to-br from-[#F0F5FF] to-white rounded-xl mb-6 min-h-[200px] relative overflow-hidden" aria-hidden="true">
-                  {/* Image positioned at bottom right */}
-                  <ImageWithFallback 
+                  {/* Image positioned at bottom center */}
+                  <img 
                     src={service.image} 
                     alt="" 
-                    className="absolute bottom-0 right-0 h-[180px] w-auto object-contain"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[180px] w-auto object-contain"
                   />
                 </div>
                 

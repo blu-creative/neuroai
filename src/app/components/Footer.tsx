@@ -7,7 +7,10 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         {/* Logo */}
         <div className="mb-12 text-center md:text-left">
-          <img src="/images/logo-white.png" alt="NeuroCompliance" className="h-8 brightness-0 invert inline-block md:inline" />
+          <div className="flex items-center justify-center md:justify-start gap-4">
+            <img src="/images/logo-white.png" alt="NeuroCompliance" className="h-12 brightness-0 invert" />
+            <img src="/images/blu-white.png" alt="Blü AI" className="h-12" />
+          </div>
         </div>
 
         {/* Four Column Layout */}
@@ -105,13 +108,6 @@ export function Footer() {
                 <Phone className="w-4 h-4 text-[#69BCFF] flex-shrink-0" aria-hidden="true" />
                 <a href="tel:1-855-937-3726" className="text-gray-300 hover:text-white transition-colors">
                   1-855-937-3726
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#69BCFF] flex-shrink-0" aria-hidden="true" />
-                <a href="mailto:sales@blucreative.dev" className="text-gray-300 hover:text-white transition-colors">
-                  sales@blucreative.dev
                 </a>
               </div>
             </div>

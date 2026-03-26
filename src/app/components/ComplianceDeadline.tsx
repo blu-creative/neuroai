@@ -41,9 +41,7 @@ export function ComplianceDeadline() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 id="compliance-heading" className="text-3xl md:text-4xl lg:text-5xl text-[#001957] leading-tight font-[DM_Sans]">
-                The Deadline Your Organization Cannot Afford to Miss
-              </h2>
+              <h2 id="compliance-heading" className="text-3xl md:text-4xl lg:text-5xl text-[#001957] leading-tight font-[DM_Sans]">The Deadline Your Organization Cannot Afford to Miss</h2>
             </div>
             
             {/* Body Text */}
