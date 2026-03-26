@@ -12,6 +12,7 @@ import { WebsiteMonitoring } from './pages/services/WebsiteMonitoring';
 import { RemediationAudit } from './pages/services/RemediationAudit';
 import { WebsiteRemediation } from './pages/services/WebsiteRemediation';
 import { DocumentRemediation } from './pages/services/DocumentRemediation';
+import { Checker } from './pages/Checker';
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
       { path: 'contracts', Component: Contracts },
       { path: 'resources', Component: Resources },
       { path: 'contact', Component: Contact },
+      { path: 'checker', Component: Checker },
       { path: 'services/website-monitoring', Component: WebsiteMonitoring },
       { path: 'services/remediation-audit', Component: RemediationAudit },
       { path: 'services/website-remediation', Component: WebsiteRemediation },

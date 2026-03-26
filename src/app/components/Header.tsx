@@ -89,6 +89,9 @@ export function Header() {
             <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
               Resources
             </Link>
+            <Link to="/checker" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
+              Checker
+            </Link>
             <Link to="/contact" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
               Contact
             </Link>
@@ -151,6 +154,7 @@ export function Header() {
               <Link to="/about" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">About</Link>
               <Link to="/contracts" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Contracts</Link>
               <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Resources</Link>
+              <Link to="/checker" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Checker</Link>
               <Link to="/contact" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Contact</Link>
               
               {/* Request a Demo Button */}
