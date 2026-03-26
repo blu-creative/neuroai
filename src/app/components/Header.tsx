@@ -4,8 +4,10 @@ import { Link } from 'react-router';
 
 export function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isCorporateOpen, setIsCorporateOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const corporateDropdownRef = useRef<HTMLDivElement>(null);
 
   const serviceItems = [
     { name: 'Website Accessibility Monitoring', path: '/services/website-monitoring' },
@@ -14,35 +16,43 @@ export function Header() {
     { name: 'Document Accessibility Remediation', path: '/services/document-remediation' },
   ];
 
+  const corporateItems = [
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
       }
+      if (corporateDropdownRef.current && !corporateDropdownRef.current.contains(event.target as Node)) {
+        setIsCorporateOpen(false);
+      }
     }
 
-    if (isServicesOpen) {
+    if (isServicesOpen || isCorporateOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       return () => {
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }
-  }, [isServicesOpen]);
+  }, [isServicesOpen, isCorporateOpen]);
 
   return (
     <header className="fixed top-0 md:top-[40px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 py-6 md:py-4">
+      <div className="max-w-7xl mx-auto px-6 pb-6 pt-8 md:pb-4 md:pt-6">
         <div className="flex items-center justify-between">
           {/* Logo - Left */}
           <div className="flex items-center flex-shrink-0">
             <Link to="/" aria-label="NeuroCompliance Home">
-              <img src="/images/Logo.png" alt="NeuroCompliance" className="h-8" />
+              <img src="/images/logo.png" alt="NeuroCompliance" className="h-8" />
             </Link>
           </div>
           
           {/* Navigation - Center */}
-          <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-4 absolute left-1/2 -translate-x-1/2" aria-label="Main navigation">
             {/* Services Dropdown */}
             <div 
               ref={dropdownRef}
@@ -51,12 +61,12 @@ export function Header() {
               onMouseLeave={() => setIsServicesOpen(false)}>
               <Link
                 to="/services"
-                className="flex items-center gap-1 text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1"
+                className="flex items-center gap-0.5 text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1"
                 aria-expanded={isServicesOpen}
                 aria-haspopup="true"
               >
                 Services
-                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </Link>
               
               {/* Dropdown Menu */}
@@ -76,33 +86,64 @@ export function Header() {
               )}
             </div>
             
-            <Link to="/platform" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
+            <Link to="/platform" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1">
               Platform
             </Link>
-            <Link to="/why-accessibility" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1 whitespace-nowrap">Why Accessibility</Link>
-            <Link to="/about" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
-              About
-            </Link>
-            <Link to="/contracts" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
+            <Link to="/why-accessibility" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1 whitespace-nowrap">Why Accessibility</Link>
+            <Link to="/contracts" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1">
               Contracts
             </Link>
-            <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
+            <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1">
               Resources
             </Link>
-            <Link to="/checker" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
-              Checker
-            </Link>
-            <Link to="/contact" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[14px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
-              Contact
-            </Link>
+            
+            {/* Corporate Dropdown */}
+            <div 
+              ref={corporateDropdownRef}
+              className="relative"
+              onMouseEnter={() => setIsCorporateOpen(true)}
+              onMouseLeave={() => setIsCorporateOpen(false)}>
+              <button
+                className="flex items-center gap-0.5 text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1"
+                aria-expanded={isCorporateOpen}
+                aria-haspopup="true"
+              >
+                Corporate
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isCorporateOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {/* Dropdown Menu */}
+              {isCorporateOpen && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden" role="menu">
+                  {corporateItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item.path}
+                      className="block px-6 py-3 text-[#001957] hover:bg-[#F0F5FF] hover:text-[#3366FF] transition-colors focus:outline-none focus:bg-[#F0F5FF] focus:text-[#3366FF]"
+                      role="menuitem"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
           
-          {/* CTA Button - Right */}
-          <div className="hidden lg:flex items-center">
+          {/* CTA Buttons - Right */}
+          <div className="hidden lg:flex items-center gap-2">
+            <Link 
+              to="/checker" 
+              className="bg-white text-[#3366FF] px-4 py-2 rounded-full hover:bg-[#F0F5FF] transition-colors whitespace-nowrap text-[13px] border-2 border-[#3366FF] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
+            >
+              <span>Check Accessibility</span>
+            </Link>
             <a 
               href="#demo" 
-              className="bg-[#3366FF] text-white px-6 py-2.5 rounded-full hover:bg-[#001957] transition-colors whitespace-nowrap text-[14px] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
-            ><span className="">Request a Demo</span></a>
+              className="bg-[#3366FF] text-white px-4 py-2 rounded-full hover:bg-[#001957] transition-colors whitespace-nowrap text-[13px] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
+            >
+              <span>Request Demo</span>
+            </a>
           </div>
           
           {/* Mobile Menu Button */}
@@ -151,16 +192,44 @@ export function Header() {
               </div>
               <Link to="/platform" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Platform</Link>
               <Link to="/why-accessibility" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Why Accessibility</Link>
-              <Link to="/about" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">About</Link>
               <Link to="/contracts" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Contracts</Link>
               <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Resources</Link>
-              <Link to="/checker" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Checker</Link>
-              <Link to="/contact" className="text-[#001957] hover:text-[#3366FF] focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1">Contact</Link>
               
-              {/* Request a Demo Button */}
+              {/* Corporate Dropdown */}
+              <div>
+                <button 
+                  className="flex items-center gap-1 text-[#001957] w-full focus:outline-none focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1"
+                  onClick={() => setIsCorporateOpen(!isCorporateOpen)}
+                  aria-expanded={isCorporateOpen}
+                >
+                  Corporate
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isCorporateOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isCorporateOpen && (
+                  <div className="ml-4 mt-2 flex flex-col gap-2">
+                    {corporateItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="text-gray-600 hover:text-[#3366FF] focus:outline-none focus:text-[#3366FF] focus:ring-2 focus:ring-[#3366FF] rounded-md px-2 py-1"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              {/* CTA Buttons */}
+              <a 
+                href="#check" 
+                className="bg-white text-[#3366FF] px-6 py-3 rounded-full hover:bg-[#F0F5FF] transition-colors text-center font-medium mt-2 border-2 border-[#3366FF]"
+              >
+                Check your Accessibility
+              </a>
               <a 
                 href="#demo" 
-                className="bg-[#3366FF] text-white px-6 py-3 rounded-full hover:bg-[#001957] transition-colors text-center font-medium mt-2"
+                className="bg-[#3366FF] text-white px-6 py-3 rounded-full hover:bg-[#001957] transition-colors text-center font-medium"
               >
                 Request a Demo
               </a>
