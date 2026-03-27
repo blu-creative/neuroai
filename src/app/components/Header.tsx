@@ -129,7 +129,7 @@ export function Header() {
               )}
             </div>
           </nav>
-          
+          {/* . */}
           {/* CTA Buttons - Right */}
           <div className="hidden lg:flex items-center gap-2">
             <Link 
