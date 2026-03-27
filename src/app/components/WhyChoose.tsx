@@ -56,10 +56,15 @@ export function WhyChoose() {
                 {/* Icon */}
                 <div className="mb-6" aria-hidden="true">
                   {index === 0 ? (
-                    <div className="flex items-center gap-3">
-                      <img src="/images/contracts/tips-logo.png" alt="TIPS" className="h-10 w-auto object-contain" />
-                      <img src="/images/contracts/ncsa-logo.png" alt="NCSA" className="h-10 w-auto object-contain" />
-                      <img src="/images/contracts/ontario-logo.png" alt="Ontario" className="h-10 w-auto object-contain" />
+                    <div className="flex flex-col gap-4">
+                      <div className="w-14 h-14 bg-[#E8F5E9] rounded-xl flex items-center justify-center">
+                        <Icon className="w-7 h-7 text-[#3366FF]" />
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <img src="/images/contracts/tips-logo.png" alt="TIPS" className="h-10 w-auto object-contain" />
+                        <img src="/images/contracts/ncsa-logo.png" alt="NCSA" className="h-10 w-auto object-contain" />
+                        <img src="/images/contracts/ontario-logo.png" alt="Ontario" className="h-10 w-auto object-contain" />
+                      </div>
                     </div>
                   ) : (
                     <div className="w-14 h-14 bg-[#E8F5E9] rounded-xl flex items-center justify-center">

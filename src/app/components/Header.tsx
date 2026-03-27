@@ -129,15 +129,15 @@ export function Header() {
               )}
             </div>
           </nav>
-          {/* . */}
+          
           {/* CTA Buttons - Right */}
           <div className="hidden lg:flex items-center gap-2">
-            <Link 
-              to="/checker" 
-              className="bg-white text-[#3366FF] px-4 py-2 rounded-full hover:bg-[#F0F5FF] transition-colors whitespace-nowrap text-[13px] border-2 border-[#3366FF] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
-            >
-              <span>Check Accessibility</span>
-            </Link>
+            <Link
+              to="/checker"
+              className="bg-white text-[#3366FF] px-4 py-2 rounded-full hover:bg-[#F0F5FF] transition-colors whitespace-nowrap text-[13px] border-2 border-[#3366FF] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
+            >
+              <span>Check Accessibility</span>
+            </Link>
             <a 
               href="#demo" 
               className="bg-[#3366FF] text-white px-4 py-2 rounded-full hover:bg-[#001957] transition-colors whitespace-nowrap text-[13px] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"

@@ -7,31 +7,31 @@ export function WebsiteMonitoring() {
       icon: Radar,
       title: 'Automated Domain-Wide Scanning',
       description: 'Your entire web domain is scanned at regular intervals - weekly, bi-weekly, or monthly - depending on the frequency your organization needs. Every page is checked against your target WCAG compliance level.',
-      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwbW9uaXRvcmluZ3xlbnwxfHx8fDE3NzM5NTc3MTF8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      imageUrl: '/images/services/monitoring/1-automated_domain-wide_scanning.png'
     },
     {
       icon: TrendingUp,
       title: 'Accessibility Score Tracking',
       description: 'A clear, numeric accessibility score for your entire site and for each individual page. Historical trend data shows whether you\'re improving, holding steady, or regressing - so leadership always has a current picture.',
-      imageUrl: 'https://images.unsplash.com/photo-1585244129648-5dc1f9cd9d7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2Nlc3NpYmlsaXR5JTIwc2NvcmUlMjB0cmFja2luZyUyMGNoYXJ0fGVufDF8fHx8MTc3Mzk1NzcxMXww&ixlib=rb-4.1.0&q=80&w=1080'
+      imageUrl: '/images/services/monitoring/2-accessibility_score_tracking.png'
     },
     {
       icon: AlertTriangle,
       title: 'Issue Severity Classification',
       description: 'Every detected issue is classified as Extreme, High, Medium, or Low severity. Your team sees what matters most and can prioritize accordingly.',
-      imageUrl: 'https://images.unsplash.com/photo-1606495813362-8efff01b8573?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub3RpZmljYXRpb24lMjBhbGVydCUyMHN5c3RlbSUyMG1vYmlsZXxlbnwxfHx8fDE3NzM5NTc3MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      imageUrl: '/images/services/monitoring/3-issue_severity.png'
     },
     {
       icon: Bell,
       title: 'Alerts & Notifications',
       description: 'When new critical issues are detected - such as a page dropping below your compliance threshold - your team is notified immediately.',
-      imageUrl: 'https://images.unsplash.com/photo-1606495813362-8efff01b8573?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub3RpZmljYXRpb24lMjBhbGVydCUyMHN5c3RlbSUyMG1vYmlsZXxlbnwxfHx8fDE3NzM5NTc3MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      imageUrl: '/images/services/monitoring/4-notifications.png'
     },
     {
       icon: LayoutDashboard,
       title: 'Dashboard Access',
       description: 'Full access to the NeuroCompliance platform with color-coded grading, page-level drill-downs, and compliance targeting (A, AA, AAA, or best-practice mix).',
-      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2UlMjBhbmFseXRpY3N8ZW58MXx8fHwxNzczOTU3NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080'
+      imageUrl: '/images/services/monitoring/5-dashboard.png'
     }
   ];
 
@@ -113,13 +113,12 @@ export function WebsiteMonitoring() {
 
                       {/* Right Side: Visual */}
                       <div className="flex items-center justify-center">
-                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-[#F0F5FF] to-white">
+                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-white">
                           <ImageWithFallback
                             src={feature.imageUrl}
                             alt={`${feature.title} visualization`}
-                            className="w-full h-full object-cover opacity-60"
+                            className="w-full h-full object-contain"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#3366FF]/10 to-transparent"></div>
                         </div>
                       </div>
                     </div>
