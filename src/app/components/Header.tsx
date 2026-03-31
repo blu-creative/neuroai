@@ -71,17 +71,19 @@ export function Header() {
               
               {/* Dropdown Menu */}
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden" role="menu">
-                  {serviceItems.map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.path}
-                      className="block px-6 py-3 text-[#001957] hover:bg-[#F0F5FF] hover:text-[#3366FF] transition-colors focus:outline-none focus:bg-[#F0F5FF] focus:text-[#3366FF]"
-                      role="menuitem"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden" role="menu">
+                  <div className="py-2">
+                    {serviceItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="block px-6 py-3 text-[#001957] hover:bg-[#F0F5FF] hover:text-[#3366FF] transition-colors focus:outline-none focus:bg-[#F0F5FF] focus:text-[#3366FF]"
+                        role="menuitem"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -93,9 +95,9 @@ export function Header() {
             <Link to="/contracts" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1">
               Contracts
             </Link>
-            <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1">
+            {/* <Link to="/resources" className="text-[#001957] hover:text-[#3366FF] transition-colors text-[13px] focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-1.5 py-1">
               Resources
-            </Link>
+            </Link> */}
             
             {/* Corporate Dropdown */}
             <div 
@@ -114,17 +116,19 @@ export function Header() {
               
               {/* Dropdown Menu */}
               {isCorporateOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden" role="menu">
-                  {corporateItems.map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.path}
-                      className="block px-6 py-3 text-[#001957] hover:bg-[#F0F5FF] hover:text-[#3366FF] transition-colors focus:outline-none focus:bg-[#F0F5FF] focus:text-[#3366FF]"
-                      role="menuitem"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden" role="menu">
+                  <div className="py-2">
+                    {corporateItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="block px-6 py-3 text-[#001957] hover:bg-[#F0F5FF] hover:text-[#3366FF] transition-colors focus:outline-none focus:bg-[#F0F5FF] focus:text-[#3366FF]"
+                        role="menuitem"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

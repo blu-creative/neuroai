@@ -56,11 +56,11 @@ export function Footer() {
                   Contracts & Procurement
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/resources" className="text-gray-300 text-sm hover:text-white transition-colors">
                   Resources
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact" className="text-gray-300 text-sm hover:text-white transition-colors">
                   Contact

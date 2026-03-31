@@ -7,31 +7,31 @@ export function DocumentRemediation() {
       icon: FolderSearch,
       title: 'Document Inventory & Audit',
       description: 'We catalog your organization\'s published documents and assess each one for accessibility compliance. This covers reading order, heading structure, table markup, alt text for images, form field labeling, color contrast, language settings, bookmarks, and tag structure.',
-      imageUrl: 'https://images.unsplash.com/photo-1566114560338-2cf0b11aecb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudCUyMGludmVudG9yeSUyMGNhdGFsb2clMjBhdWRpdHxlbnwxfHx8fDE3NzQwMTc5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/documentation/1-document_inventory.png'
     },
     {
       icon: FileCheck,
       title: 'PDF Remediation',
       description: 'Tagged PDF remediation with proper reading order, bookmarks, structural tags, and screen reader compatibility. We convert scanned PDFs (image-only) into fully tagged, searchable, accessible documents.',
-      imageUrl: 'https://images.unsplash.com/photo-1576864333223-db90dadfb975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxQREYlMjBkb2N1bWVudCUyMHJlbWVkaWF0aW9uJTIwYWNjZXNzaWJpbGl0eXxlbnwxfHx8fDE3NzQwMTc5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/documentation/2-pdf_remediation.png'
     },
     {
       icon: Table2,
       title: 'Excel Remediation',
       description: 'Named ranges, sheet structure, alt text for charts and graphics, accessible formatting, and proper data table markup.',
-      imageUrl: 'https://images.unsplash.com/photo-1587401511935-a7f87afadf2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGNlbCUyMHNwcmVhZHNoZWV0JTIwZGF0YSUyMGFuYWx5c2lzfGVufDF8fHx8MTc3NDAxNzkxOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/documentation/3-excel_remediation.png'
     },
     {
       icon: FileType,
       title: 'Word Document Remediation',
       description: 'Heading hierarchy, accessible styles, alt text for all embedded images, proper document structure, and list formatting.',
-      imageUrl: 'https://images.unsplash.com/photo-1608536213146-b869c077d6ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JkJTIwZG9jdW1lbnQlMjBlZGl0aW5nJTIwd3JpdGluZ3xlbnwxfHx8fDE3NzQwMTc5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/documentation/4-word_remediation.png'
     },
     {
       icon: Monitor,
       title: 'Assistive Technology Validation',
       description: 'Every remediated document is tested with assistive technology to confirm it can be navigated and read by screen readers.',
-      imageUrl: 'https://images.unsplash.com/photo-1576864333223-db90dadfb975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc3Npc3RpdmUlMjB0ZWNobm9sb2d5JTIwc2NyZWVuJTIwcmVhZGVyJTIwYWNjZXNzaWJpbGl0eXxlbnwxfHx8fDE3NzQwMTc5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/documentation/4-screen_readers.png'
     }
   ];
 
@@ -109,13 +109,12 @@ export function DocumentRemediation() {
 
                       {/* Right Side: Visual */}
                       <div className="flex items-center justify-center">
-                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-[#F0F5FF] to-white">
+                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-white">
                           <ImageWithFallback
                             src={feature.imageUrl}
                             alt={`${feature.title} visualization`}
-                            className="w-full h-full object-cover opacity-60"
+                            className="w-full h-full object-contain"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#3366FF]/10 to-transparent"></div>
                         </div>
                       </div>
                     </div>

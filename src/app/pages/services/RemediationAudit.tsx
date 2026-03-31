@@ -7,43 +7,43 @@ export function RemediationAudit() {
       icon: Globe,
       title: 'Full-Domain Coverage',
       description: 'Every page, component, and interactive element on your website is audited. Nothing is skipped.',
-      imageUrl: 'https://images.unsplash.com/photo-1516382799247-87df95d790b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwYXVkaXQlMjBjb3ZlcmFnZSUyMGFuYWx5c2lzfGVufDF8fHx8MTc3Mzk2MTM3Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/1-full_domain_coverage.png'
     },
     {
       icon: FolderKanban,
       title: 'Issue Categorization',
       description: 'Issues are organized into categories your team can act on: Clickables, Readability, Headings, Tables, Forms, Keyboard Navigation, Graphics, Context, Document Structure, Errors, and Navigation.',
-      imageUrl: 'https://images.unsplash.com/photo-1603290989168-0cab99a6e996?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXRlZ29yaXphdGlvbiUyMG9yZ2FuaXphdGlvbiUyMHN5c3RlbXxlbnwxfHx8fDE3NzM5NjEzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/2-issue_categorization.png'
     },
     {
       icon: BookCheck,
       title: 'WCAG Compliance Tagging',
       description: 'Every issue is tagged with its corresponding WCAG compliance level—A, AA, AAA, or Best Practice—so your team knows which issues are legally required to fix and which are recommended.',
-      imageUrl: 'https://images.unsplash.com/photo-1704969724221-8b7361b61f75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wbGlhbmNlJTIwc3RhbmRhcmRzJTIwY2hlY2tsaXN0fGVufDF8fHx8MTc3Mzk2MTM3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/3-wcag_compliance.png'
     },
     {
       icon: AlertCircle,
       title: 'Severity Classification',
       description: 'Extreme, High, Medium, and Low. You\'ll know immediately which issues pose the greatest compliance risk and which can be addressed in later phases.',
-      imageUrl: 'https://images.unsplash.com/photo-1675651151785-ae8d84eddbea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbGVydCUyMHdhcm5pbmclMjBsZXZlbHN8ZW58MXx8fHwxNzczOTYxMzc2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/4-severity_classification.png'
     },
     {
       icon: Smartphone,
       title: 'Device-Specific Findings',
       description: 'We identify issues specific to Desktop, Mobile, or Cross-device so your remediation team can target their fixes appropriately.',
-      imageUrl: 'https://images.unsplash.com/photo-1705907014674-802919d4c4fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBkZXNrdG9wJTIwZGV2aWNlc3xlbnwxfHx8fDE3NzM5NjEzNzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/5-device_specific.png'
     },
     {
       icon: Code2,
       title: 'Code-Level Issue Identification',
       description: 'For each issue, we show you the exact source code causing the problem, along with an AI-generated suggested fix that your developers can copy and implement.',
-      imageUrl: 'https://images.unsplash.com/photo-1650600538903-ec09f670c391?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb3VyY2UlMjBjb2RlJTIwcHJvZ3JhbW1pbmd8ZW58MXx8fHwxNzczOTYxMzc0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/6-code_level.png'
     },
     {
       icon: Map,
       title: 'Prioritized Technical Roadmap',
       description: 'We don\'t just hand you a list of problems. We deliver a prioritized roadmap organized by effort and impact, so your team or ours can execute remediation in the most efficient sequence.',
-      imageUrl: 'https://images.unsplash.com/photo-1661577804141-6f0180f82373?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb2FkbWFwJTIwcGxhbm5pbmclMjBzdHJhdGVneXxlbnwxfHx8fDE3NzM5MDg5MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/audit/7-roadmap.png'
     }
   ];
 
@@ -126,13 +126,12 @@ export function RemediationAudit() {
 
                       {/* Right Side: Visual */}
                       <div className="flex items-center justify-center">
-                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-[#F0F5FF] to-white">
+                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-white">
                           <ImageWithFallback
                             src={feature.imageUrl}
                             alt={`${feature.title} visualization`}
-                            className="w-full h-full object-cover opacity-60"
+                            className="w-full h-full object-contain"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#3366FF]/10 to-transparent"></div>
                         </div>
                       </div>
                     </div>
@@ -265,7 +264,7 @@ export function RemediationAudit() {
               href="#demo"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
-              Request an Audit
+              Get Started
             </a>
           </div>
         </div>

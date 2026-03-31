@@ -133,25 +133,25 @@ export function WebsiteRemediation() {
       icon: Code,
       title: 'Code-Level Fixes',
       description: 'Our team works directly in your website\'s codebase to resolve accessibility issues. This includes ARIA roles, heading hierarchy, color contrast, keyboard navigation, alt text, form labeling, table markup, and every other category identified in the audit.',
-      imageUrl: 'https://images.unsplash.com/photo-1568716353609-12ddc5c67f04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwcHJvZ3JhbW1pbmclMjBhY2Nlc3NpYmlsaXR5fGVufDF8fHx8MTc3Mzk2MzE4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/remediation/1-code_level_fixes.png'
     },
     {
       icon: Smartphone,
       title: 'Cross-Device Remediation',
       description: 'We fix issues on both Desktop and Mobile. Your website will be accessible regardless of how your audience accesses it.',
-      imageUrl: 'https://images.unsplash.com/photo-1742796674961-a5e833a6f0c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBkZXNrdG9wJTIwZGV2aWNlcyUyMHJlc3BvbnNpdmV8ZW58MXx8fHwxNzczOTYzMTg1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/remediation/2-cross_device.png'
     },
     {
       icon: CheckCircle,
       title: 'Post-Remediation Verification',
       description: 'After remediation, we run a full verification scan to confirm that issues have been resolved and your accessibility score reflects the improvements.',
-      imageUrl: 'https://images.unsplash.com/photo-1554350747-ec45fd24f51b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2ZXJpZmljYXRpb24lMjB0ZXN0aW5nJTIwcXVhbGl0eSUyMGFzc3VyYW5jZXxlbnwxfHx8fDE3NzM5NjMxODZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/remediation/3-verification.png'
     },
     {
       icon: FileText,
       title: 'Handoff Documentation',
       description: 'We document every change made to your website so your team understands what was modified and how to maintain compliance as new content is published.',
-      imageUrl: 'https://images.unsplash.com/photo-1606327054581-0a1d4bf42831?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudGF0aW9uJTIwaGFuZG9mZiUyMHRlY2huaWNhbCUyMHdyaXRpbmd8ZW58MXx8fHwxNzczOTYzMTg2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      imageUrl: '/images/services/remediation/4-handoff_documentation.png'
     }
   ];
 
@@ -229,13 +229,12 @@ export function WebsiteRemediation() {
 
                       {/* Right Side: Visual */}
                       <div className="flex items-center justify-center">
-                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-gradient-to-br from-[#F0F5FF] to-white">
+                        <div className="relative w-full aspect-square max-w-md rounded-2xl overflow-hidden bg-white">
                           <ImageWithFallback
                             src={feature.imageUrl}
                             alt={`${feature.title} visualization`}
-                            className="w-full h-full object-cover opacity-60"
+                            className="w-full h-full object-contain"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#3366FF]/10 to-transparent"></div>
                         </div>
                       </div>
                     </div>
@@ -309,11 +308,10 @@ export function WebsiteRemediation() {
             <div className="flex items-center justify-center">
               <div className="relative w-full aspect-square max-w-lg rounded-2xl overflow-hidden bg-gradient-to-br from-[#F0F5FF] to-white border border-gray-200">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1768323275769-6615e7cfcbe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYXV0b21hdGlvbiUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzczOTY0MTY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/images/services/remediation/neuroai-automation.png"
                   alt="NeuroAI Automation visualization"
-                  className="w-full h-full object-cover opacity-60"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#3366FF]/10 to-transparent"></div>
               </div>
             </div>
           </div>
