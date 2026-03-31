@@ -1,6 +1,7 @@
 import { Code, Wrench, CheckCircle, Rocket, Settings, ClipboardCheck, Smartphone, FileText, FileSearch, Zap, Sparkles, AlertCircle, Target, Users, Calendar, Ban } from 'lucide-react';
 import { ImageWithFallback } from '../../components/figma/ImageWithFallback';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 
 function HowItWorksSection() {
   const [activeSteps, setActiveSteps] = useState<number[]>([]);
@@ -385,12 +386,12 @@ export function WebsiteRemediation() {
             <p className="text-white/90 mb-8 text-lg">
               Let our expert developers handle the technical work of achieving compliance
             </p>
-            <a
-              href="#demo"
+            <Link
+              to="/contact?inquiryType=web-remediation"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Start Remediation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

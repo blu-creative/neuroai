@@ -1,4 +1,5 @@
 import { Eye, Radar, TrendingUp, AlertTriangle, Bell, LayoutDashboard, CheckCircle, Target, Shield, DollarSign, Calendar } from 'lucide-react';
+import { Link } from 'react-router';
 import { ImageWithFallback } from '../../components/figma/ImageWithFallback';
 
 export function WebsiteMonitoring() {
@@ -210,12 +211,12 @@ export function WebsiteMonitoring() {
             <p className="text-white/90 mb-8 text-lg">
               Ensure continuous compliance and protect your organization from accessibility risks
             </p>
-            <a
-              href="#demo"
+            <Link
+              to="/contact?inquiryType=monitoring"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </section>

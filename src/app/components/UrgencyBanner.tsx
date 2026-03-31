@@ -1,4 +1,5 @@
 import { ArrowRight, AlertTriangle } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function UrgencyBanner() {
   return (
@@ -21,13 +22,13 @@ export function UrgencyBanner() {
           
           {/* CTA Button */}
           <div>
-            <a 
-              href="#why-accessibility"
+            <Link
+              to="/why-accessibility"
               className="group bg-yellow-300 text-[#001957] px-6 py-3 rounded-full hover:bg-yellow-200 transition-all flex items-center gap-2 font-bold text-sm shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-offset-2 focus:ring-offset-[#001957]"
             >
               Learn what this means for your organization
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

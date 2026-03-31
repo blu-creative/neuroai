@@ -177,7 +177,7 @@ export function ServicesOverview() {
               Get a free compliance assessment from our accessibility experts
             </p>
             <Link
-              to="/contact"
+              to="/contact?inquiryType=compliance-assessment"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Get a Free Compliance Assessment

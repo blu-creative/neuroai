@@ -1,4 +1,5 @@
 import { ArrowRight, Award } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function Hero() {
   return (
@@ -25,19 +26,19 @@ export function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a 
-            href="#assessment"
+          <Link
+            to="/contact?inquiryType=compliance-assessment"
             className="group bg-[#3366FF] text-white px-8 py-4 rounded-full hover:bg-[#001957] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#3366FF]/20 focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2 w-full sm:w-auto"
           >
             Get a Free Compliance Assessment
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-          </a>
-          <a 
-            href="#services"
+          </Link>
+          <Link
+            to="/services"
             className="bg-white text-[#001957] px-8 py-4 rounded-full border-2 border-[#3366FF] hover:bg-[#F0F5FF] transition-all text-center font-medium focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2 w-full sm:w-auto"
           >
             Explore Our Services
-          </a>
+          </Link>
         </div>
         
         {/* Trust Indicators */}

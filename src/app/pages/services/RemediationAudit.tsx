@@ -1,5 +1,6 @@
 import { FileSearch, Users, ClipboardCheck, TrendingUp, Search, ListChecks, Globe, FolderKanban, BookCheck, AlertCircle, Smartphone, Code2, Map, Target, Calendar, Briefcase, Scale } from 'lucide-react';
 import { ImageWithFallback } from '../../components/figma/ImageWithFallback';
+import { Link } from 'react-router';
 
 export function RemediationAudit() {
   const features = [
@@ -260,12 +261,12 @@ export function RemediationAudit() {
             <p className="text-white/90 mb-8 text-lg">
               Understand your current compliance status and receive a clear path to accessibility
             </p>
-            <a
-              href="#demo"
+            <Link
+              to="/contact?inquiryType=audit"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </section>

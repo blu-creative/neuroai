@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router';
 
 export function Header() {
@@ -142,11 +142,13 @@ export function Header() {
             >
               <span>Check Accessibility</span>
             </Link>
-            <a 
-              href="#demo" 
+            <a
+              href="https://tidycal.com/team/blu-ai-bizdev/neuroai-demo"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#3366FF] text-white px-4 py-2 rounded-full hover:bg-[#001957] transition-colors whitespace-nowrap text-[13px] focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
             >
-              <span>Request Demo</span>
+              <span>Request a Demo</span>
             </a>
           </div>
           
@@ -225,14 +227,16 @@ export function Header() {
               </div>
               
               {/* CTA Buttons */}
-              <a 
-                href="#check" 
+              <Link
+                to="/checker"
                 className="bg-white text-[#3366FF] px-6 py-3 rounded-full hover:bg-[#F0F5FF] transition-colors text-center font-medium mt-2 border-2 border-[#3366FF]"
               >
-                Check your Accessibility
-              </a>
-              <a 
-                href="#demo" 
+                Check Accessibility
+              </Link>
+              <a
+                href="https://tidycal.com/team/blu-ai-bizdev/neuroai-demo"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#3366FF] text-white px-6 py-3 rounded-full hover:bg-[#001957] transition-colors text-center font-medium"
               >
                 Request a Demo

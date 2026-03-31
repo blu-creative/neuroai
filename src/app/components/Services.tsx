@@ -1,30 +1,35 @@
 import { Monitor, FileSearch, Code, FileText, ArrowRight, Briefcase } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Link } from 'react-router';
 
 const services = [
   {
     icon: Monitor,
     title: 'Website Accessibility Monitoring',
     description: 'Continuous, automated tracking of your website\'s accessibility score. Know exactly where you stand at all times—and catch critical issues before they become public complaints or legal exposure. Our most cost-effective service for organizations that need to stay on track.',
-    image: '/images/services/monitoring.png'
+    image: '/images/services/monitoring.png',
+    path: '/services/website-monitoring',
   },
   {
     icon: FileSearch,
     title: 'Accessibility Remediation Audit',
     description: 'A comprehensive, page-by-page audit of your website\'s accessibility. We identify every issue, map it to the relevant WCAG standard, classify its severity, and deliver a prioritized technical roadmap so your team knows exactly what needs to happen.',
-    image: '/images/services/audit.png'
+    image: '/images/services/audit.png',
+    path: '/services/remediation-audit',
   },
   {
     icon: Code,
     title: 'Website Accessibility Remediation',
     description: 'Our accessibility engineers go directly into your website and fix the issues identified in your audit. We bring your site to a minimum WCAG 2.1 Level AA standard—the level required by ADA Title II—across every page and component.',
-    image: '/images/services/remediation.png'
+    image: '/images/services/remediation.png',
+    path: '/services/website-remediation',
   },
   {
     icon: FileText,
     title: 'Document Accessibility Remediation',
     description: 'Accessibility doesn\'t stop at your website. Every PDF, Excel file, and Word document your organization publishes must be accessible. We audit and remediate your entire document library to meet ADA Title II and Section 508 standards.',
-    image: '/images/services/document.png'
+    image: '/images/services/document.png',
+    path: '/services/document-remediation',
   },
 ];
 
@@ -51,9 +56,11 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <article
+              <Link
                 key={index}
+                to={service.path}
                 className="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#3366FF] transition-all duration-300 hover:shadow-lg flex flex-col"
+                aria-label={`Learn more about ${service.title}`}
               >
                 {/* Visual Element */}
                 <div className="bg-gradient-to-br from-[#F0F5FF] to-white rounded-xl mb-6 min-h-[200px] relative overflow-hidden" aria-hidden="true">
@@ -77,16 +84,12 @@ export function Services() {
 
                 {/* Button */}
                 <div>
-                  <a 
-                    href="#"
-                    className="group/btn inline-flex items-center gap-2 text-[#3366FF] hover:text-[#001957] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1"
-                    aria-label={`Learn more about ${service.title}`}
-                  >
+                  <span className="group/btn inline-flex items-center gap-2 text-[#3366FF] group-hover:text-[#001957] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#3366FF] focus:ring-offset-2 rounded-md px-2 py-1">
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
-                  </a>
+                  </span>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>

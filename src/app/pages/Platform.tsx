@@ -1,6 +1,7 @@
 import { BarChart3, ClipboardList, Code, GitBranch, FileText, Target, Sparkles, Monitor } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Link } from 'react-router';
 
 export function Platform() {
   const features = [
@@ -227,12 +228,12 @@ export function Platform() {
             <p className="text-white/90 mb-8 text-lg">
               Schedule a personalized demo with our accessibility experts
             </p>
-            <a
-              href="#demo"
+            <Link
+              to="/contact?inquiryType=platform-demo"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Request a Demo
-            </a>
+            </Link>
           </div>
         </div>
       </section>

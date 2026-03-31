@@ -1,4 +1,5 @@
 import { Scale, Globe, Smartphone, FileText, Video, MousePointer, TrendingUp, Search, Award, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function WhyAccessibility() {
   return (
@@ -306,12 +307,12 @@ export function WhyAccessibility() {
 
           {/* CTA Button */}
           <div className="text-center">
-            <a
-              href="#demo"
+            <Link
+              to="/contact?inquiryType=compliance-assessment"
               className="inline-block bg-[#3366FF] text-white px-8 py-4 rounded-full hover:bg-[#2952CC] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Get Your Free Compliance Assessment
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { Building2, GraduationCap, Scale, Bus, Globe, CalendarClock } from 'lucide-react';
+import { Link } from 'react-router';
 
 const entities = [
   {
@@ -81,12 +82,12 @@ export function ComplianceDeadline() {
               The requirement covers websites, web applications, mobile apps, and all publicly available digital documents—including PDFs, forms, reports, and policy documents.
             </p>
             <div className="text-center">
-              <a 
-                href="#assessment"
+              <Link
+                to="/contact?inquiryType=compliance-assessment"
                 className="inline-block bg-[#3366FF] text-white px-8 py-4 rounded-full hover:bg-[#001957] transition-colors font-medium shadow-lg shadow-[#3366FF]/20 focus:outline-none focus:ring-4 focus:ring-[#69BCFF] focus:ring-offset-2"
               >
                 Get Your Free Compliance Assessment
-              </a>
+              </Link>
             </div>
           </div>
         </div>

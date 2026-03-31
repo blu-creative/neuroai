@@ -15,7 +15,9 @@ export function MobileBottomBar() {
         
         {/* Request a Demo Button */}
         <a 
-          href="#demo" 
+          href="https://tidycal.com/team/blu-ai-bizdev/neuroai-demo"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-[#3366FF] text-white px-6 py-2.5 rounded-full hover:bg-[#001957] transition-colors whitespace-nowrap text-sm font-medium"
         >
           Request a Demo

@@ -1,5 +1,6 @@
 import { FileText, Download, CheckCircle, Users, FileCog, FolderSearch, FileCheck, Table2, FileType, Monitor, ClipboardCheck, Target, GraduationCap, Calendar, Building, AlertCircle, Image, Keyboard, Navigation } from 'lucide-react';
 import { ImageWithFallback } from '../../components/figma/ImageWithFallback';
+import { Link } from 'react-router';
 
 export function DocumentRemediation() {
   const features = [
@@ -338,12 +339,12 @@ export function DocumentRemediation() {
             <p className="text-white/90 mb-8 text-lg">
               Ensure all your digital documents meet ADA Title II and Section 508 requirements
             </p>
-            <a
-              href="#demo"
+            <Link
+              to="/contact?inquiryType=doc-remediation"
               className="inline-block bg-white text-[#001957] px-8 py-4 rounded-full hover:bg-[#F0F5FF] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </section>

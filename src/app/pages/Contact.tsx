@@ -1,7 +1,9 @@
 import { Mail, Phone, MapPin, Clock, MessageSquare, Building2, Globe } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router';
 
 export function Contact() {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     fullName: '',
     organizationName: '',
@@ -12,6 +14,16 @@ export function Contact() {
     populationServed: '',
     message: ''
   });
+
+  useEffect(() => {
+    const inquiryType = searchParams.get('inquiryType');
+    if (!inquiryType) return;
+
+    setFormData((prev) => ({
+      ...prev,
+      inquiryType
+    }));
+  }, [searchParams]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

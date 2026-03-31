@@ -204,7 +204,7 @@ export function Contracts() {
 
           <div className="text-center">
             <Link
-              to="/contact"
+              to="/contact?inquiryType=contracts"
               className="inline-block bg-[#3366FF] text-white px-8 py-4 rounded-full hover:bg-[#001957] transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
               Contact Our Contracts Team
