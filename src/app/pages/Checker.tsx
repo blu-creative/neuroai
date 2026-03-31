@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router';
-import { CheckerIframe } from '../components/Checkeriframe';
+import { CheckerIframe } from '../components/CheckerIframe';
 import React from 'react';
 
 export function Checker() {
