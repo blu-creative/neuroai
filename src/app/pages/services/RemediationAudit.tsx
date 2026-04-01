@@ -32,13 +32,13 @@ export function RemediationAudit() {
       icon: Smartphone,
       title: 'Device-Specific Findings',
       description: 'We identify issues specific to Desktop, Mobile, or Cross-device so your remediation team can target their fixes appropriately.',
-      imageUrl: '/images/services/audit/6-code_specific.png'
+      imageUrl: '/images/services/audit/5-device_findings.png'
     },
     {
       icon: Code2,
       title: 'Code-Level Issue Identification',
       description: 'For each issue, we show you the exact source code causing the problem, along with an AI-generated suggested fix that your developers can copy and implement.',
-      imageUrl: '/images/services/audit/2-issue_categorization.png'
+      imageUrl: '/images/services/audit/6-code_specific.png'
     },
     {
       icon: Map,
