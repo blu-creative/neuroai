@@ -134,19 +134,19 @@ export function WebsiteRemediation() {
       icon: Code,
       title: 'Code-Level Fixes',
       description: 'Our team works directly in your website\'s codebase to resolve accessibility issues. This includes ARIA roles, heading hierarchy, color contrast, keyboard navigation, alt text, form labeling, table markup, and every other category identified in the audit.',
-      imageUrl: '/images/services/remediation/1-code_level_fixes.png'
+      imageUrl: '/images/services/remediation/1-code_fixes.png'
     },
     {
       icon: Smartphone,
       title: 'Cross-Device Remediation',
       description: 'We fix issues on both Desktop and Mobile. Your website will be accessible regardless of how your audience accesses it.',
-      imageUrl: '/images/services/remediation/2-cross_device.png'
+      imageUrl: '/images/services/remediation/2-cross_devices.png'
     },
     {
       icon: CheckCircle,
       title: 'Post-Remediation Verification',
       description: 'After remediation, we run a full verification scan to confirm that issues have been resolved and your accessibility score reflects the improvements.',
-      imageUrl: '/images/services/remediation/3-verification.png'
+      imageUrl: '/images/services/remediation/3-post-remediation_verification.png'
     },
     {
       icon: FileText,

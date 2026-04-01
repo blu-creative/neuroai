@@ -8,7 +8,7 @@ export function RemediationAudit() {
       icon: Globe,
       title: 'Full-Domain Coverage',
       description: 'Every page, component, and interactive element on your website is audited. Nothing is skipped.',
-      imageUrl: '/images/services/audit/1-full_domain_coverage.png'
+      imageUrl: '/images/services/audit/1-full_coverage.png'
     },
     {
       icon: FolderKanban,
@@ -20,7 +20,7 @@ export function RemediationAudit() {
       icon: BookCheck,
       title: 'WCAG Compliance Tagging',
       description: 'Every issue is tagged with its corresponding WCAG compliance level—A, AA, AAA, or Best Practice—so your team knows which issues are legally required to fix and which are recommended.',
-      imageUrl: '/images/services/audit/3-wcag_compliance.png'
+      imageUrl: '/images/services/audit/3-wcag_tagging.png'
     },
     {
       icon: AlertCircle,
@@ -32,19 +32,19 @@ export function RemediationAudit() {
       icon: Smartphone,
       title: 'Device-Specific Findings',
       description: 'We identify issues specific to Desktop, Mobile, or Cross-device so your remediation team can target their fixes appropriately.',
-      imageUrl: '/images/services/audit/5-device_specific.png'
+      imageUrl: '/images/services/audit/6-code_specific.png'
     },
     {
       icon: Code2,
       title: 'Code-Level Issue Identification',
       description: 'For each issue, we show you the exact source code causing the problem, along with an AI-generated suggested fix that your developers can copy and implement.',
-      imageUrl: '/images/services/audit/6-code_level.png'
+      imageUrl: '/images/services/audit/2-issue_categorization.png'
     },
     {
       icon: Map,
       title: 'Prioritized Technical Roadmap',
       description: 'We don\'t just hand you a list of problems. We deliver a prioritized roadmap organized by effort and impact, so your team or ours can execute remediation in the most efficient sequence.',
-      imageUrl: '/images/services/audit/7-roadmap.png'
+      imageUrl: '/images/services/audit/7-prioritized_roadmap.png'
     }
   ];
 
