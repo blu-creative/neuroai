@@ -194,7 +194,7 @@ export function WebsiteMonitoring() {
                     <Calendar className="w-5 h-5 text-[#001957]" aria-hidden="true" />
                   </div>
                   <p className="text-gray-700 leading-relaxed">
-                    Entities preparing for the April 2026 ADA Title II deadline that need baseline visibility.
+                    Entities preparing for the April 2027 ADA Title II deadline that need baseline visibility.
                   </p>
                 </div>
               </div>

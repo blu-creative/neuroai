@@ -223,7 +223,7 @@ export function RemediationAudit() {
                   <Calendar className="w-6 h-6 text-[#001957]" aria-hidden="true" />
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  Entities approaching the April 2026 deadline that need to understand their current exposure.
+                  Entities approaching the April 2027 deadline that need to understand their current exposure.
                 </p>
               </div>
             </div>

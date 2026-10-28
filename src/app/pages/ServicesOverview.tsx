@@ -42,7 +42,7 @@ export function ServicesOverview() {
     {
       icon: Landmark,
       title: 'Government Agencies',
-      description: 'Federal, state, and local government entities subject to ADA Title II and Section 508. We help you meet the April 2026 compliance deadline across your entire digital footprint—websites, portals, applications, and published documents.'
+      description: 'Federal, state, and local government entities subject to ADA Title II and Section 508. We help you meet the April 2027 compliance deadline across your entire digital footprint—websites, portals, applications, and published documents.'
     },
     {
       icon: GraduationCap,

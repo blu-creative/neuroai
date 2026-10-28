@@ -69,11 +69,11 @@ export function WhyAccessibility() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-gray-600 text-lg">
                   <CheckCircle2 className="w-5 h-5 text-[#3366FF] flex-shrink-0 mt-1" aria-hidden="true" />
-                  <span><strong>April 24, 2026</strong> — Public entities serving a population of 50,000 or more</span>
+                  <span><strong>April 26, 2027</strong> — Public entities serving a population of 50,000 or more</span>
                 </li>
                 <li className="flex items-start gap-3 text-gray-600 text-lg">
                   <CheckCircle2 className="w-5 h-5 text-[#3366FF] flex-shrink-0 mt-1" aria-hidden="true" />
-                  <span><strong>April 26, 2027</strong> — Public entities serving a population under 50,000</span>
+                  <span><strong>April 26, 2028</strong> — Public entities serving a population under 50,000</span>
                 </li>
               </ul>
               <p className="text-gray-600 leading-relaxed text-lg">

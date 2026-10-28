@@ -27,7 +27,7 @@ export function Resources() {
       id: 'ada-deadline-guide',
       type: 'guides',
       tagline: 'Guide (Gated PDF Download)',
-      title: 'The ADA Title II Compliance Deadline: What Public Entities Need to Know Before April 2026',
+      title: 'The ADA Title II Compliance Deadline: What Public Entities Need to Know Before April 2027',
       description: "A comprehensive guide covering the DOJ's final rule, what's required, who's affected, the compliance timeline, and a step-by-step action plan. This is the primary lead magnet for the site.",
       isGated: true,
       ctaText: 'Download Guide',

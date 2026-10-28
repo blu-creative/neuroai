@@ -10,7 +10,7 @@ export function TopBar() {
           className="hover:text-yellow-300 transition-colors hidden md:flex items-center gap-2 text-[13px] focus:outline-none focus:text-yellow-300 focus:underline bg-white/20 px-3 py-1 rounded-full"
         >
           <AlertTriangle className="w-4 h-4 text-yellow-300" aria-hidden="true" />
-          <span className="font-bold text-yellow-300">ADA Title II Deadline: April 24, 2026</span>
+          <span className="font-bold text-yellow-300">ADA Title II Deadline: April 26, 2027</span>
           <span>— Is your organization ready?</span>
         </a>
 

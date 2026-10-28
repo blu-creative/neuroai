@@ -62,7 +62,7 @@ export function Contact() {
           </h1>
           
           <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Whether you're facing the April 2026 ADA Title II deadline, responding to an accessibility complaint, or building a proactive compliance program, we're here to help. Tell us about your organization and we'll recommend the right starting point.
+            Whether you're facing the April 2027 ADA Title II deadline, responding to an accessibility complaint, or building a proactive compliance program, we're here to help. Tell us about your organization and we'll recommend the right starting point.
           </p>
         </div>
       </section>
@@ -328,7 +328,7 @@ export function Contact() {
               <div className="bg-[#001957] rounded-2xl p-6 text-white">
                 <h3 className="text-xl font-semibold mb-3">Need Immediate Help?</h3>
                 <p className="text-white/90 text-sm mb-4 leading-relaxed">
-                  For urgent accessibility issues or questions about the April 2026 deadline, call us now.
+                  For urgent accessibility issues or questions about the April 2027 deadline, call us now.
                 </p>
                 <a
                   href="tel:1-855-937-3726"

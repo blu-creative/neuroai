@@ -51,7 +51,7 @@ export function ComplianceDeadline() {
                 The Department of Justice has finalized its rule under ADA Title II, requiring all state and local government entities to make their websites and digital content conform to WCAG 2.1 Level AA.
               </p>
               <p>
-                For entities serving populations of 50,000 or more, the compliance date is <strong className="text-[#001957]">April 24,2026</strong>. For entities serving under 50,000, the deadline extends to <strong className="text-[#001957]">April 26,2027</strong>.
+                For entities serving populations of 50,000 or more, the compliance date is <strong className="text-[#001957]">April 26,2027</strong>. For entities serving under 50,000, the deadline extends to <strong className="text-[#001957]">April 26,2028</strong>.
               </p>
               <p>
                 After these dates, the safe harbor that has historically shielded public organizations from digital accessibility lawsuits is gone. Non-compliant entities will be exposed to legal action, Department of Justice enforcement, and public complaints.

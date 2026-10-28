@@ -16,7 +16,7 @@ export function UrgencyBanner() {
               <span id="urgency-heading" className="text-yellow-300 font-bold text-base tracking-wide">URGENT: DEADLINE APPROACHING</span>
             </div>
             <p className="text-white text-sm md:text-base leading-relaxed font-medium">
-              The DOJ has set April 24, 2026 as the ADA Title II compliance date for public entities serving 50,000+ residents. After this date, non-compliant organizations lose safe harbor protection from legal action.
+              The DOJ has set April 26, 2027 as the ADA Title II compliance date for public entities serving 50,000+ residents. After this date, non-compliant organizations lose safe harbor protection from legal action.
             </p>
           </div>
           
